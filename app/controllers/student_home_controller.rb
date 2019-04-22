@@ -1,8 +1,8 @@
-class HomeController < ApplicationController
+class StudentHomeController < ApplicationController
 
   layout 'application'
 
-  before_action :confirm_logged_in
+  before_action :require_student_login
 
   def index
     @username = session[:username]

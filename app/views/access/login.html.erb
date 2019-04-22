@@ -4,8 +4,8 @@
   <%= form_tag(access_attempt_login_path, :method => :post) do %>
   <table>
     <tr>
-      <td><%= label_tag(:username) %></td>
-      <td><%= text_field_tag(:username, params[:username]) %></td>
+      <td><%= label_tag(:nameOrMail, "Username or Email") %></td>
+      <td><%= text_field_tag(:nameOrMail, params[:nameOrMail]) %></td>
     </tr>
     <tr>
       <td><%= label_tag(:password) %></td>

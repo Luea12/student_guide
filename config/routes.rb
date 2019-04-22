@@ -2,10 +2,14 @@ Rails.application.routes.draw do
 
   root :to => 'access#login'
 
+  # Login/Logout routes
   get 'login', :to => 'access#login', :as => 'login'
   post 'access/attempt_login'
   get 'logout', :to => 'access#logout', :as => 'logout'
-  get 'home', :to => 'home#index', :as => 'home'
+
+  # Home routes
+  get 'home_s', :to => 'student_home#index', :as => 'student_home'
+  get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
 
 
   # Cand accesez localhost:3000/ imi apare un welcome.
