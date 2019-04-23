@@ -8,18 +8,28 @@ class AccessController < ApplicationController
         redirect_to(student_home_path) and return;
       elsif session[:user_type] == "T"
         redirect_to(teacher_home_path) and return;
+      elsif session[:user_type] == "A"
+        redirect_to(admin_home_path) and return;
       end
     end
   end
 
   def attempt_login
     if params[:nameOrMail].present? && params[:password].present?
+      # User is Student
       found_user = Student.find_by(:username => params[:nameOrMail]) || Student.find_by(:email => params[:nameOrMail])
       user_type = "S"
       unless found_user
+        # User is Teacher
         found_user = Teacher.find_by(:username => params[:nameOrMail]) || Teacher.find_by(:email => params[:nameOrMail])
         user_type = "T"
       end
+      unless found_user
+        # User is Admin
+        found_user = Admin.find_by(:username => params[:nameOrMail])
+        user_type = "A"
+      end
+      # Authenticate User with password
       if found_user
         authorized_user = found_user.authenticate(params[:password])
       end
@@ -34,6 +44,8 @@ class AccessController < ApplicationController
         redirect_to(student_home_path)
       elsif session[:user_type] == "T"
         redirect_to(teacher_home_path)
+      elsif session[:user_type] == "A"
+        redirect_to(admin_home_path)
       end
     else
       flash.now[:notice] = "Invalid username/password combination."

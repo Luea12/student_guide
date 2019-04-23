@@ -26,4 +26,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_admin_login
+    unless session[:user_id]
+      flash[:notice] = "You must be logged in as an admin to access this section."
+      redirect_to(login_path) and return;
+    end
+    if session[:user_type] != "A"
+      flash[:notice] = "You must be logged in as an admin to access this section. Please logout first."
+      redirect_to(login_path) and return;
+    end
+  end
+
 end

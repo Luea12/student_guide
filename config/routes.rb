@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # Home routes
   get 'home_s', :to => 'student_home#index', :as => 'student_home'
   get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
+  get 'home_a', :to => 'admin_home#index', :as => 'admin_home'
 
 
   # Cand accesez localhost:3000/ imi apare un welcome.
