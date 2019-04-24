@@ -1,0 +1,2 @@
+module TeacherHomeHelper
+end
