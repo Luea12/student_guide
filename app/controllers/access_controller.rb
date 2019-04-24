@@ -5,13 +5,14 @@ class AccessController < ApplicationController
   def login
     if session[:user_id]
       if session[:user_type] == "S"
-        redirect_to(student_home_path) and return;
+        redirect_to(student_home_path) and return
       elsif session[:user_type] == "T"
-        redirect_to(teacher_home_path) and return;
+        redirect_to(teacher_home_path) and return
       elsif session[:user_type] == "A"
-        redirect_to(admin_home_path) and return;
+        redirect_to(admin_home_path) and return
       end
     end
+    render('login')
   end
 
   def attempt_login

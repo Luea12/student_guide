@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_054203) do
+ActiveRecord::Schema.define(version: 2019_04_23_063402) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "username", limit: 25, null: false
-    t.string "password_digest"
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["username"], name: "index_admins_on_username"
+    t.index ["username"], name: "index_admins_on_username", unique: true
   end
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -74,18 +74,33 @@ ActiveRecord::Schema.define(version: 2019_04_23_054203) do
     t.index ["optional_id", "student_id"], name: "index_optionals_students_on_optional_id_and_student_id"
   end
 
+  create_table "student_tokens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "token", null: false
+    t.integer "group_no", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_student_tokens_on_token", unique: true
+  end
+
   create_table "students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", limit: 50, null: false
     t.string "last_name", limit: 50, null: false
     t.string "email", limit: 100, null: false
     t.string "username", limit: 25, null: false
-    t.string "password_digest"
+    t.string "password_digest", null: false
     t.integer "group_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_students_on_email"
+    t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["first_name", "last_name"], name: "index_students_on_first_name_and_last_name"
-    t.index ["username"], name: "index_students_on_username"
+    t.index ["username"], name: "index_students_on_username", unique: true
+  end
+
+  create_table "teacher_tokens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "token", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_teacher_tokens_on_token", unique: true
   end
 
   create_table "teachers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -93,12 +108,12 @@ ActiveRecord::Schema.define(version: 2019_04_23_054203) do
     t.string "last_name", limit: 50, null: false
     t.string "email", limit: 100, null: false
     t.string "username", limit: 25, null: false
-    t.string "password_digest"
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_teachers_on_email"
+    t.index ["email"], name: "index_teachers_on_email", unique: true
     t.index ["first_name", "last_name"], name: "index_teachers_on_first_name_and_last_name"
-    t.index ["username"], name: "index_teachers_on_username"
+    t.index ["username"], name: "index_teachers_on_username", unique: true
   end
 
 end

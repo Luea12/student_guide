@@ -1,7 +1,7 @@
 <% @page_title = "Login" %>
 
 <div class="login">
-  <%= form_tag(access_attempt_login_path, :method => :post) do %>
+  <%= form_tag(attempt_login_path, :method => :post) do %>
   <table>
     <tr>
       <td><%= label_tag(:nameOrMail, "Username or Email") %></td>
@@ -18,3 +18,4 @@
   </table>
   <% end %>
 </div>
+<p>Don't have an account yet? <%= link_to("Signup now", signup_path) %></p>
