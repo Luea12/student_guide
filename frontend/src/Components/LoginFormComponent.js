@@ -5,9 +5,11 @@ function LoginFormComponent(props) {
 
     return (
         <main>
+            {/* welcome screen */}
             <div id="welcome" >
                 <h1>Welcome<br />to<br />STUDENT GUIDE</h1>
             </div>
+            {/* login screen */}
             <div id="login">
                 <form>
                     <h2>Login</h2>

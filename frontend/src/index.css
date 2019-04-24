@@ -10,6 +10,7 @@ section {
   height: 100%;
 }
 
+/* background */
 section .layer2 {
   position: absolute;
   top: 0;
@@ -22,6 +23,7 @@ section .layer2 {
   transition: 2s;
 }
 
+/* zona centrala cu continut */
 section .layer1 {
   position: absolute;
   top: 50%;
@@ -39,6 +41,7 @@ section .layer1 {
   border-radius: 0.625rem;
 }
 
+/* tranzitie hover pe componenta centrala */
 .layer1:hover ~ .layer2 {
   filter: blur(10px);
 }
@@ -58,6 +61,7 @@ section .layer1 {
   position: relative;
 }
 
+/* input date */
 .box .inputBox input {
   width: 100%;
   padding: 0.625rem 0;
@@ -82,6 +86,7 @@ section .layer1 {
   transition: 0.5s;
 }
 
+/* efectul la input-uri cand pui mouse-ul pe ele */
 .box .inputBox input:focus ~ label,
 .box .inputBox input:valid ~ label,
 .box .inputBox input:not([value=""]) ~ label {
@@ -112,6 +117,7 @@ section .layer1 {
 /*.layer1:hover #welcome { display: none; }*/
 /*.layer1:hover #login { display: inline; }*/
 
+/* welcome screen */
 #welcome h1{
   font-size: 55px;
   position: absolute;
@@ -124,11 +130,13 @@ section .layer1 {
   padding: 50px 50px 50px 50px;
 }
 
+/* pentru placeholder-ul de la input date */
 input[type="date"]:before {
   content: attr(placeholder) !important;
   color: white;
   margin-right: 0.5em;
 }
+
 input[type="date"]:focus:before,
 input[type="date"]:valid:before {
   content: "";
