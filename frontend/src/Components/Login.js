@@ -67,16 +67,19 @@ class Login extends Component{
                     div.style.opacity = String(parseFloat(div.style.opacity) - 0.05)
                 }, 15);
 
-                var element = document.getElementById('login')
-                element.style.display = 'inline'
-                element.style.opacity = '0'
-                var myInterval = setInterval(function () {
-                    if (parseFloat(element.style.opacity) > 1) {
-                        clearInterval(myInterval);
-                    } else {
-                        element.style.opacity = (parseFloat(element.style.opacity) + 0.05).toString();
-                    }
-                }, 50)
+                setTimeout(() => {
+                    var element = document.getElementById('login')
+                    element.style.opacity = '0'
+                    element.style.display = 'inline'
+                    var myInterval = setInterval(() => {
+                        if (parseFloat(element.style.opacity) > 1) {
+                            clearInterval(myInterval);
+                        } else {
+                            console.log(element.style.opacity)
+                            element.style.opacity = (parseFloat(element.style.opacity) + 0.05).toString();
+                        }
+                    }, 1500)
+                }, 500)
             }
         }
     }
