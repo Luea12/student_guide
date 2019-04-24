@@ -64,8 +64,8 @@ class Login extends Component{
                         div.parentElement.removeChild(div);
                         div.style.display='none'
                     }
-                    div.style.opacity = String(parseFloat(div.style.opacity) - 0.5)
-                }, 150);
+                    div.style.opacity = String(parseFloat(div.style.opacity) - 0.05)
+                }, 15);
 
                 var element = document.getElementById('login')
                 element.style.display = 'inline'
