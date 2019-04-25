@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'student_tokens/index'
+  get 'student_tokens/new'
   root :to => 'access#login'
 
   # Login/Logout routes
@@ -17,6 +19,12 @@ Rails.application.routes.draw do
   get 'token_auth', :to => 'register#verify', :as => 'token_auth'
   post 'token_auth', :to => 'register#token_validation', :as => 'token_validation'
   post 'signup', :to => 'register#attempt_signup', :as => 'attempt_signup'
+
+  # Student Tokens routes
+  get 'home_a/student_tokens', :to => 'student_tokens#index', :as => 'student_tokens'
+  get 'home_a/student_tokens/new', :to => 'student_tokens#new', :as => 'new_student_token'
+  post 'home_a/student_tokens/new', :to => 'student_tokens#create', :as => 'create_student_token'
+  delete 'home_a/student_tokens/:id', :to => 'student_tokens#destroy', :as => 'delete_student_token'
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.
