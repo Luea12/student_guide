@@ -64,19 +64,22 @@ class Login extends Component{
                         div.parentElement.removeChild(div);
                         div.style.display='none'
                     }
-                    div.style.opacity = String(parseFloat(div.style.opacity) - 0.5)
-                }, 150);
+                    div.style.opacity = String(parseFloat(div.style.opacity) - 0.05)
+                }, 15);
 
-                var element = document.getElementById('login')
-                element.style.display = 'inline'
-                element.style.opacity = '0'
-                var myInterval = setInterval(function () {
-                    if (parseFloat(element.style.opacity) > 1) {
-                        clearInterval(myInterval);
-                    } else {
-                        element.style.opacity = (parseFloat(element.style.opacity) + 0.05).toString();
-                    }
-                }, 50)
+                setTimeout(() => {
+                    var element = document.getElementById('login')
+                    element.style.opacity = '0'
+                    element.style.display = 'inline'
+                    var myInterval = setInterval(() => {
+                        if (parseFloat(element.style.opacity) > 1) {
+                            clearInterval(myInterval);
+                        } else {
+                            console.log(element.style.opacity)
+                            element.style.opacity = (parseFloat(element.style.opacity) + 0.05).toString();
+                        }
+                    }, 1500)
+                }, 500)
             }
         }
     }
@@ -85,9 +88,11 @@ class Login extends Component{
        return(
            <div>
                <section className="box">
-                   <div className="layer1" onMouseEnter={this.handleOnMouseEnter}>
+                    {/* zona centrala cu continut */}
+                   <div className="layer1" onMouseEnter={this.handleOnMouseEnter}> 
                        <LoginFormContainer/>
                    </div>
+                   {/* background */}
                    <div className="layer2"></div>
                </section>
            </div>
