@@ -1,0 +1,26 @@
+<% @page_title = "Student Tokens" %>
+
+<%= link_to("Back to Home", admin_home_path) %>
+
+<div class="student-tokens index">
+  <h2>Student Tokens</h2>
+
+  <%= link_to("Create new token", new_student_token_path) %>
+
+  <table summary="Student tokens">
+    <tr class="header">
+      <th>#</th>
+      <th>Token</th>
+      <th>Group</th>
+      <th>Actions</th>
+    </tr>
+    <% @student_tokens.each do |s_token| %>
+    <tr>
+      <td><%= s_token.id %></td>
+      <td><%= s_token.token %></td>
+      <td><%= s_token.group_no %></td>
+      <td><%= link_to("Delete", delete_student_token_path(s_token), :method => :delete) %></td>
+    </tr>
+    <% end %>
+  </table
+</div>

@@ -1,0 +1,2 @@
+module TeacherTokensHelper
+end

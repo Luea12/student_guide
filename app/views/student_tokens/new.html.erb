@@ -1,0 +1,24 @@
+<% @page_title = "New Student Token" %>
+
+<%= link_to("Back to list", student_tokens_path) %>
+
+<div class="student-token new">
+  <h2>Create Student Token</h2>
+
+  <%= form_tag(create_student_token_path, :method => :post) do %>
+    <table>
+      <tr>
+        <td><%= label_tag(:group) %></td>
+        <td><%= text_field_tag(:group, params[:group]) %></td>
+      </tr>
+      <tr>
+        <td><%= label_tag(:amount) %></td>
+        <td><%= text_field_tag(:amount, params[:amount]=1) %></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><%= submit_tag("Create") %></td>
+      </tr>
+    </table>
+  <% end %>
+</div>
