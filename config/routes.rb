@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
+  #Event Tokens routes
   root :to => 'access#login'
+
+  get 'home_a/event_tokens', :to => 'event_tokens#index', :as => 'event_tokens'
+  #get 'home_a/event_tokens/new', :to => 'event_tokens#new', :as => 'new_event_token'
+  post 'home_a/event_tokens', :to => 'event_tokens#create', :as => 'create_event_token'
+  delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
 
   # Login/Logout routes
   get 'login', :to => 'access#login', :as => 'login'
