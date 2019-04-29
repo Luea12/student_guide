@@ -92,6 +92,7 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jwt (2.1.0)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -152,6 +153,9 @@ GEM
       railties (>= 3.2)
       tilt
     regexp_parser (1.4.0)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     rubyzip (1.2.2)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -213,10 +217,12 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   duktape
   jbuilder (~> 2.5)
+  jwt
   mysql2 (>= 0.4.4, < 0.6.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
   react-rails
+  responders
   sass-rails (~> 5.0)
   selenium-webdriver
   turbolinks (~> 5)

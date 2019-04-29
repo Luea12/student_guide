@@ -1,21 +1,5 @@
-<% @page_title = "Login" %>
 
-<div class="login">
-  <%= form_tag(attempt_login_path, :method => :post) do %>
-  <table>
-    <tr>
-      <td><%= label_tag(:nameOrMail, "Username or Email") %></td>
-      <td><%= text_field_tag(:nameOrMail, params[:nameOrMail]) %></td>
-    </tr>
-    <tr>
-      <td><%= label_tag(:password) %></td>
-      <td><%= password_field_tag(:password) %></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><%= submit_tag("Log In") %></td>
-    </tr>
-  </table>
-  <% end %>
-</div>
-<p>Don't have an account yet? <%= link_to("Signup now", signup_path) %></p>
+
+
+
+  <%= react_component 'Login', authenticity_token: form_authenticity_token%>

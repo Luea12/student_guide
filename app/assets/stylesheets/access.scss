@@ -1,3 +1,147 @@
 // Place all the styles related to the access controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+/* background */
+section .layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(image1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  transition: 2s;
+}
+
+/* zona centrala cu continut */
+section .layer1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 95%;
+  background: url(image1.jpg);
+  background-position: center;
+  z-index: 1;
+  transition: 2s;
+  padding: 2.5rem;
+  box-sizing: border-box;
+
+  border-radius: 0.625rem;
+}
+
+/* tranzitie hover pe componenta centrala */
+.layer1:hover ~ .layer2 {
+  filter: blur(10px);
+}
+
+.layer1:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .8);
+}
+
+.box h2 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+/* input date */
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+/* efectul la input-uri cand pui mouse-ul pe ele */
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem;
+}
+
+.box button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #03a9f4;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
+}
+
+#login { display: none; }
+/*.layer1:hover #welcome { display: none; }*/
+/*.layer1:hover #login { display: inline; }*/
+
+/* welcome screen */
+#welcome h1{
+  font-size: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  border: thick double;
+  padding: 50px 50px 50px 50px;
+}
+
+/* pentru placeholder-ul de la input date */
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: white;
+  margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}

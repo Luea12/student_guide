@@ -1,6 +1,7 @@
 class AccessController < ApplicationController
 
   layout 'application'
+  skip_before_action :verify_authenticity_token
 
   def login
     if session[:user_id]
@@ -16,6 +17,8 @@ class AccessController < ApplicationController
   end
 
   def attempt_login
+
+
     if params[:nameOrMail].present? && params[:password].present?
       # User is Student
       found_user = Student.find_by(:username => params[:nameOrMail]) || Student.find_by(:email => params[:nameOrMail])
@@ -59,7 +62,7 @@ class AccessController < ApplicationController
       session[:user_id] = nil
       session[:username] = nil
       session[:user_type] = nil
-      flash[:notice] = 'Logged out'
+      
     end
     redirect_to(root_path)
   end
