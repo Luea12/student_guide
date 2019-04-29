@@ -1,15 +1,15 @@
 <% @page_title = "Token Confirmation" %>
 
 <div class="token-confirmation">
-  <%= form_tag(token_validation_path, :method => :post) do %>
+  <%= form_with :url => token_validation_path, :method => :post do |f| %>
   <table>
     <tr>
-      <td><%= label_tag(:token, "Token") %></td>
-      <td><%= text_field_tag(:token, params[:token]) %></td>
+      <td><%= f.label :token, "Token" %></td>
+      <td><%= f.text_field :token %></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><%= submit_tag("Check Token") %></td>
+      <td><%= f.submit "Check Token" %></td>
     </tr>
   </table>
   <% end %>

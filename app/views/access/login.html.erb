@@ -1,19 +1,19 @@
 <% @page_title = "Login" %>
 
 <div class="login">
-  <%= form_tag(attempt_login_path, :method => :post) do %>
+  <%= form_with :url => attempt_login_path, :method => :post do |f| %>
   <table>
     <tr>
-      <td><%= label_tag(:nameOrMail, "Username or Email") %></td>
-      <td><%= text_field_tag(:nameOrMail, params[:nameOrMail]) %></td>
+      <td><%= f.label :nameOrMail, "Username or Email" %></td>
+      <td><%= f.text_field :nameOrMail %></td>
     </tr>
     <tr>
-      <td><%= label_tag(:password) %></td>
-      <td><%= password_field_tag(:password) %></td>
+      <td><%= f.label :password %></td>
+      <td><%= f.password_field :password %></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><%= submit_tag("Log In") %></td>
+      <td><%= f.submit "Log In" %></td>
     </tr>
   </table>
   <% end %>
