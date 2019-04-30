@@ -1,0 +1,24 @@
+<% @page_title = "Event Tokens" %>
+
+<%= link_to("Back to Home", admin_home_path) %>
+
+<div class="event-tokens index">
+  <h2>Event Tokens</h2>
+
+  <%= link_to("Create new token", create_event_token_path, :method => :post) %>
+
+  <table summary="Event tokens">
+    <tr class="header">
+      <th>#</th>
+      <th>Token</th>
+      <th>Actions</th>
+    </tr>
+    <% @event_tokens.each do |e_token| %>
+    <tr>
+      <td><%= e_token.id %></td>
+      <td><%= e_token.token %></td>
+      <td><%= link_to("Delete", delete_event_token_path(e_token), :method => :delete) %></td>
+    </tr>
+    <% end %>
+  </table
+</div>

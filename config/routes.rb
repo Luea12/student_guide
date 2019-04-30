@@ -30,6 +30,11 @@ Rails.application.routes.draw do
   post 'home_a/teacher_tokens/new', :to => 'teacher_tokens#create', :as => 'create_teacher_token'
   delete 'home_a/teacher_tokens/:id', :to => 'teacher_tokens#destroy', :as => 'delete_teacher_token'
 
+  #Event Tokens routes
+  get 'home_a/event_tokens', :to => 'event_tokens#index', :as => 'event_tokens'
+  post 'home_a/event_tokens', :to => 'event_tokens#create', :as => 'create_event_token'
+  delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
+
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.
   # Cand dau submit la formularul de login, se face un post request catre server.
