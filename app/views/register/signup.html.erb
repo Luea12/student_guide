@@ -1,34 +1,34 @@
 <% @page_title = "Signup" %>
 
 <div class="signup">
-  <%= form_tag(attempt_signup_path, :method => :post) do %>
+  <%= form_with :url => attempt_signup_path, :method => :post do |f| %>
   <table>
     <tr>
-      <td><%= label_tag(:first_name) %></td>
-      <td><%= text_field_tag(:first_name, params[:first_name]) %></td>
+      <td><%= f.label :first_name %></td>
+      <td><%= f.text_field :first_name %></td>
     </tr>
     <tr>
-      <td><%= label_tag(:last_name) %></td>
-      <td><%= text_field_tag(:last_name, params[:last_name]) %></td>
+      <td><%= f.label :last_name %></td>
+      <td><%= f.text_field :last_name %></td>
     </tr>
     <tr>
-      <td><%= label_tag(:email) %></td>
-      <td><%= email_field_tag(:email, params[:email]) %></td>
+      <td><%= f.label :email %></td>
+      <td><%= f.email_field :email %></td>
     </tr>
     <tr>
-      <td><%= label_tag(:username) %></td>
-      <td><%= text_field_tag(:username, params[:username]) %></td>
+      <td><%= f.label :username %></td>
+      <td><%= f.text_field :username %></td>
     </tr>
     <tr>
-      <td><%= label_tag(:password) %></td>
-      <td><%= password_field_tag(:password) %></td>
+      <td><%= f.label :password %></td>
+      <td><%= f.password_field :password %></td>
     </tr>
     <tr>
-      <td><%= label_tag(:password_hint, "Minimum eight characters, at least one uppercase letter, one lowercase letter and one number") %></td>
+      <td><%= f.label :password_hint, "Minimum eight characters, at least one uppercase letter, one lowercase letter and one number" %></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><%= submit_tag("Register") %></td>
+      <td><%= f.submit "Register" %></td>
     </tr>
   </table>
   <% end %>
