@@ -3,6 +3,7 @@ class RegisterController < ApplicationController
   layout 'application'
 
   before_action :require_token_auth, :only => :signup
+  skip_before_action :verify_authenticity_token
 
   def signup
     render('signup')
@@ -113,6 +114,7 @@ class RegisterController < ApplicationController
     else
       flash.now[:notice] = "Invalid token."
       render('verify')
+
     end
   end
 

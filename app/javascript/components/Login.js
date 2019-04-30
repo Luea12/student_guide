@@ -21,10 +21,6 @@ class Login extends Component{
 
   }
 
-  static propTypes() {
-
-   user: React.PropTypes.array
- }
 
   handleNameChange(event) {
         this.setState({
