@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
 
-  #Event Tokens routes
-  root :to => 'access#login'
 
-  get 'home_a/event_tokens', :to => 'event_tokens#index', :as => 'event_tokens'
-  #get 'home_a/event_tokens/new', :to => 'event_tokens#new', :as => 'new_event_token'
-  post 'home_a/event_tokens', :to => 'event_tokens#create', :as => 'create_event_token'
-  delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
+  root :to => 'access#login'
 
   # Login/Logout routes
   get 'login', :to => 'access#login', :as => 'login'
@@ -35,6 +30,12 @@ Rails.application.routes.draw do
   get 'home_a/teacher_tokens/new', :to => 'teacher_tokens#new', :as => 'new_teacher_token'
   post 'home_a/teacher_tokens/new', :to => 'teacher_tokens#create', :as => 'create_teacher_token'
   delete 'home_a/teacher_tokens/:id', :to => 'teacher_tokens#destroy', :as => 'delete_teacher_token'
+
+  #Event Tokens routes
+  get 'home_a/event_tokens', :to => 'event_tokens#index', :as => 'event_tokens'
+  #get 'home_a/event_tokens/new', :to => 'event_tokens#new', :as => 'new_event_token'
+  post 'home_a/event_tokens', :to => 'event_tokens#create', :as => 'create_event_token'
+  delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.
