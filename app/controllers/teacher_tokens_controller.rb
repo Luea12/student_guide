@@ -30,7 +30,7 @@ class TeacherTokensController < ApplicationController
       @teacher_token = TeacherToken.find(params[:id])
       @teacher_token.destroy
     end
-    redirect_to(student_tokens_path)
+    redirect_to(teacher_tokens_path)
   end
 
 end
