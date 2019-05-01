@@ -1,6 +1,6 @@
 class StudentHomeController < ApplicationController
 
-  layout 'application'
+  layout 'student'
 
   before_action :require_student_login
 

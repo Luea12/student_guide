@@ -1,4 +1,6 @@
-<% @page_title = "Teacher Home" %>
-<h1>Teacher Home</h1>
+<% @page_title = "Home" %>
+
+<%= react_component 'TeacherApp' %>
+
 <p>Logged in as: <%= @username %></p>
 <p><%= link_to("Logout", logout_path) %></p>

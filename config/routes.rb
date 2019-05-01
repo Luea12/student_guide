@@ -31,13 +31,14 @@ Rails.application.routes.draw do
   delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
 
   # Home routes
-  get 'home_s/*path', :to => 'student_home#index', :as => 'student_home', :constraints => ->(request) do
+  get 'home_a', :to => 'admin_home#index', :as => 'admin_home'
+  get 'home_s', :to => 'student_home#index', :as => 'student_home'
+  get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
+
+  get 'home_s/*path', :to => 'student_home#index', :constraints => ->(request) do
     !request.xhr? && request.format.html?
   end
-  get 'home_t/*path', :to => 'teacher_home#index', :as => 'teacher_home', :constraints => ->(request) do
-    !request.xhr? && request.format.html?
-  end
-  get 'home_a/*path', :to => 'admin_home#index', :as => 'admin_home', :constraints => ->(request) do
+  get 'home_t/*path', :to => 'teacher_home#index', :constraints => ->(request) do
     !request.xhr? && request.format.html?
   end
 
