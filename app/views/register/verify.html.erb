@@ -1,7 +1,7 @@
 <% @page_title = "Token Confirmation" %>
 
 <div class="token-confirmation">
-  <%= form_with :url => token_validation_path, :method => :post do |f| %>
+  <%= form_with :url => token_validation_path, :method => :post, :local => true do |f| %>
   <table>
     <tr>
       <td><%= f.label :token, "Token" %></td>

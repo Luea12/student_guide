@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentGuide | Student |<%= " | #{@page_title}" if @page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application'%>
+  </head>
+
+  <body>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </body>
+</html>

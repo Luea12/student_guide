@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StudentGuide<%= " | #{@page_title}" if @page_title %></title>
+    <title>StudentGuide | Teacher |<%= " | #{@page_title}" if @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,15 +12,7 @@
 
   <body>
     <div id="main">
-      <% if !flash[:notice].blank? %>
-        <div class="notice">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
-
-      <div id="content">
-        <%= yield %>
-      </div>
+      <%= yield %>
     </div>
   </body>
 </html>

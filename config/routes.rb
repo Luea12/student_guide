@@ -7,11 +7,6 @@ Rails.application.routes.draw do
   post 'login', :to => 'access#attempt_login', :as => 'attempt_login'
   get 'logout', :to => 'access#logout', :as => 'logout'
 
-  # Home routes
-  get 'home_s', :to => 'student_home#index', :as => 'student_home'
-  get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
-  get 'home_a', :to => 'admin_home#index', :as => 'admin_home'
-
   # Signup/Register routes
   get 'signup', :to => 'register#signup', :as => 'signup'
   get 'token_auth', :to => 'register#verify', :as => 'token_auth'
@@ -34,6 +29,18 @@ Rails.application.routes.draw do
   get 'home_a/event_tokens', :to => 'event_tokens#index', :as => 'event_tokens'
   post 'home_a/event_tokens', :to => 'event_tokens#create', :as => 'create_event_token'
   delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
+
+  # Home routes
+  get 'home_a', :to => 'admin_home#index', :as => 'admin_home'
+  get 'home_s', :to => 'student_home#index', :as => 'student_home'
+  get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
+
+  get 'home_s/*path', :to => 'student_home#index', :constraints => ->(request) do
+    !request.xhr? && request.format.html?
+  end
+  get 'home_t/*path', :to => 'teacher_home#index', :constraints => ->(request) do
+    !request.xhr? && request.format.html?
+  end
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.

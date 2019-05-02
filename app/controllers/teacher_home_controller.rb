@@ -1,6 +1,6 @@
 class TeacherHomeController < ApplicationController
 
-  layout 'application'
+  layout 'teacher'
 
   before_action :require_teacher_login
 
