@@ -59,6 +59,7 @@ class AccessController < ApplicationController
       session[:user_id] = nil
       session[:username] = nil
       session[:user_type] = nil
+      @current_user = nil
       flash[:notice] = 'Logged out'
     end
     redirect_to(root_path)
