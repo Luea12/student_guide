@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 class StudentHome extends React.Component {
   render () {

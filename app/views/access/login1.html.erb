@@ -1,0 +1,32 @@
+<% @page_title = "Login" %>
+
+<div>
+    <section class="box">
+        <div class="layer1">
+            <div>
+                <main>
+                    <div id="login">
+                        <%= form_with :url => attempt_login_path, :method => :post, :local => true do |f| %>
+                          <table>
+                            <tr class="inputBox">
+                              <td><%= f.label :nameOrMail, "Username or Email" %></td>
+                              <td><%= f.text_field :nameOrMail %></td>
+                            </tr>
+                            <tr class="inputBox">
+                              <td></td>
+                              <td><%= f.password_field :password %></td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td><%= f.submit "Log In" %></td>
+                            </tr>
+                          </table>
+                          <% end %>
+                          <p>Don't have an account yet? <%= link_to("Signup now", signup_path) %></p>
+                    </div>
+                </main>
+             </div>
+        </div>
+        <div className="layer2"></div>
+    </section>
+</div>

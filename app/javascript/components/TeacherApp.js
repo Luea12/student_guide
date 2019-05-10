@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import TeacherHome from './TeacherHome'
 import Error from './Error'
