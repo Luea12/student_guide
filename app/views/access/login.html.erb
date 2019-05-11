@@ -7,9 +7,14 @@
         <div class="layer1">
             <div>
                 <main>
-                    <div id="login">
+                    <div id="welcome" >
+                       <h1>Welcome<br />to<br />STUDENT GUIDE</h1>
+                    </div>
+                    <div id="login_form">
                         <%= form_with :url => attempt_login_path, :method => :post, :local => true do |f| %>
+
                             <h2>Login</h2>
+
                             <div class="inputBox">
                                <%= f.text_field :nameOrMail, placeholder: " " %>
                                <label> Username or Email</label>
@@ -18,18 +23,18 @@
                             <div class="inputBox">
                               <%= f.password_field :password, placeholder: " "%>
                               <label>Password</label>
-
                             </div>
+
                             <div>
                               <p><%= f.submit "Login" %></p>
                             </div>
 
-                          <% end %>
-                          <p>Don't have an account yet? <%= link_to("Signup now", signup_path) %></p>
+                        <% end %>
+                        <p>Don't have an account yet? <%= link_to("Signup now", signup_path) %></p>
                     </div>
                 </main>
              </div>
         </div>
-        <div className="layer2"></div>
+        <div class="layer2"></div>
     </section>
 </div>
