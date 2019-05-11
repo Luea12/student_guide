@@ -1,0 +1,36 @@
+<% @page_title = "Signup" %>
+
+<div class="signup">
+  <%= form_with :url => attempt_signup_path, :method => :post, :local => true do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :first_name %></td>
+      <td><%= f.text_field :first_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :last_name %></td>
+      <td><%= f.text_field :last_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email %></td>
+      <td><%= f.email_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :username %></td>
+      <td><%= f.text_field :username %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password %></td>
+      <td><%= f.password_field :password %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password_hint, "Minimum eight characters, at least one uppercase letter, one lowercase letter and one number" %></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><%= f.submit "Register" %></td>
+    </tr>
+  </table>
+  <% end %>
+</div>
+<p>Already have an account? <%= link_to("Log in", login_path) %></p>
