@@ -2,13 +2,11 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
 
 section {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 section .layer2 {
   position: absolute;
@@ -18,8 +16,7 @@ section .layer2 {
   height: 100%;
   background-attachment: fixed;
   background-position: center;
-  transition: 2s;
-}
+  transition: 2s; }
 
 section .layer1 {
   position: absolute;
@@ -34,27 +31,22 @@ section .layer1 {
   padding: 2.5rem;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.6);
-  border-radius: 0.625rem;
-}
+  border-radius: 0.625rem; }
 
 .layer1:hover ~ .layer2 {
-  filter: blur(10px);
-}
+  filter: blur(10px); }
 
 .layer1:hover {
-  box-shadow: 0 25px 60px rgba(0, 0, 0, .8);
-}
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8); }
 
 .box h2 {
   margin: 0 0 1.875rem;
   padding: 0;
   color: #fff;
-  text-align: center;
-}
+  text-align: center; }
 
 .box .inputBox {
-  position: relative;
-}
+  position: relative; }
 
 .box .inputBox input {
   width: 100%;
@@ -66,8 +58,7 @@ section .layer1 {
   border: none;
   border-bottom: 0.065rem solid #fff;
   outline: none;
-  background: transparent;
-}
+  background: transparent; }
 
 .box .inputBox label {
   position: absolute;
@@ -77,36 +68,48 @@ section .layer1 {
   font-size: 1rem;
   color: #fff;
   pointer-events: none;
-  transition: 0.5s;
-}
+  transition: 0.5s; }
 
-.box .inputBox #nameOrMail:focus ~ label,
-.box .inputBox #nameOrMail:not(:placeholder-shown) ~ label
- {
+.box .inputBox #first_name:focus ~ label,
+.box .inputBox #first_name:not(:placeholder-shown) ~ label {
   top: -1.125rem;
   left: 0;
   color: #03a9f4;
-  font-size: 0.75rem;
-}
+  font-size: 0.75rem; }
+
+.box .inputBox #last_name:focus ~ label,
+.box .inputBox #last_name:not(:placeholder-shown) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem; }
+
+.box .inputBox #email:focus ~ label,
+.box .inputBox #email:not(:placeholder-shown) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem; }
+
+.box .inputBox #username:focus ~ label,
+.box .inputBox #username:not(:placeholder-shown) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem; }
 
 .box .inputBox #password:focus ~ label,
-.box .inputBox #password:not(:placeholder-shown) ~ label
-{
+.box .inputBox #password:not(:placeholder-shown) ~ label {
   top: -1.125rem;
   left: 0;
   color: #03a9f4;
-  font-size: 0.75rem;
-}
+  font-size: 0.75rem; }
 
-.box .inputBox #token:focus ~ label,
-.box .inputBox #token:not(:placeholder-shown) ~ label
-{
-  top: -1.125rem;
-  left: 0;
-  color: #03a9f4;
-  font-size: 0.75rem;
-}
+.box .inputBox #password:not(:focus)::placeholder {
+  opacity: 0; }
 
+.box .inputBox #password:focus::placeholder {
+  font-size: 0.60rem; }
 
 .box input[type=submit] {
   border: none;
@@ -118,17 +121,14 @@ section .layer1 {
   border-radius: 0.312rem;
   font-size: 1rem;
   display: inline-block;
-  margin: 0;
-}
+  margin: 0; }
 
 .box input[type="submit"]:hover {
-  background-color: #1cb1f5;
-}
+  background-color: #1cb1f5; }
 
 /*.layer1:hover #welcome { display: none; }*/
 /*.layer1:hover #login { display: inline; }*/
-
-#welcome h1{
+#welcome h1 {
   font-size: 55px;
   position: absolute;
   top: 50%;
@@ -137,28 +137,18 @@ section .layer1 {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   border: thick double;
-  padding: 50px 50px 50px 50px;
-}
+  padding: 50px 50px 50px 50px; }
 
 input[type="date"]:before {
   content: attr(placeholder) !important;
   color: white;
-  margin-right: 0.5em;
-}
+  margin-right: 0.5em; }
+
 input[type="date"]:focus:before,
 input[type="date"]:valid:before {
-  content: "";
-}
+  content: ""; }
 
-.notice{
-  display: none;
-}
+.link {
+  color: #03a9f4; }
 
-.formular {
-  position: relative;
-  top: 10%;
-}
-
-.link{
-  color: #03a9f4;
-}
+/*# sourceMappingURL=register.css.map */

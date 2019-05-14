@@ -2,63 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a963a309-4ca2-4595-9a79-3f8d2cf5e0f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/access.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/access.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/student_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/student_home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/access.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/access.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/access.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/access.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/access.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/access.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/student_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/student_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/student_home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/student_home_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/StudentApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/StudentApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/StudentHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/StudentHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/TeacherApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/TeacherApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/TeacherHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/TeacherHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/server_rendering.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/server_rendering.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/student.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/student.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/register.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/access/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/access/login1.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login1.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/register/signup.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/register/signup.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/register/verify.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/register/verify.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/student_home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/student_home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/image7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/LoginFormComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/LoginFormContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/RegisterFormComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/RegisterFormContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Images/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Register/AppForRegister.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Register/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,11 +51,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="34" selection-start-column="34" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-121">
+              <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -189,7 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1088" />
@@ -315,18 +274,18 @@
       <workItem from="1557741712076" duration="281000" />
       <workItem from="1557747067733" duration="11077000" />
       <workItem from="1557846002592" duration="874000" />
-      <workItem from="1557848004026" duration="2651000" />
+      <workItem from="1557848004026" duration="2904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28795000" />
+    <option name="totallyTimeSpent" value="29048000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="870" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38002774" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18389262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -495,13 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1446">
-          <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/student_home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -590,6 +542,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
         </state>
       </provider>
     </entry>
