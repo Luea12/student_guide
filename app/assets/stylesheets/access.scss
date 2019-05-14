@@ -98,6 +98,16 @@ section .layer1 {
   font-size: 0.75rem;
 }
 
+.box .inputBox #token:focus ~ label,
+.box .inputBox #token:not(:placeholder-shown) ~ label
+{
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem;
+}
+
+
 .box input[type=submit] {
   border: none;
   outline: none;
