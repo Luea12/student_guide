@@ -1,3 +1,114 @@
-// Place all the styles related to the register controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: asset-url("image1.jpg");
+}
+
+a {
+  color: #03a9f4;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 95%;
+  background-position: center;
+  z-index: 1;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, .6);
+  border-radius: 0.625rem;
+  transition: 2s;
+}
+
+.box:hover {
+  box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
+}
+
+.box h1 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+
+.box .input-group {
+  position: relative;
+}
+
+.box .input-group input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+  text-shadow: 1px 1px 2px black;
+}
+
+.box .input-group input:focus ~ label,
+.box .input-group input:valid ~ label,
+.box .input-group input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size:0.75rem;
+  text-shadow: none;
+}
+
+.box .input-group #password:not(:focus)::placeholder {
+  opacity: 0;
+}
+
+.box .input-group #password:focus::placeholder {
+  font-size: 0.6rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color:#fff;
+  background-color: #03a9f4;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+  display: inline-block;
+  margin: auto;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
+}
+
+.box p {
+  padding-top: 20px;
+  text-shadow: 1px 1px 2px black;
+}

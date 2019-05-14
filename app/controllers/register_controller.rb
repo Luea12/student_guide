@@ -1,6 +1,6 @@
 class RegisterController < ApplicationController
 
-  layout 'application'
+  layout 'access'
 
   before_action :require_token_auth, :only => :signup
 
