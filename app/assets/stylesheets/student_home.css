@@ -1,0 +1,18 @@
+.containerr {
+  display: grid;
+  grid-template-rows: 170px auto;
+  grid-template-columns: 200px auto; }
+
+.icon {
+  width: 100px;
+  height: 100px; }
+
+.cls {
+  text-align: center;
+  background: #f8f9fa;
+  box-shadow: 0px 0px 10px grey inset; }
+
+#main {
+  /*    background-color: #161616;*/ }
+
+/*# sourceMappingURL=student_home.css.map */

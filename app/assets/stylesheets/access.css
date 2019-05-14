@@ -84,6 +84,13 @@ section .layer1 {
   color: #03a9f4;
   font-size: 0.75rem; }
 
+.box .inputBox #token:focus ~ label,
+.box .inputBox #token:not(:placeholder-shown) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem; }
+
 .box input[type=submit] {
   border: none;
   outline: none;
@@ -120,5 +127,12 @@ input[type="date"]:before {
 input[type="date"]:focus:before,
 input[type="date"]:valid:before {
   content: ""; }
+
+.notice {
+  display: none; }
+
+.formular {
+  position: relative;
+  top: 10%; }
 
 /*# sourceMappingURL=access.css.map */

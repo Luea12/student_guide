@@ -3,8 +3,8 @@
 <div>
     <section class="box">
         <div class="layer1" >
-                 <%= form_with :url => token_validation_path, :method => :post, :local => true do |f| %>
-
+            <div class="formular">
+                 <%=form_with :url => token_validation_path, :method => :post, :local => true do |f| %>
                    <h2>Token Authentication</h2>
 
                    <div class="inputBox">
@@ -15,6 +15,7 @@
                    <p><%= f.submit "Check Token" %></p>
                    <% end %>
                    <p>Already have an account? <span class="link"> <%= link_to("Log in", login_path) %></span></p>
+            </div>
         </div>
         <div class="layer2"></div>
     </section>

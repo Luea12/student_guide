@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,WAAW;EACP,OAAO,EAAE,IAAI;EACb,kBAAkB,EAAE,UAAU;EAC9B,qBAAqB,EAAE,UAAU;;AAGrC,KAAK;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;;AAGjB,IAAI;EACA,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,OAAO;EACnB,UAAU,EAAE,uBAAuB;;AAGvC,KAAK;EACL,kCAAkC",
+"sources": ["student_home.scss"],
+"names": [],
+"file": "student_home.css"
+}

@@ -2,16 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a963a309-4ca2-4595-9a79-3f8d2cf5e0f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/access/login1.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/access.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/access.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/student_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/student_home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/access.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/access.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/access.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/access.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/access.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/access.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/student_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/student_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/student_home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/student_home_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/StudentApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/StudentApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/StudentHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/StudentHome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/TeacherApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/TeacherApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/TeacherHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/TeacherHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/access/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/access/login.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/server_rendering.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/server_rendering.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/student.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/student.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/register/verify.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/register/verify.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/student_home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/student_home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/image7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Error.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/LoginFormComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/LoginFormContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/RegisterFormComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/RegisterFormContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Images/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Register/AppForRegister.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Register/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,56 +66,55 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1437407183">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="3" />
-          <entry key="erb" value="5" />
-          <entry key="js" value="10" />
-          <entry key="map" value="1" />
-          <entry key="scss" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="3" />
-          <entry key="JavaScript" value="10" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="SCSS" value="1" />
-          <entry key="SourceMap" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="erb" value="378" />
-          <entry key="js" value="123" />
-          <entry key="scss" value="71" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JavaScript" value="123" />
-          <entry key="PLAIN_TEXT" value="378" />
-          <entry key="SCSS" value="71" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/server_rendering.js">
+        <entry file="file://$PROJECT_DIR$/app/views/student_home/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/components/StudentApp.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/access.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="671">
+              <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin_home.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/server_rendering.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -77,54 +123,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin_home/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/register/verify.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/register/signup.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/access/login1.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="81" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="93" column="39" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/access.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="399">
+              <caret line="19" selection-start-line="19" selection-end-line="22" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,12 +140,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>login</find>
+      <find>logou</find>
+      <find>className</find>
+      <find>class</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,37 +158,39 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/javascript/components/StudentApp.js" />
-        <option value="$PROJECT_DIR$/app/javascript/components/StudentHome.js" />
-        <option value="$PROJECT_DIR$/app/javascript/components/TeacherApp.js" />
-        <option value="$PROJECT_DIR$/app/javascript/components/TeacherHome.js" />
-        <option value="$PROJECT_DIR$/app/javascript/components/Error.js" />
         <option value="$PROJECT_DIR$/app/views/access/index.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/access.css" />
         <option value="$PROJECT_DIR$/app/views/access/login1.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/access.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/access.scss" />
         <option value="$PROJECT_DIR$/app/views/access/login.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/register/signup.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/register_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/student_home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/student.html.erb" />
+        <option value="$PROJECT_DIR$/app/javascript/components/IconComponent.js" />
+        <option value="$PROJECT_DIR$/app/views/register/verify.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/access.scss" />
+        <option value="$PROJECT_DIR$/app/javascript/components/SmallerComponents/IconComponent.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/SmallerComponents/NextCourse.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/SmallerComponents/Meniu.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/SmallerComponents/MainPage.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/student_home.scss" />
+        <option value="$PROJECT_DIR$/app/views/student_home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/javascript/components/Error.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/TeacherApp.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/TeacherHome.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/access.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/register.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/StudentHome.js" />
+        <option value="$PROJECT_DIR$/app/javascript/components/StudentApp.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/admin_home.js" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/application.js" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/server_rendering.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/student_home.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/frontend/package.json" />
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1088" />
   </component>
@@ -219,14 +230,26 @@
               <item name="student_guide" type="b2602c69:ProjectViewProjectNode" />
               <item name="student_guide" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="student_guide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="student_guide" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="student_guide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="student_guide" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="student_guide" type="b2602c69:ProjectViewProjectNode" />
               <item name="student_guide" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="student_guide" type="b2602c69:ProjectViewProjectNode" />
@@ -238,7 +261,9 @@
             <path>
               <item name="student_guide" type="b2602c69:ProjectViewProjectNode" />
               <item name="student_guide" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="student_home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,10 +272,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../StudentGuide" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tavi\Documents\GitHub\Strudent Guide BUN\student_guide\app\javascript\components\SmallerComponents" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,22 +308,30 @@
       <workItem from="1557507853865" duration="469000" />
       <workItem from="1557508598307" duration="4007000" />
       <workItem from="1557512779282" duration="8569000" />
+      <workItem from="1557739933037" duration="197000" />
+      <workItem from="1557740148718" duration="20000" />
+      <workItem from="1557740574188" duration="568000" />
+      <workItem from="1557741158505" duration="536000" />
+      <workItem from="1557741712076" duration="281000" />
+      <workItem from="1557747067733" duration="11077000" />
+      <workItem from="1557846002592" duration="874000" />
+      <workItem from="1557848004026" duration="2651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12591000" />
+    <option name="totallyTimeSpent" value="28795000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-6" y="0" width="781" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19060403" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38002774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32971507" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32841823" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32791328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -300,49 +339,196 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24830393" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.25067025" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="rails-model-fields" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/javascript/components/TeacherApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/components/TeacherHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/components/Error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_home.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_tokens.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_tokens.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/access/index.css" />
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin_home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/register/signup.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/access_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/register_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/access/login1.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="81" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/register_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-651">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin_home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/access_helper.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/admin_home_helper.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/event_token.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/student.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="212" selection-start-line="10" selection-start-column="212" selection-end-line="10" selection-end-column="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/mailer.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/register/verify.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/teacher.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/SmallerComponents/NextCourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/SmallerComponents/IconComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/SmallerComponents/Meniu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/SmallerComponents/MainPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/student_home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1446">
+          <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/student_home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/student_home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/StudentHome.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/StudentApp.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/Error.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/TeacherApp.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/components/TeacherHome.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
@@ -354,95 +540,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/components/StudentHome.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="399">
+          <caret line="19" selection-start-line="19" selection-end-line="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/components/StudentApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/server_rendering.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2152">
-          <caret line="134" column="1" selection-end-line="134" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin_home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/access.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="671">
+          <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/access.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="93" column="39" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/login1.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="81" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/register/signup.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/register/verify.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin_home.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/access/login.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>

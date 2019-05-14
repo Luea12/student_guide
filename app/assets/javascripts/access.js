@@ -13,7 +13,9 @@ function chooseImage(){
 /** This function set a random image to the background*/
 function updateBackground(){
     const node = document.getElementsByClassName('layer2')[0];
-    node.style.backgroundImage=this.chooseImage();
+    if(node!=null) {
+        node.style.backgroundImage = this.chooseImage();
+    }
 }
 
 /** This function is called every time you hover over layer 1.
@@ -55,13 +57,17 @@ function handleOnMouseEnter() {
 
 /** The function below is called when page is loaded*/
 document.addEventListener("DOMContentLoaded", function(event) {
-    var div = document.getElementById("password");
-    if(div !== null) {
+    const div = document.getElementById("password");
+    if( div !== null ) {
             div.setAttribute('value',"");
         }
     updateBackground();
     const login = document.getElementById("login_form");
-    login.style.display ='none';
-    var a = document.getElementsByClassName('layer1')[0];
-    a.addEventListener('mouseenter', handleOnMouseEnter);
+    if ( login!=null ){
+        login.style.display ='none';
+    }
+    const a = document.getElementsByClassName('layer1')[0];
+    if ( a!= null ){
+        a.addEventListener('mouseenter', handleOnMouseEnter);
+    }
 });

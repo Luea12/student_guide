@@ -1,6 +1,20 @@
 <% @page_title = "Home" %>
-
-<%= react_component 'StudentApp' %>
-
-<p>Logged in as: <%= @username %></p>
-<p><%= link_to("Logout", logout_path) %></p>
+<div class="containerr">
+    <div class="cls">
+        <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="UserImage" class="rounded-circle icon"/>
+        <br/>
+        <p>Logged in as: <%= @username %></p>
+        <p><%= link_to("Logout", logout_path) %></p>
+    </div>
+    <div>
+        Your next course is:
+    </div>
+    <nav class="nav flex-column">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">Schedule</a>
+        <a class="nav-link" href="#">Events</a>
+    </nav>
+    <div>
+        Main page
+    </div>
+</div>

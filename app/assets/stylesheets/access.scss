@@ -149,3 +149,12 @@ input[type="date"]:focus:before,
 input[type="date"]:valid:before {
   content: "";
 }
+
+.notice{
+  display: none;
+}
+
+.formular{
+  position: relative;
+  top: 10%;
+}
