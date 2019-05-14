@@ -122,3 +122,8 @@ input[type="date"]:valid:before {
   content: ""; }
 
 /*# sourceMappingURL=access.css.map */
+
+.link{
+  color: #03a9f4;
+}
+
