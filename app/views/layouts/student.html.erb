@@ -5,14 +5,31 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application'%>
+    <%= stylesheet_link_tag    'student', media: 'all' %>
+    <%= javascript_include_tag 'student' %>
   </head>
 
   <body>
-    <div id="main">
+    <nav class = "main-menu">
+      <img src="../assets/student.png" class="student-img">
+      <ul>
+        <li class = "schedule <%= 'active' if params[:controller]=='student_schedule'%>">
+          <%= link_to "Schedule", student_schedule_path %>
+        </li>
+        <li class = "home <%= 'active' if params[:controller]=='student_home'%>">
+          <%= link_to "Home", student_home_path %>
+        </li>
+      </ul>
+      <ul class="logout">
+        <li>
+          <%= link_to "Logout", logout_path %>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="area">
       <%= yield %>
     </div>
+
   </body>
 </html>

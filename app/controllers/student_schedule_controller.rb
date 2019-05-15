@@ -2,6 +2,7 @@ class StudentScheduleController < ApplicationController
 
   before_action :require_student_login
   helper_method :current_user
+  layout "student"
 
   def current_user
     if session[:user_id]
@@ -44,6 +45,11 @@ class StudentScheduleController < ApplicationController
     end
 
 
+    monday = monday.sort_by!{ |c| c[:start_time]}
+    tuesday = tuesday.sort_by!{ |c| c[:start_time]}
+    wednesday = wednesday.sort_by!{ |c| c[:start_time]}
+    thursday = thursday.sort_by!{ |c| c[:start_time]}
+    friday = friday.sort_by!{ |c| c[:start_time]}
 
 
     @schedule = { 'monday' => monday, 'tuesday' => tuesday, 'wednesday' => wednesday, 'thursday' => thursday, 'friday' => friday}

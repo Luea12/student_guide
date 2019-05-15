@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'student_schedule/index'
   root :to => 'access#login'
 
   # Login/Logout routes
