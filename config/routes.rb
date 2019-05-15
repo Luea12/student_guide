@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'search_schedule/index'
   root :to => 'access#login'
 
   # Login/Logout routes
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
 
   # Schedule routes
   get 'home_s/your_schedule', :to => 'student_schedule#index', :as => 'student_schedule'
+
 
 
   get 'home_s/*path', :to => 'student_home#index', :constraints => ->(request) do

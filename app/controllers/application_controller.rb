@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def require_user_login
+    unless session[:user_id]
+      flash[:notice] = "You must be logged in as a student to access this section."
+      redirect_to(login_path) and return
+    end
+  end
+
   def require_student_login
     unless session[:user_id]
       flash[:notice] = "You must be logged in as a student to access this section."
