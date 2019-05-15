@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_063402) do
+ActiveRecord::Schema.define(version: 2019_04_30_084628) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "username", limit: 25, null: false
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 2019_04_23_063402) do
     t.integer "course_id"
     t.integer "group_id"
     t.index ["course_id", "group_id"], name: "index_courses_groups_on_course_id_and_group_id"
+  end
+
+  create_table "event_tokens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "token", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_event_tokens_on_token", unique: true
   end
 
   create_table "groups", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
