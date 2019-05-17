@@ -6,6 +6,10 @@
   <div class="error-text">
     <%= flash[:alert] %>
   </div>
+<% elsif !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
 <% end %>
 
 <%= form_with :url => attempt_login_path, :method => :post, :local => true, :id => 'login' do |f| %>
