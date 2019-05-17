@@ -2,10 +2,20 @@
 
 <h1>Login</h1>
 
+<% if !flash[:alert].blank? %>
+  <div class="error-text">
+    <%= flash[:alert] %>
+  </div>
+<% elsif !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <%= form_with :url => attempt_login_path, :method => :post, :local => true, :id => 'login' do |f| %>
 
   <div class="input-group">
-    <%= f.text_field :nameOrMail, :required => true %>
+    <%= f.text_field :nameOrMail, :required => true, :value => "#{session[:fail_login]}" %>
     <%= f.label :nameOrMail, "Username or Email" %>
   </div>
 
@@ -14,7 +24,7 @@
     <%= f.label :password %>
   </div>
 
-  <%= f.submit "Log In" %>
+  <%= f.submit "Log In", data: { disable_with: "Logging in..." } %>
 
 <% end %>
 

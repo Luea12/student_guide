@@ -16,6 +16,7 @@ class AccessController < ApplicationController
   end
 
   def attempt_login
+    unless session[:user_id]
     if params[:nameOrMail].present? && params[:password].present?
       # User is Student
       found_user = Student.find_by(:username => params[:nameOrMail]) || Student.find_by(:email => params[:nameOrMail])
@@ -40,6 +41,7 @@ class AccessController < ApplicationController
       session[:user_id] = authorized_user.id
       session[:username] = authorized_user.username
       session[:user_type] = user_type
+      session[:fail_login] = nil;
       flash[:notice] = "You are now logged in as #{authorized_user.username}"
       if session[:user_type] == "S"
         redirect_to student_home_path
@@ -49,9 +51,13 @@ class AccessController < ApplicationController
         redirect_to admin_home_path
       end
     else
-      flash.now[:notice] = "Invalid username/password combination."
+      session[:fail_login] = params[:nameOrMail]
+      flash.now[:alert] = "Invalid username/password combination."
       render('login')
     end
+  else
+    redirect_to(login_path)
+  end
   end
 
   def logout
@@ -59,8 +65,7 @@ class AccessController < ApplicationController
       session[:user_id] = nil
       session[:username] = nil
       session[:user_type] = nil
-      @current_user = nil
-      flash[:notice] = 'Logged out'
+      flash[:notice] = 'Logged out.'
     end
     redirect_to(root_path)
   end

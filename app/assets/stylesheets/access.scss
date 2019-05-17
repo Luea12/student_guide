@@ -34,6 +34,22 @@ a {
   box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
 }
 
+.box .error-text {
+  margin: auto;
+  padding-bottom: 25px;
+  color: #ea4848;
+  text-shadow: 1px 1px 2px black;
+  font-size: 125%;
+}
+
+.box .notice {
+  margin: auto;
+  padding-bottom: 25px;
+  color: mediumseagreen;
+  text-shadow: 1px 1px 2px black;
+  font-size: 125%;
+}
+
 .box h1 {
   margin: 0 0 1.875rem;
   padding: 0;
@@ -72,8 +88,7 @@ a {
 }
 
 .box .input-group input:focus ~ label,
-.box .input-group input:valid ~ label,
-.box .input-group input:not([value=""]) ~ label {
+.box .input-group input:valid ~ label {
   top: -1.125rem;
   left: 0;
   color: #03a9f4;

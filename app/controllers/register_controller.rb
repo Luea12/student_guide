@@ -22,7 +22,7 @@ class RegisterController < ApplicationController
         # Register Student
         found_token = StudentToken.find(session[:token_id])
         unless found_token
-          flash[:notice] = "Something went wrong... Please confirm your token."
+          flash[:alert] = "Something went wrong... Please confirm your token."
           remove_token_from_session()
           redirect_to(token_auth_path) and return
         end
@@ -30,12 +30,14 @@ class RegisterController < ApplicationController
         found_user = Teacher.exists?(:username => params[:username]) || Admin.exists?(:username => params[:username]) || \
                      Student.exists?(:username => params[:username])
         if found_user
-          flash.now[:notice] = "Username already exists."
+          flash.now[:alert] = "Username already exists."
+          remember_form_input()
           render('signup') and return
         end
         found_email = Teacher.exists?(:email => params[:email]) || Student.exists?(:email => params[:email])
         if found_email
-          flash.now[:notice] = "Email already exists."
+          flash.now[:alert] = "Email already exists."
+          remember_form_input()
           render('signup') and return
         end
         # Validate the input for Student
@@ -46,17 +48,19 @@ class RegisterController < ApplicationController
         if valid
           found_token.destroy
           remove_token_from_session()
+          forget_form_input()
           flash[:notice] = "Student account created."
           redirect_to(login_path) and return
         else
-          flash.now[:notice] = "Invalid columns. Try again."
+          flash.now[:alert] = "Invalid columns. Try again."
+          remember_form_input()
           render('signup')
         end
       elsif session[:token_type] == "T"
         # Register Teacher
         found_token = TeacherToken.exists?(session[:token_id])
         unless found_token
-          flash[:notice] = "Something went wrong... Please confirm your token."
+          flash[:alert] = "Something went wrong... Please confirm your token."
           remove_token_from_session()
           redirect_to(token_auth_path) and return
         end
@@ -64,12 +68,14 @@ class RegisterController < ApplicationController
         found_user = Student.exists?(:username => params[:username]) || Admin.exists?(:username => params[:username]) || \
                      Teacher.exists?(:username => params[:username])
         if found_user
-          flash.now[:notice] = "Username already exists."
+          flash.now[:alert] = "Username already exists."
+          remember_form_input()
           render('signup') and return
         end
         found_email = Student.exists?(:email => params[:email]) || Teacher.exists?(:email => params[:email])
         if found_email
-          flash.now[:notice] = "Email already exists."
+          flash.now[:alert] = "Email already exists."
+          remember_form_input()
           render('signup') and return
         end
         # Validate the input for Teacher
@@ -80,15 +86,17 @@ class RegisterController < ApplicationController
         if valid
           TeacherToken.destroy(session[:token_id])
           remove_token_from_session()
+          forget_form_input()
           flash[:notice] = "Teacher account created."
           redirect_to(login_path) and return
         else
-          flash.now[:notice] = "Invalid columns. Try again."
+          flash.now[:alert] = "Invalid columns. Try again."
+          remember_form_input()
           render('signup')
         end
       end
     else
-      flash.now[:notice] = "All fields are mandatory."
+      flash.now[:alert] = "All fields are mandatory."
       render('signup')
     end
   end
@@ -108,10 +116,12 @@ class RegisterController < ApplicationController
     if found_token
       session[:token_id] = found_token.id
       session[:token_type] = token_type
+      session[:fail_token] = nil
       flash[:notice] = "You can now signup."
       redirect_to(signup_path)
     else
-      flash.now[:notice] = "Invalid token."
+      session[:fail_token] = params[:token]
+      flash.now[:alert] = "Invalid token."
       render('verify')
     end
   end
@@ -123,6 +133,20 @@ class RegisterController < ApplicationController
       flash[:notice] = "Please enter your token to signup."
       redirect_to(token_auth_path)
     end
+  end
+
+  def remember_form_input
+    session[:fail_first_name] = params[:first_name]
+    session[:fail_last_name] = params[:last_name]
+    session[:fail_email] = params[:email]
+    session[:fail_username] = params[:username]
+  end
+
+  def forget_form_input
+    session[:fail_first_name] = nil
+    session[:fail_last_name] = nil
+    session[:fail_email] = nil
+    session[:fail_username] = nil
   end
 
   def remove_token_from_session

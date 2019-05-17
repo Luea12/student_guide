@@ -2,14 +2,24 @@
 
 <h1>Token Confirmation</h1>
 
+<% if !flash[:alert].blank? %>
+  <div class="error-text">
+    <%= flash[:alert] %>
+  </div>
+<% elsif !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <%= form_with :url => token_validation_path, :method => :post, :local => true, :id => 'token_confirmation' do |f| %>
 
   <div class="input-group">
-    <%= f.text_field :token, :required => true %>
+    <%= f.text_field :token, :required => true, :value => "#{session[:fail_token]}" %>
     <%= f.label :token, "Token" %>
   </div>
 
-  <%= f.submit "Check Token" %>
+  <%= f.submit "Check Token", data: { disable_with: "Checking..." } %>
 
 <% end %>
 
