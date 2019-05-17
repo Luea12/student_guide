@@ -35,12 +35,26 @@ Rails.application.routes.draw do
   get 'home_s', :to => 'student_home#index', :as => 'student_home'
   get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
 
+  # Schedule routes
+  # search schedule
+  get 'home_s/search_schedule', :to => 'search_schedule#search', :as => 'student_search_schedule'
+  get 'home_t/search_schedule', :to => 'search_schedule#search', :as => 'teacher_search_schedule'
+  post 'home_s/search_schedule', :to => 'search_schedule#attempt_search', :as => 'student_attempt_search_schedule'
+  post 'home_t/search_schedule', :to => 'search_schedule#attempt_search', :as => 'teacher_attempt_search_schedule'
+
+  # your Schedule
+  get 'home_s/your_schedule', :to => 'student_schedule#index', :as => 'student_schedule'
+
+
+
   get 'home_s/*path', :to => 'student_home#index', :constraints => ->(request) do
     !request.xhr? && request.format.html?
   end
   get 'home_t/*path', :to => 'teacher_home#index', :constraints => ->(request) do
     !request.xhr? && request.format.html?
   end
+
+
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.

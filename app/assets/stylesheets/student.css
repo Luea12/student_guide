@@ -1,0 +1,110 @@
+body {
+  margin:0;
+}
+
+.student-img{
+
+  margin-top:40px;
+  height: 100px;
+  width: 50%;
+  margin-left: 20%;
+  margin-bottom: 40px;
+  border-radius: 30%;
+  border-width: 0.5%;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,black,
+      #668cff,
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+
+    padding: 4%;
+}
+
+.schedule{
+
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 60px;
+  background: url('schedule.png') no-repeat;
+  background-size: 50px 50px;
+
+}
+
+.home{
+
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 60px;
+  background: url('homepage.png') no-repeat;
+  background-size: 50px 50px;
+
+}
+
+.logout li{
+
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 60px;
+  background: url('logout.png') no-repeat;
+  background-size: 50px 50px;
+
+}
+
+.logout{
+
+  margin-top: 120%;
+}
+
+.main-menu  ul:first-child {
+
+  margin-top: 200px;
+
+}
+
+ul {
+
+  list-style: none;
+  padding-left: 20px;
+}
+
+
+
+.main-menu{
+
+    border-right-color: #668cff;
+    border-right-style: solid;
+    border-right-width: 0.5%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left:0;
+    width: 20%;
+
+}
+
+.main-menu li{
+
+  position: relative;
+  display: block;
+}
+
+.main-menu li a{
+
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-decoration: none;
+  color: #668cff;
+
+
+}
+
+.area{
+
+  float: right;
+  width: 79.5%;
+  height: 100%;
+}
