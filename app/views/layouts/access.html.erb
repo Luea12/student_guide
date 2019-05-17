@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentGuide<%= " | #{@page_title}" if @page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag params[:controller], media: 'all' %>
+    <%= javascript_include_tag params[:controller] %>
+  </head>
+
+  <body>
+    <div class="box">
+      <%= yield %>
+    </div>
+  </body>
+</html>

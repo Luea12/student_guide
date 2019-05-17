@@ -1,6 +1,6 @@
 class AccessController < ApplicationController
 
-  layout 'application'
+  layout 'access'
 
   def login
     if session[:user_id]

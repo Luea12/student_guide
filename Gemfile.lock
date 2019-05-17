@@ -47,10 +47,6 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.12-x64-mingw32)
     bindex (0.7.0)
     bootsnap (1.4.3)
@@ -71,7 +67,6 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     concurrent-ruby (1.1.5)
-    connection_pool (2.2.2)
     crass (1.0.4)
     duktape (2.0.1.0)
     erubi (1.8.0)
@@ -106,8 +101,6 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
-    rack-proxy (0.6.5)
-      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
@@ -138,12 +131,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    react-rails (2.5.0)
-      babel-transpiler (>= 0.7.0)
-      connection_pool
-      execjs
-      railties (>= 3.2)
-      tilt
     regexp_parser (1.4.0)
     rubyzip (1.2.2)
     sass (3.7.4)
@@ -181,10 +168,6 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webpacker (4.0.2)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -205,13 +188,11 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
-  react-rails
   sass-rails (~> 5.0)
   selenium-webdriver
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-  webpacker
 
 RUBY VERSION
    ruby 2.5.3p105

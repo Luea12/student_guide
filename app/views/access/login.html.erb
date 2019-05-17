@@ -1,21 +1,21 @@
 <% @page_title = "Login" %>
 
-<div class="login">
-  <%= form_with :url => attempt_login_path, :method => :post, :local => true do |f| %>
-  <table>
-    <tr>
-      <td><%= f.label :nameOrMail, "Username or Email" %></td>
-      <td><%= f.text_field :nameOrMail %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :password %></td>
-      <td><%= f.password_field :password %></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><%= f.submit "Log In" %></td>
-    </tr>
-  </table>
-  <% end %>
-</div>
-<p>Don't have an account yet? <%= link_to("Signup now", signup_path) %></p>
+<h1>Login</h1>
+
+<%= form_with :url => attempt_login_path, :method => :post, :local => true, :id => 'login' do |f| %>
+
+  <div class="input-group">
+    <%= f.text_field :nameOrMail, :required => true %>
+    <%= f.label :nameOrMail, "Username or Email" %>
+  </div>
+
+  <div class="input-group">
+    <%= f.password_field :password, :required => true %>
+    <%= f.label :password %>
+  </div>
+
+  <%= f.submit "Log In" %>
+
+<% end %>
+
+<p>Don't have an account yet? <%= link_to("Create one now!", signup_path) %></p>

@@ -1,17 +1,16 @@
 <% @page_title = "Token Confirmation" %>
 
-<div class="token-confirmation">
-  <%= form_with :url => token_validation_path, :method => :post, :local => true do |f| %>
-  <table>
-    <tr>
-      <td><%= f.label :token, "Token" %></td>
-      <td><%= f.text_field :token %></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><%= f.submit "Check Token" %></td>
-    </tr>
-  </table>
-  <% end %>
-</div>
+<h1>Token Confirmation</h1>
+
+<%= form_with :url => token_validation_path, :method => :post, :local => true, :id => 'token_confirmation' do |f| %>
+
+  <div class="input-group">
+    <%= f.text_field :token, :required => true %>
+    <%= f.label :token, "Token" %>
+  </div>
+
+  <%= f.submit "Check Token" %>
+
+<% end %>
+
 <p>Already have an account? <%= link_to("Log in", login_path) %></p>
