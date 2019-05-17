@@ -2,34 +2,42 @@
 
 <h1>Signup</h1>
 
+<% if !flash[:alert].blank? %>
+  <div class="error-text">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
 <%= form_with :url => attempt_signup_path, :method => :post, :local => true, :id => 'signup' do |f| %>
 
   <div class="input-group">
-    <%= f.text_field :first_name, :required => true %>
+    <%= f.text_field :first_name, :required => true, :value => "#{session[:fail_first_name]}" %>
     <%= f.label :first_name %>
   </div>
 
   <div class="input-group">
-    <%= f.text_field :last_name, :required => true %>
+    <%= f.text_field :last_name, :required => true, :value => "#{session[:fail_last_name]}" %>
     <%= f.label :last_name %>
   </div>
 
   <div class="input-group">
-    <%= f.email_field :email, :required => true %>
+    <%= f.email_field :email, :required => true, :value => "#{session[:fail_email]}" %>
     <%= f.label :email %>
   </div>
 
   <div class="input-group">
-    <%= f.text_field :username, :required => true %>
+    <%= f.text_field :username, :required => true, :value => "#{session[:fail_username]}" %>
     <%= f.label :username %>
   </div>
 
   <div class="input-group">
-    <%= f.password_field :password, :required => true, :placeholder => 'Minimum eight characters, at least one uppercase letter, one lowercase letter and one number' %>
+    <%= f.password_field :password, :required => true, :pattern => "(?=^.{8,}$)(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s).*$", \
+        :title => "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters", \
+        :placeholder => 'Minimum eight characters, at least one uppercase letter, one lowercase letter and one number' %>
     <%= f.label :password %>
   </div>
 
-  <%= f.submit "Register" %></td>
+  <%= f.submit "Sign up", data: { disable_with: "Creating account..."} %></td>
 
 <% end %>
 

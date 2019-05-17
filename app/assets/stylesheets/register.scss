@@ -80,7 +80,8 @@ a {
 }
 
 .box .input-group input:focus ~ label,
-.box .input-group input:valid ~ label {
+.box .input-group input:valid ~ label,
+.box .input-group input:not([value=""]) ~ label {
   top: -1.125rem;
   left: 0;
   color: #03a9f4;
