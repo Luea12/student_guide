@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'search_schedule/index'
   root :to => 'access#login'
 
   # Login/Logout routes
@@ -37,6 +36,13 @@ Rails.application.routes.draw do
   get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
 
   # Schedule routes
+  # search schedule
+  get 'home_s/search_schedule', :to => 'search_schedule#search', :as => 'student_search_schedule'
+  get 'home_t/search_schedule', :to => 'search_schedule#search', :as => 'teacher_search_schedule'
+  post 'home_s/search_schedule', :to => 'search_schedule#attempt_search', :as => 'student_attempt_search_schedule'
+  post 'home_t/search_schedule', :to => 'search_schedule#attempt_search', :as => 'teacher_attempt_search_schedule'
+
+  # your Schedule
   get 'home_s/your_schedule', :to => 'student_schedule#index', :as => 'student_schedule'
 
 

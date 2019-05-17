@@ -1,2 +1,27 @@
-<p><%= @schedule['monday'][0]['start_time'] %> </p>
-  <!-- monday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency } -->
+<%= link_to "Your schedule", student_schedule_path %>
+<%= link_to "Search schedule", student_search_schedule_path %>
+
+<h1> Monday </h1>
+<% @schedule['monday'].each do |course| %>
+<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
+<% end %>
+
+<h1> Tuesday </h1>
+<% @schedule['tuesday'].each do |course| %>
+<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
+<% end %>
+
+<h1> Wednesday </h1>
+<% @schedule['wednesday'].each do |course| %>
+<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
+<% end %>
+
+<h1> Thursday </h1>
+<% @schedule['thursday'].each do |course| %>
+<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
+<% end %>
+
+<h1> Friday </h1>
+<% @schedule['friday'].each do |course| %>
+<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
+<% end %>
