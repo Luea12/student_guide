@@ -45,17 +45,6 @@ Rails.application.routes.draw do
   # your Schedule
   get 'home_s/your_schedule', :to => 'student_schedule#index', :as => 'student_schedule'
 
-
-
-  get 'home_s/*path', :to => 'student_home#index', :constraints => ->(request) do
-    !request.xhr? && request.format.html?
-  end
-  get 'home_t/*path', :to => 'teacher_home#index', :constraints => ->(request) do
-    !request.xhr? && request.format.html?
-  end
-
-
-
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.
   # Cand dau submit la formularul de login, se face un post request catre server.

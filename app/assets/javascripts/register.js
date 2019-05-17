@@ -1,3 +1,6 @@
+//= require rails-ujs
+//= require activestorage
+
 document.addEventListener("DOMContentLoaded", function(event) {
     // Token Confirmation
     if(document.getElementById("token_confirmation")) {

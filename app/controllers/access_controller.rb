@@ -40,6 +40,7 @@ class AccessController < ApplicationController
       session[:user_id] = authorized_user.id
       session[:username] = authorized_user.username
       session[:user_type] = user_type
+      session[:fail_login] = nil;
       flash[:notice] = "You are now logged in as #{authorized_user.username}"
       if session[:user_type] == "S"
         redirect_to student_home_path
@@ -49,7 +50,8 @@ class AccessController < ApplicationController
         redirect_to admin_home_path
       end
     else
-      flash.now[:notice] = "Invalid username/password combination."
+      session[:fail_login] = params[:nameOrMail]
+      flash.now[:alert] = "Invalid username/password combination."
       render('login')
     end
   end
