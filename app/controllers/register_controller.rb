@@ -108,10 +108,12 @@ class RegisterController < ApplicationController
     if found_token
       session[:token_id] = found_token.id
       session[:token_type] = token_type
+      session[:fail_token] = nil
       flash[:notice] = "You can now signup."
       redirect_to(signup_path)
     else
-      flash.now[:notice] = "Invalid token."
+      session[:fail_token] = params[:token]
+      flash.now[:alert] = "Invalid token."
       render('verify')
     end
   end
