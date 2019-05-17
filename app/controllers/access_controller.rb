@@ -16,6 +16,7 @@ class AccessController < ApplicationController
   end
 
   def attempt_login
+    unless session[:user_id]
     if params[:nameOrMail].present? && params[:password].present?
       # User is Student
       found_user = Student.find_by(:username => params[:nameOrMail]) || Student.find_by(:email => params[:nameOrMail])
@@ -54,6 +55,9 @@ class AccessController < ApplicationController
       flash.now[:alert] = "Invalid username/password combination."
       render('login')
     end
+  else
+    redirect_to(login_path)
+  end
   end
 
   def logout
