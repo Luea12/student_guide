@@ -16,58 +16,58 @@
 
 ###### GRUPELE AN 2 ######
 
-g = Group.create(:group_no => 201,
+gr201 = Group.create(:group_no => 201,
 				 :major    => "MATE-INFO")
 
-g = Group.create(:group_no => 211,
+gr211 = Group.create(:group_no => 211,
 				 :major    => "MATE-INFO")
 
-g = Group.create(:group_no => 212,
+gr212 = Group.create(:group_no => 212,
 				 :major    => "MATE-INFO")
 
-g = Group.create(:group_no => 221,
+gr221 = Group.create(:group_no => 221,
 				 :major    => "MATE APL.")
 
-g = Group.create(:group_no => 222,
+gr222 = Group.create(:group_no => 222,
 				 :major    => "MATE APL.")
 
-g = Group.create(:group_no => 231,
+gr231 = Group.create(:group_no => 231,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 232,
+gr232 = Group.create(:group_no => 232,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 233,
+gr233 = Group.create(:group_no => 233,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 234,
+gr234 = Group.create(:group_no => 234,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 235,
+gr235 = Group.create(:group_no => 235,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 241,
+gr241 = Group.create(:group_no => 241,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 242,
+gr242 = Group.create(:group_no => 242,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 243,
+gr243 = Group.create(:group_no => 243,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 244,
+gr244 = Group.create(:group_no => 244,
 				 :major    => "INFO")
 
-g = Group.create(:group_no => 251,
+gr251 = Group.create(:group_no => 251,
 				 :major    => "CTI")
 
-g = Group.create(:group_no => 252,
+gr252 = Group.create(:group_no => 252,
 				 :major    => "CTI")
 
-g = Group.create(:group_no => 253,
+gr253 = Group.create(:group_no => 253,
 				 :major    => "CTI")
 
-g = Group.create(:group_no => 254,
+gr254 = Group.create(:group_no => 254,
 				 :major    => "CTI")
 
 
@@ -82,7 +82,12 @@ c = Course.new(:name               => "AnComplexa",
 			   :day                => "Luni",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+
+c.groups << gr201
+
 c.save
+
+
 
 # Example for linking a course to a group
 # c.groups << Group.find(241)
@@ -96,6 +101,9 @@ c = Course.new(:name               => "Geometrie",
 			   :day                => "Luni",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+
+c.groups << gr201
+
 c.save
 
 c = Course.new(:name               => "Mecanica",
@@ -107,6 +115,11 @@ c = Course.new(:name               => "Mecanica",
 			   :day                => "Marti",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+
+c.groups << gr201
+c.groups << gr221
+c.groups << gr222
+
 c.save
 
 c = Course.new(:name               => "TeoriaNr",
@@ -118,6 +131,9 @@ c = Course.new(:name               => "TeoriaNr",
 			   :day                => "Marti",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+
+c.groups << gr201
+
 c.save
 
 c = Course.new(:name               => "TeoriaNr",
@@ -129,6 +145,9 @@ c = Course.new(:name               => "TeoriaNr",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+
+c.groups << gr201
+
 c.save
 
 c = Course.new(:name               => "Mecanica",
@@ -140,6 +159,7 @@ c = Course.new(:name               => "Mecanica",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr201
 c.save
 
 c = Course.new(:name               => "Mecanica",
@@ -151,6 +171,7 @@ c = Course.new(:name               => "Mecanica",
 			   :day                => "Miercuri",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr201
 c.save
 
 c = Course.new(:name               => "Probabilitati",
@@ -162,6 +183,7 @@ c = Course.new(:name               => "Probabilitati",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr201
 c.save
 
 c = Course.new(:name               => "AnComplexa",
@@ -173,6 +195,13 @@ c = Course.new(:name               => "AnComplexa",
 			   :day                => "Joi",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+
+c.groups << gr201
+c.groups << gr211
+c.groups << gr212
+c.groups << gr221
+c.groups << gr222
+
 c.save
 
 c = Course.new(:name               => "Probabilitati",
@@ -184,6 +213,11 @@ c = Course.new(:name               => "Probabilitati",
 			   :day                => "Joi",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr201
+c.groups << gr211
+c.groups << gr212
+c.groups << gr222
+c.groups << gr221
 c.save
 
 c = Course.new(:name               => "Geometrie",
@@ -195,6 +229,7 @@ c = Course.new(:name               => "Geometrie",
 			   :day                => "Joi",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr201
 c.save
 
 c = Course.new(:name               => "Algebra",
@@ -206,6 +241,11 @@ c = Course.new(:name               => "Algebra",
 			   :day                => "Vineri",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr201
+c.groups << gr211
+c.groups << gr212
+c.groups << gr221
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "Algebra",
@@ -217,6 +257,7 @@ c = Course.new(:name               => "Algebra",
 			   :day                => "Vineri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr201
 c.save
 
 c = Course.new(:name               => "LFA [sapt 1-7]",
@@ -228,6 +269,7 @@ c = Course.new(:name               => "LFA [sapt 1-7]",
 			   :day                => "Luni",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "LbForm&Autom",
@@ -239,6 +281,8 @@ c = Course.new(:name               => "LbForm&Autom",
 			   :day                => "Luni",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "POO",
@@ -250,6 +294,8 @@ c = Course.new(:name               => "POO",
 			   :day                => "Marti",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "POO",
@@ -261,6 +307,7 @@ c = Course.new(:name               => "POO",
 			   :day                => "Marti",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "BD",
@@ -272,6 +319,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "BD",
@@ -283,6 +331,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "BD",
@@ -294,6 +343,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "AnComplexa",
@@ -305,6 +355,7 @@ c = Course.new(:name               => "AnComplexa",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency          => "Saptamanal")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "Probabilitait",
@@ -316,6 +367,7 @@ c = Course.new(:name               => "Probabilitait",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "POO",
@@ -327,6 +379,7 @@ c = Course.new(:name               => "POO",
 			   :day                => "Joi",
 			   :kind               => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "BD",
@@ -338,6 +391,8 @@ c = Course.new(:name               => "BD",
 			   :day                => "Vineri",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "Algebra",
@@ -349,6 +404,7 @@ c = Course.new(:name               => "Algebra",
 			   :day                => "Vineri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "LbForm&Autom",
@@ -360,6 +416,7 @@ c = Course.new(:name               => "LbForm&Autom",
 			   :day                => "Vineri",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr211
 c.save
 
 c = Course.new(:name               => "AnComplexa",
@@ -371,6 +428,7 @@ c = Course.new(:name               => "AnComplexa",
 			   :day                => "Luni",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "POO",
@@ -382,6 +440,7 @@ c = Course.new(:name               => "POO",
 			   :day                => "Marti",
 			   :kind               => "Seminar",
 			   :frequency             => "Impar")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "LFA[sapt 1-7]",
@@ -393,6 +452,7 @@ c = Course.new(:name               => "LFA[sapt 1-7]",
 			   :day                => "Marti",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "POO",
@@ -404,6 +464,7 @@ c = Course.new(:name               => "POO",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "LFA[sapt 1-7]",
@@ -415,6 +476,7 @@ c = Course.new(:name               => "LFA[sapt 1-7]",
 			   :day                => "Marti",
 			   :kind               => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "BD",
@@ -426,6 +488,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Miercuri",
 			   :kind               => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "BD",
@@ -437,6 +500,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Miercuri",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "Probabilitati",
@@ -448,6 +512,7 @@ c = Course.new(:name               => "Probabilitati",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "Algebra",
@@ -459,6 +524,7 @@ c = Course.new(:name               => "Algebra",
 			   :day                => "Miercuri",
 			   :kind               => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "BD",
@@ -470,6 +536,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Vineri",
 			   :kind               => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "LbForm&Autom",
@@ -481,6 +548,7 @@ c = Course.new(:name               => "LbForm&Autom",
 			   :day                => "Vineri",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr212
 c.save
 
 c = Course.new(:name               => "Mecanica",
@@ -492,6 +560,7 @@ c = Course.new(:name               => "Mecanica",
 			   :day				   => "Marti",
 			   :kind 			   => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr221
 c.save
 
 c = Course.new(:name               => "Probabilitati",
@@ -503,7 +572,21 @@ c = Course.new(:name               => "Probabilitati",
 			   :day				   => "Miercuri",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr221
 c.save
+
+c = Course.new(:name               => "AnComplexa",
+			   :room               => "219",
+			   :teacher_last_name  => "O",
+			   :teacher_first_name => "Preda",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Seminar",
+			   :frequency             => "Saptamanal" )
+c.groups << gr221
+c.save
+
 
 c = Course.new(:name               => "Mecanica",
 			   :room 			   => "305",
@@ -514,6 +597,7 @@ c = Course.new(:name               => "Mecanica",
 			   :day				   => "Joi",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr221
 c.save
 
 c = Course.new(:name               => "SoftMatem",
@@ -525,6 +609,19 @@ c = Course.new(:name               => "SoftMatem",
 			   :day				   => "Vineri",
 			   :kind 			   => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr221
+c.save
+
+c = Course.new(:name               => "Algebra",
+			   :room               => "12",
+			   :teacher_last_name  => "F",
+			   :teacher_first_name => "Besleaga",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Vineri",
+			   :kind               => "Seminar",
+			   :frequency             => "Saptamanal")
+c.groups << gr221
 c.save
 
 c = Course.new(:name               => "SoftMatem",
@@ -536,6 +633,7 @@ c = Course.new(:name               => "SoftMatem",
 			   :day				   => "Vineri",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr221
 c.save
 
 c = Course.new(:name               => "Mecanica",
@@ -547,6 +645,7 @@ c = Course.new(:name               => "Mecanica",
 			   :day				   => "Marti",
 			   :kind 			   => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "Probabilitati",
@@ -558,6 +657,7 @@ c = Course.new(:name               => "Probabilitati",
 			   :day				   => "Miercuri",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "AnComplexa",
@@ -569,6 +669,7 @@ c = Course.new(:name               => "AnComplexa",
 			   :day				   => "Miercuri",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "Algebra",
@@ -580,6 +681,7 @@ c = Course.new(:name               => "Algebra",
 			   :day				   => "Miercuri",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "Mecanica",
@@ -591,6 +693,7 @@ c = Course.new(:name               => "Mecanica",
 			   :day				   => "Joi",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Impar")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "SoftMatem",
@@ -602,6 +705,7 @@ c = Course.new(:name               => "SoftMatem",
 			   :day				   => "Vineri",
 			   :kind 			   => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "SoftMatem",
@@ -613,6 +717,7 @@ c = Course.new(:name               => "SoftMatem",
 			   :day				   => "Vineri",
 			   :kind 			   => "Seminar",
 			   :frequency             => "Saptamanal")
+c.groups << gr222
 c.save
 
 c = Course.new(:name               => "ProgLogica",
@@ -624,6 +729,11 @@ c = Course.new(:name               => "ProgLogica",
 			   :day                => "Luni",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 
 c = Course.new(:name               => "ProgLogica",
@@ -635,6 +745,7 @@ c = Course.new(:name               => "ProgLogica",
 			   :day                => "Vineri",
 			   :kind               => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "ProgLogica",
@@ -646,6 +757,7 @@ c = Course.new(:name               => "ProgLogica",
 			   :day                => "Vineri",
 			   :kind               => "Seminar",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "IA[sapt 8-14]",
@@ -657,6 +769,7 @@ c = Course.new(:name               => "IA[sapt 8-14]",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "IA[sapt 1-7]",
@@ -668,6 +781,11 @@ c = Course.new(:name               => "IA[sapt 1-7]",
 			   :day                => "Marti",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 
 c = Course.new(:name               => "IA[sapt 8-14]",
@@ -679,6 +797,11 @@ c = Course.new(:name               => "IA[sapt 8-14]",
 			   :day                => "Marti",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 
 c = Course.new(:name               => "ReteleCalc",
@@ -690,6 +813,7 @@ c = Course.new(:name               => "ReteleCalc",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "IA[sapt 8-14]",
@@ -701,6 +825,7 @@ c = Course.new(:name               => "IA[sapt 8-14]",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "IA[sapt 1-7]",
@@ -712,6 +837,7 @@ c = Course.new(:name               => "IA[sapt 1-7]",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "IA[sapt 8-14]",
@@ -723,6 +849,7 @@ c = Course.new(:name               => "IA[sapt 8-14]",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "ProgAvOb",
@@ -734,6 +861,7 @@ c = Course.new(:name               => "ProgAvOb",
 			   :day                => "Marti",
 			   :kind               => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "MetDezvSoft",
@@ -745,6 +873,7 @@ c = Course.new(:name               => "MetDezvSoft",
 			   :day                => "Miercuri",
 			   :kind               => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "MetDezvSoft",
@@ -756,6 +885,11 @@ c = Course.new(:name               => "MetDezvSoft",
 			   :day                => "Miercuri",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 
 c = Course.new(:name               => "IA [sapt 1-7]",
@@ -767,6 +901,7 @@ c = Course.new(:name               => "IA [sapt 1-7]",
 			   :day                => "Miercuri",
 			   :kind               => "Laborator",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "BD",
@@ -778,6 +913,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Joi",
 			   :kind               => "Laborator",
 			   :frequency             => "Par")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "BD",
@@ -789,6 +925,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Joi",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "BD",
@@ -800,6 +937,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Joi",
 			   :kind               => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "BD",
@@ -811,6 +949,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Joi",
 			   :kind               => "Seminar",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "ProgAvOb",
@@ -822,6 +961,11 @@ c = Course.new(:name               => "ProgAvOb",
 			   :day                => "Joi",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 
 c = Course.new(:name               => "BD",
@@ -833,6 +977,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Joi",
 			   :kind               => "Seminar",
 			   :frequency             => "Par")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "BD",
@@ -844,6 +989,7 @@ c = Course.new(:name               => "BD",
 			   :day                => "Joi",
 			   :kind               => "Seminar",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "IA[sapt 8-14]",
@@ -855,6 +1001,7 @@ c = Course.new(:name               => "IA[sapt 8-14]",
 			   :day                => "Joi",
 			   :kind               => "Laborator",
 			   :frequency             => "Impar")
+c.groups << gr231
 c.save
 
 c = Course.new(:name               => "BD",
@@ -866,6 +1013,11 @@ c = Course.new(:name               => "BD",
 			   :day                => "Vineri",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 
 c = Course.new(:name               => "ReteleCalc",
@@ -877,6 +1029,11 @@ c = Course.new(:name               => "ReteleCalc",
 			   :day                => "Vineri",
 			   :kind               => "Curs",
 			   :frequency             => "Saptamanal")
+c.groups << gr231
+c.groups << gr232
+c.groups << gr233
+c.groups << gr234
+c.groups << gr235
 c.save
 #### OPTIONALELE ####
 
