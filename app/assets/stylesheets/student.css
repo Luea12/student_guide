@@ -217,6 +217,10 @@ ul ul a {
         -ms-transform: translateX(50%);
         transform: translateX(50%);
     }
+    .rightBtn{
+        position: relative;
+        right: -73%;
+    }
     #sidebar.active {
         margin-left: 0 !important;
     }
@@ -307,7 +311,7 @@ ul ul a {
 /* Add a red background color to the cancel button */
 .form-container .cancel {
     width: 45%;
-    background-color: #277683;
+    background-color: #2c8492;
 }
 
 /* Add some hover effects to buttons */
