@@ -62,16 +62,9 @@
             <button type="button" id="sidebarCollapse" class="btn btn-info">
               <i class="fas fa-align-left"></i>
             </button>
+            <input id ="top-search" class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
           </div>
         </nav>
-
-        <div class="navbar navbar-light bg-light">
-          <div class="container-fluid">
-            <h2>Your next course is:</h2>
-            <div>Matematica</div>
-            <%= link_to "See more...", student_schedule_path, :class => "link" %>
-          </div>
-        </div>
         <%= yield %>
       </div>
     </div>
