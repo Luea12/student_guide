@@ -18,5 +18,21 @@
     <h2>News</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore  incididunt ut labore et dolore.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore  incididunt ut labore et dolore.</p>
+
+    <a href="#" class="link rightBtn" onclick="openForm()">Add new Event</a>
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>Enter the new event</h1>
+
+        <label><b>Event name</b></label>
+        <input type="text" placeholder="Event name" required>
+
+        <label><b>Event description</b></label>
+        <input type="text" placeholder="What is happening?" required>
+
+        <button type="submit" class="btn">Save</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
   </div>
 </div>
