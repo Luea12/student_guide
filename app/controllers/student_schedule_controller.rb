@@ -21,7 +21,7 @@ class StudentScheduleController < ApplicationController
   end
 
   def index
-
+    @username = session[:username]
     courses = Group.find(current_user.group_id).courses
 
     monday = []

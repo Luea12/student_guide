@@ -81,7 +81,7 @@ span {
 }
 
 #sidebar.active {
-    min-width: 80px;
+    min-width: 100px;
     max-width: 80px;
     text-align: center;
 }
@@ -175,12 +175,20 @@ ul ul a {
     background: #6d7fcc;
 }
 
+.link{
+    color: #0b97c4 !important;
+    font-size: 20px;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+.content{
+    width: 100%;
+}
 
 #content {
-    width: 100%;
+    background: #FAFCFC;
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;

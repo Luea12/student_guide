@@ -12,8 +12,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
   </head>
 
   <body>
@@ -27,16 +25,19 @@
 
        <ul class="list-unstyled components">
           <li>
-            <p>Account: <%= @username %></p>
+            <p>Logged in as: <%= @username %></p>
           </li>
           <li class = "home <%= 'active' if params[:controller]=='student_home'%>">
-            <%= link_to "Home", student_home_path %>
+            <%= link_to student_home_path do%>
+            <%= content_tag :i, "", :class => "fas fa-home" %>
+            <%="Home" %>
+            <% end %>
           </li>
 
          <li class = "schedule <%= 'active' if params[:controller]=='student_schedule'%>">
-
             <%= link_to student_schedule_path do%>
-             <%= content_tag :li, "Schedule", :class => "fas fa-calendar-alt" %>
+             <%= content_tag :i, "", :class => "fas fa-calendar-alt" %>
+             <%= "Schedule" %>
              <% end %>
           </li>
          <li>
@@ -47,12 +48,32 @@
          </li>
 
         <li>
-          <%= link_to("Logout", logout_path) %>
+          <%= link_to logout_path do %>
+          <%= content_tag :i, "", :class => "fas fa-sign-out-alt" %>
+            <%= "Logout" %>
+          <% end %>
         </li>
       </ul>
     </nav>
     <div class="content">
-      <%= yield %>
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </div>
+        </nav>
+
+        <div class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <h2>Your next course is:</h2>
+            <div>Matematica</div>
+            <%= link_to "See more...", student_schedule_path, :class => "link" %>
+          </div>
+        </div>
+        <%= yield %>
+      </div>
     </div>
   </div>
 
