@@ -1,27 +1,64 @@
 <%= link_to "Your schedule", student_schedule_path, :class => "link" %>
 <%= link_to "Search schedule", student_search_schedule_path, :class => "link ml-2" %>
 
-<h1> Monday </h1>
-<% @schedule['monday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Luni')">Luni</button>
+  <button class="tablinks" onclick="openCity(event, 'Marti')">Marti</button>
+  <button class="tablinks" onclick="openCity(event, 'Miercuri')">Miercuri</button>
+  <button class="tablinks" onclick="openCity(event, 'Joi')">Joi</button>
+  <button class="tablinks" onclick="openCity(event, 'Vineri')">Vineri</button>
+</div>
 
-<h1> Tuesday </h1>
-<% @schedule['tuesday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<!-- Tab content -->
+<div id="Luni" class="tabcontent">
+  <%= @schedule['monday'][0] %>
+  <% @schedule['monday'].each do |course| %>
+  <p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
+  <% end %>
+</div>
 
-<h1> Wednesday </h1>
-<% @schedule['wednesday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="Marti" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
 
-<h1> Thursday </h1>
-<% @schedule['thursday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="Miercuri" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
 
-<h1> Friday </h1>
-<% @schedule['friday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="Joi" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Vineri" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<!--<h1> Monday </h1>-->
+<%#= @schedule['monday'][0] %>
+<%# @schedule['monday'].each do |course| %>
+<!--<p> <%#= course['start_time'] %> - <%#= course['end_time'] %>: <%#= course['name']%> </p>-->
+<%# end %>
+
+<!--<h1> Tuesday </h1>-->
+<%# @schedule['tuesday'].each do |course| %>
+<!--<p> <%#= course['start_time'] %> - <%#= course['end_time'] %>: <%#= course['name']%> </p>-->
+<%# end %>
+
+<!--<h1> Wednesday </h1>-->
+<%# @schedule['wednesday'].each do |course| %>
+<!--<p> <%#= course['start_time'] %> - <%#= course['end_time'] %>: <%#= course['name']%> </p>-->
+<%# end %>
+
+<!--<h1> Thursday </h1>-->
+<%# @schedule['thursday'].each do |course| %>
+<!--<p> <%#= course['start_time'] %> - <%#= course['end_time'] %>: <%#= course['name']%> </p>-->
+<%# end %>
+
+<!--<h1> Friday </h1>-->
+<%# @schedule['friday'].each do |course| %>
+<!--<p> <%#= course['start_time'] %> - <%#= course['end_time'] %>: <%#= course['name']%> </p>-->
+<%# end %>
