@@ -2,11 +2,9 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  private
-
   def require_user_login
-    unless session[:user_id]
-      flash[:notice] = "You must be logged in as a student to access this section."
+    if session[:user_id].nil? or session[:user_type] != "T" or session[:user_type] != "S"
+      flash[:notice] = "You must be logged in to access this section."
       redirect_to(login_path) and return
     end
   end
@@ -45,12 +43,11 @@ class ApplicationController < ActionController::Base
   end
 
   def get_schedule
-
     if session[:user_type] == "S"
       courses = Group.find(current_user.group_id).courses
     elsif session[:user_type] == "T"
       courses = Course.where(teacher_id: current_user.id)
-  end
+    end
 
     monday = []
     tuesday = []
@@ -84,6 +81,16 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def choose_layout
+    if session[:user_id]
+      if session[:user_type] == "S"
+        "student"
+      elsif session[:user_type] == "T"
+        "teacher"
+      end
+    end
+  end
+
   def current_user
     if session[:user_id]
       if @current_user == nil
@@ -99,7 +106,5 @@ class ApplicationController < ActionController::Base
       @current_user ||= found_user
     end
   end
-
-
 
 end

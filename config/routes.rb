@@ -44,6 +44,7 @@ Rails.application.routes.draw do
 
   # your Schedule
   get 'home_s/your_schedule', :to => 'student_schedule#index', :as => 'student_schedule'
+  get 'home_t/your_schedule', :to => 'teacher_schedule#index', :as => 'teacher_schedule'
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.
