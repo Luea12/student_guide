@@ -5,7 +5,7 @@ class StudentHomeController < ApplicationController
   before_action :require_student_login
 
   def index
-    #@username = session[:username]
+    @username = session[:username]
     render('index')
   end
 end
