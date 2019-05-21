@@ -20,4 +20,16 @@ module ApplicationHelper
     !current_user.nil?
   end
 
+  def is_teacher?
+    logged_in? and session[:user_type] == "T"
+  end
+
+  def is_student?
+    logged_in? and session[:user_type] == "S"
+  end
+
+  def is_admin?
+    logged_in? and session[:user_type] == "A"
+  end
+
 end

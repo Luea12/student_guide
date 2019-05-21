@@ -1,47 +1,13 @@
 class SearchScheduleController < ApplicationController
 
-  before_action :require_user_login
-  helper_method :current_user
   layout :choose_layout
 
-  def current_user
-    if session[:user_id]
-      if @current_user == nil
-        if session[:user_type] == "S"
-          found_user = Student.find(session[:user_id]) || Student.find_by(:username => session[:username])
-        elsif session[:user_type] == "T"
-          found_user = Teacher.find(session[:user_id]) || Teacher.find_by(:username => session[:username])
-        elsif session[:user_type] == "A"
-          found_user = Admin.find(session[:user_id]) || Admin.find_by(:username => session[:username])
-        end
-      end
+  before_action :require_user_login
 
-      @current_user ||= found_user
-    end
-  end
-
-  def choose_layout
-    if session[:user_id]
-      if session[:user_type] == "S"
-        "student"
-      elsif session[:user_type] == "T"
-        "teacher"
-      end
-    end
-  end
-
-  def choose_route
-    if session[:user_id]
-      if session[:user_type] == "S"
-        "student_search_schedule"
-      elsif session[:user_type] == "T"
-        "teacher_search_schedule"
-      end
-    end
-  end
+  helper_method :choose_schedule_route, :choose_search_route, :choose_search_post_route
 
   def search
-
+    render('search')
   end
 
   def attempt_search
@@ -82,7 +48,30 @@ class SearchScheduleController < ApplicationController
     @schedule = { 'monday' => monday, 'tuesday' => tuesday, 'wednesday' => wednesday, 'thursday' => thursday, 'friday' => friday}
 
     render('index')
+  end
 
+  def choose_schedule_route
+    if session[:user_type] == "S"
+      student_schedule_path
+    elsif session[:user_type] == "T"
+      teacher_schedule_path
+    end
+  end
+
+  def choose_search_route
+    if session[:user_type] == "S"
+      student_search_schedule_path
+    elsif session[:user_type] == "T"
+      teacher_search_schedule_path
+    end
+  end
+
+  def choose_search_post_route
+    if session[:user_type] == "S"
+      student_attempt_search_schedule_path
+    elsif session[:user_type] == "T"
+      teacher_attempt_search_schedule_path
+    end
   end
 
 end

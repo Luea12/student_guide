@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentGuide | Admin <%= " | #{@page_title}" if @page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'admin', media: 'all' %>
+    <%= stylesheet_link_tag params[:controller], media: 'all' %>
+
+    <%= javascript_include_tag 'admin' %>
+    <%= javascript_include_tag params[:controller] %>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Student Guide Admin</h1>
+    </div>
+    <div id="main">
+      <% if !flash[:alert].blank? %>
+        <div class="error-text">
+          <%= flash[:alert] %>
+        </div>
+      <% elsif !flash[:notice].blank? %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

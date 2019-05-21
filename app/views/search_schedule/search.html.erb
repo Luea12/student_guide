@@ -1,8 +1,8 @@
-<%= link_to "Your schedule", student_schedule_path %>
-<%= link_to "Search schedule", student_search_schedule_path %>
+<%= link_to "Your schedule", choose_schedule_route %>
+<%= link_to "Search schedule", choose_search_route %>
 
 <div class="search_schedule">
-  <%= form_with :url => student_attempt_search_schedule_path, :method => :post, :local => true do |f| %>
+  <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
   <table>
     <tr>
       <td><%= f.label :group, "Group number" %></td>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="search_schedule">
-  <%= form_with :url => student_attempt_search_schedule_path, :method => :post, :local => true do |f| %>
+  <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
   <table>
     <tr>
       <td><%= f.label :teacher_last_name, "Teacher's first name" %></td>

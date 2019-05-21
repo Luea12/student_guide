@@ -1,20 +1,12 @@
 <% @page_title = "New Teacher Token" %>
 
-<%= link_to("Back to list", teacher_tokens_path) %>
+<%= link_to("<< Back to list", teacher_tokens_path) %>
 
-<div class="teacher-token new">
-  <h2>Create Teacher Token</h2>
+<h2>Create Teacher Token</h2>
 
-  <%= form_tag(create_teacher_token_path, :method => :post) do %>
-    <table>
-      <tr>
-        <td><%= label_tag(:amount) %></td>
-        <td><%= text_field_tag(:amount, params[:amount]=1) %></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><%= submit_tag("Create") %></td>
-      </tr>
-    </table>
-  <% end %>
-</div>
+<%= form_with :url => create_teacher_token_path, :method => :post, :local => true do |f| %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount, :required => true, :value => 1 %>
+
+  <%= f.submit "Create", data: { disable_with: "Creating..." } %>
+<% end %>

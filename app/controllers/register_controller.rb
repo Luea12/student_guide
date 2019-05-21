@@ -20,7 +20,7 @@ class RegisterController < ApplicationController
        params[:username].present? && params[:password].present?
       if session[:token_type] == "S"
         # Register Student
-        found_token = StudentToken.find(session[:token_id])
+        found_token = StudentToken.exists?(session[:token_id])
         unless found_token
           flash[:alert] = "Something went wrong... Please confirm your token."
           remove_token_from_session()
@@ -41,6 +41,7 @@ class RegisterController < ApplicationController
           render('signup') and return
         end
         # Validate the input for Student
+        found_token = StudentToken.find(session[:token_id])
         new_student = Student.new(:first_name => params[:first_name], :last_name => params[:last_name], \
                                   :email => params[:email], :username => params[:username], \
                                   :password => params[:password], :group_id => found_token.group_no)
