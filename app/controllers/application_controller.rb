@@ -4,40 +4,40 @@ class ApplicationController < ActionController::Base
 
   def require_user_login
     if session[:user_id].nil? or session[:user_type] != "T" or session[:user_type] != "S"
-      flash[:notice] = "You must be logged in to access this section."
+      flash[:alert] = "You must be logged in to access this section."
       redirect_to(login_path) and return
     end
   end
 
   def require_student_login
     unless session[:user_id]
-      flash[:notice] = "You must be logged in as a student to access this section."
+      flash[:alert] = "You must be logged in as a student to access this section."
       redirect_to(login_path) and return
     end
     if session[:user_type] != "S"
-      flash[:notice] = "You must be logged in as a student to access this section. Please logout first."
+      flash[:alert] = "You must be logged in as a student to access this section. Please logout first."
       redirect_to(login_path) and return
     end
   end
 
   def require_teacher_login
     unless session[:user_id]
-      flash[:notice] = "You must be logged in as a teacher to access this section."
+      flash[:alert] = "You must be logged in as a teacher to access this section."
       redirect_to(login_path) and return
     end
     if session[:user_type] != "T"
-      flash[:notice] = "You must be logged in as a teacher to access this section. Please logout first."
+      flash[:alert] = "You must be logged in as a teacher to access this section. Please logout first."
       redirect_to(login_path) and return
     end
   end
 
   def require_admin_login
     unless session[:user_id]
-      flash[:notice] = "You must be logged in as an admin to access this section."
+      flash[:alert] = "You must be logged in as an admin to access this section."
       redirect_to(login_path) and return
     end
     if session[:user_type] != "A"
-      flash[:notice] = "You must be logged in as an admin to access this section. Please logout first."
+      flash[:alert] = "You must be logged in as an admin to access this section. Please logout first."
       redirect_to(login_path) and return
     end
   end

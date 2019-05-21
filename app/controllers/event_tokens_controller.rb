@@ -1,7 +1,7 @@
 class EventTokensController < ApplicationController
 
-  layout 'application'
-
+  layout 'admin'
+  
   before_action :require_admin_login
 
   def index

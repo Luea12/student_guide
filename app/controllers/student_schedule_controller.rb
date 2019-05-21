@@ -1,7 +1,8 @@
 class StudentScheduleController < ApplicationController
 
+  layout 'student'
+
   before_action :require_student_login
-  layout "student"
 
   def index
 

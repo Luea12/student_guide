@@ -1,6 +1,6 @@
 class StudentTokensController < ApplicationController
 
-  layout 'application'
+  layout 'admin'
 
   before_action :require_admin_login
 
@@ -25,7 +25,7 @@ class StudentTokensController < ApplicationController
       end
       redirect_to(student_tokens_path)
     else
-      flash.now[:notice] = "Group #{params[:group]} doesn't exist. Please try again."
+      flash.now[:alert] = "Group #{params[:group]} doesn't exist. Please try again."
       render('new')
     end
   end

@@ -1,11 +1,13 @@
 class SearchScheduleController < ApplicationController
 
-  before_action :require_user_login
   layout :choose_layout
+
+  before_action :require_user_login
+
   helper_method :choose_schedule_route, :choose_search_route, :choose_search_post_route
 
   def search
-
+    render('search')
   end
 
   def attempt_search
@@ -46,7 +48,6 @@ class SearchScheduleController < ApplicationController
     @schedule = { 'monday' => monday, 'tuesday' => tuesday, 'wednesday' => wednesday, 'thursday' => thursday, 'friday' => friday}
 
     render('index')
-
   end
 
   def choose_schedule_route
