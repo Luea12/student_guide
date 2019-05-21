@@ -31,9 +31,17 @@ Rails.application.routes.draw do
   delete 'home_a/event_tokens/:id', :to => 'event_tokens#destroy', :as => 'delete_event_token'
 
   # Home routes
+  # Admin Home
   get 'home_a', :to => 'admin_home#index', :as => 'admin_home'
+
+  # Student Home
   get 'home_s', :to => 'student_home#index', :as => 'student_home'
+
+  #Teacher Home
   get 'home_t', :to => 'teacher_home#index', :as => 'teacher_home'
+  post 'home_t', :to => 'teacher_home#attempt_add_news', :as => 'add_news'
+
+
 
   # Schedule routes
   # search schedule

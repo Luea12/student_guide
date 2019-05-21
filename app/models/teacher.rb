@@ -3,6 +3,7 @@ class Teacher < ApplicationRecord
   has_secure_password
 
   has_many :courses
+  has_many :announcements
 
   EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
   PASSWORD_REGEX = /\A.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(^[a-zA-Z0-9@\?\[\]\{\}\$\*\^\(\)\+\|\\\.-_<>,=!:;#%&~'"`]+$)\Z/
