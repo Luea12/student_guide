@@ -535,7 +535,7 @@ c = Course.new(:name               => "BD",
 			   :end_time           => "14:00",
 			   :day                => "Vineri",
 			   :kind               => "Seminar",
-			   :frequency             => "Par")
+			   :frequency             => "Impar")
 c.groups << gr212
 c.save
 
@@ -892,7 +892,7 @@ c.groups << gr234
 c.groups << gr235
 c.save
 
-c = Course.new(:name               => "IA [sapt 1-7]",
+c = Course.new(:name               => "IA[sapt 1-7]",
 			   :room 			   => "L-303",
 			   :teacher_last_name  => "Maria",
 			   :teacher_first_name => "Negru",
@@ -1148,7 +1148,7 @@ c.save
 c = Course.new(:name               => "ProgLogica",
 			   :room			   => "L-221A",
 			   :teacher_last_name  => "A",
-			   :teacher_first_name => "Tuirea",
+			   :teacher_first_name => "Tulrea",
 			   :start_time         => "10:00",
 			   :end_time           => "12:00",
 			   :day                => "Marti",
@@ -1347,6 +1347,1066 @@ c.groups << gr242
 c.groups << gr243
 c.groups << gr244
 c.save
+
+### GRUPA 232 ####
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Georgescu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "ProgAvOb",
+			   :room			   => "L-321",
+			   :teacher_last_name  => "G",
+			   :teacher_first_name => "Cazacu",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "MetDezvSoft",
+			   :room			   => "L-309",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Prunescu",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "ReteleCalc",
+			   :room 			   => "L-322",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Nisioi",
+			   :start_time 		   => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "3",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Turlea",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Seminar",
+			   :frequency             => "Par")
+
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Georgescu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L221-C",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-218",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Georgescu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr232
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L221-C",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L201(BD)",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "201(BD)",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr232
+c.save
+
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "L-221A",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Turlea",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr232
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Vineri",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr232
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Vineri",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr232
+c.save
+
+
+#### GRUPA 233 ####
+
+c = Course.new(:name               => "MetDezvSoft",
+			   :room 			   => "L-309",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Prunescu",
+			   :start_time 		   => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "L-218",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Tulrea",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+
+c.groups << gr233
+c.save
+
+
+c = Course.new(:name               => "BD",
+			   :room               => "L221-C",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L221-C",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L221-C",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr233
+c.save
+
+
+c = Course.new(:name               => "ReteleCalc",
+			   :room 			   => "L-322",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Nisioi",
+			   :start_time 		   => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L221-C",
+			   :teacher_last_name  => "N",
+			   :teacher_first_name => "Moanga",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "L-218",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Tulrea",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Imar")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Imar")
+c.groups << gr233
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "3",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Turlea",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Seminar",
+			   :frequency             => "Par")
+
+c.groups << gr233
+c.save
+
+##### GRUPA 234  ######
+
+c = Course.new(:name               => "ProgAvOb",
+			   :room			   => "L-321",
+			   :teacher_last_name  => "G",
+			   :teacher_first_name => "Cazacu",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr234
+c.save
+
+
+c = Course.new(:name               => "BD",
+			   :room               => "201(BD)",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "BanuDem.",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "201(BD)",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "BanuDem.",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "201(BD)",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "BanuDem.",
+			   :start_time         => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Smeureanu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr234
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr234
+c.save
+
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "10",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Turlea",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Marti",
+			   :kind               => "Seminar",
+			   :frequency             => "Impar")
+
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "MetDezvSoft",
+			   :room			   => "L-303",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Melemciuc",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-321",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-302A",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "ReteleCalc",
+			   :room 			   => "L-322",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Nisioi",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "L-221",
+			   :teacher_last_name  => "A",
+			   :teacher_first_name => "Turlea",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr234
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Smeureanu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr234
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Smeureanu",
+			   :start_time 		   => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr234
+c.save
+
+#### GRUPA 235 #####
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-310",
+			   :teacher_last_name  => "B",
+			   :teacher_first_name => "Alexe",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "ProgAvOb",
+			   :room 			   => "201(BD)",
+			   :teacher_last_name  => "B",
+			   :teacher_first_name => "Pahontu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr235
+c.save
+
+
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-310",
+			   :teacher_last_name  => "B",
+			   :teacher_first_name => "Alexe",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+
+c.groups << gr235
+c.save
+
+
+c = Course.new(:name               => "BD",
+			   :room               => "201(BD)",
+			   :teacher_last_name  => "Le",
+			   :teacher_first_name => "Marin",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "ReteleCalc",
+			   :room 			   => "L-322",
+			   :teacher_last_name  => "S",
+			   :teacher_first_name => "Nisioi",
+			   :start_time 		   => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr235
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "18:00",
+			   :end_time           => "20:00",
+			   :day                => "Miercuri",
+			    :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups<< gr235
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room 			   => "12",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Leustean",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Joi",
+			   :kind               => "Seminar",
+			   :frequency             => "Par")
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Leustean",
+			   :start_time 		   => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Leustean",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-308",
+			   :teacher_last_name  => "B",
+			   :teacher_first_name => "Alexe",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-321",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Noaica",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr235
+c.save
+
+c = Course.new(:name               => "MetDezvSoft",
+			   :room			   => "L-303",
+			   :teacher_last_name  => "P",
+			   :teacher_first_name => "Soviany",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr235
+c.save
+
+
+c = Course.new(:name               => "BD",
+			   :room               => "201(BD)",
+			   :teacher_last_name  => "Le",
+			   :teacher_first_name => "Marin",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Vineri",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr235
+c.save
+
+
+#### GRUPA 241 #####
+
+c = Course.new(:name               => "BD",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "SL",
+			   :teacher_first_name => "Vasile",
+			   :start_time 		   => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-218",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Negru",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "R",
+			   :teacher_first_name => "Ionescu",
+			   :start_time 		   => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room 			   => "201(BD)",
+			   :teacher_last_name  => "SL",
+			   :teacher_first_name => "Vasile",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room 			   => "201(BD)",
+			   :teacher_last_name  => "SL",
+			   :teacher_first_name => "Vasile",
+			   :start_time 		   => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-310",
+			   :teacher_last_name  => "R",
+			   :teacher_first_name => "Ionescu",
+			   :start_time 		   => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "ReteleCalc",
+			   :room			   => "L-204",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Dragan",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr241
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-218",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Negru",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr241
+c.save
+
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "L-221A",
+			   :teacher_last_name  => "Ca",
+			   :teacher_first_name => "Chirita",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+
+c.groups << gr241
+c.save
+
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "L-121D",
+			   :teacher_last_name  => "Ca",
+			   :teacher_first_name => "Chirita",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Miercuri",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "ProgAvOb",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Badea",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "ProgLogica",
+			   :room			   => "3",
+			   :teacher_last_name  => "Ca",
+			   :teacher_first_name => "Chirita",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Joi",
+			   :kind               => "Seminar",
+			   :frequency             => "Par")
+
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-309",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Negru",
+			   :start_time         => "12:00",
+			   :end_time           => "14:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+
+c.groups << gr241
+c.save
+
+
+c = Course.new(:name               => "IA[sapt 1-7]",
+			   :room 			   => "L-218",
+			   :teacher_last_name  => "R",
+			   :teacher_first_name => "Ionescu",
+			   :start_time 		   => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Joi",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr241
+c.save
+
+c = Course.new(:name               => "MetDezvSoft",
+			   :room			   => "L-303",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Paduraru",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Vineri",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr241
+c.save
+
+
+##### GRUPA 242 #######
+
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Georgescu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-218",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Negru",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L-218",
+			   :teacher_last_name  => "SN",
+			   :teacher_first_name => "Predul",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Luni",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room			   => "L-218",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Negru",
+			   :start_time         => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "I",
+			   :teacher_first_name => "Georgescu",
+			   :start_time 		   => "08:00",
+			   :end_time           => "10:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "ReteleCalc",
+			   :room			   => "L-204",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Dragan",
+			   :start_time         => "10:00",
+			   :end_time           => "12:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "IA[sapt 8-14]",
+			   :room 			   => "L-308",
+			   :teacher_last_name  => "M",
+			   :teacher_first_name => "Negru",
+			   :start_time 		   => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Impar")
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L-321",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Benegui",
+			   :start_time         => "14:00",
+			   :end_time           => "16:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Par")
+c.groups << gr242
+c.save
+
+c = Course.new(:name               => "BD",
+			   :room               => "L-321",
+			   :teacher_last_name  => "C",
+			   :teacher_first_name => "Benegui",
+			   :start_time         => "16:00",
+			   :end_time           => "18:00",
+			   :day                => "Marti",
+			   :kind               => "Laborator",
+			   :frequency             => "Saptamanal")
+c.groups << gr242
+c.save
+
+
+
+
 
 
 
