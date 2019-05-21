@@ -10,6 +10,21 @@ $(document).ready(function () {
     });
 });
 
+function openDetails(event){
+    let className = event.target.innerText;
+    let informatiiClass = document.getElementsByClassName("informatii");
+    for(var i=0; i<informatiiClass.length; i++){
+        informatiiClass[i].style.display="none";
+    }
+    className = className.substr(0, className.length-8);
+    document.getElementsByClassName(className)[0].style.display="block";
+    let information = document.getElementsByClassName("activee");
+    for(let i=0; i<information.length; i++){
+        information[i].className = information[i].className.replace("activee", "oneline");
+    }
+    event.target.className = event.target.className.replace("oneline", "activee");
+}
+
 function openCity(evt, day) {
     // Declare all variables
     let i, tabcontent, tablinks;
