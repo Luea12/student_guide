@@ -1,4 +1,46 @@
 <% @page_title = "Home" %>
 
-<p>Logged in as: <%= @username %></p>
-<p><%= link_to("Logout", logout_path) %></p>
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <h2>Your next course is:</h2>
+    <div><%= @next_course['day'].capitalize %>, <%=@next_course['start_time']%>, <%=@next_course['name']%></div>
+    <%= link_to "See your schedule", teacher_schedule_path, :class => "link" %>
+  </div>
+</div>
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <h2>Upcoming events</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <h2>News</h2>
+    <% @news.each do |n| %>
+      <p><%= n['content'] %>  ( adaugat de <%= n['teacher']%> )</p>
+    <% end %>
+
+      <a href="#" class="link rightBtn" onclick="openForm()">Add News</a>
+      <div class="form-popup" id="myForm">
+        <%=form_with :class => "form-container", :url => add_news_path, :method => :post, :local => true do |f| %>
+          <h1>Add News</h1>
+          <%= f.label :content, "Content" %>
+          <%= f.text_area :content, :placeholder => "What are the news?", :required => true, :id => "news_content"%>
+          <%= f.label :valability %>
+          <%= f.number_field :valability, :required => true, :min => 1 %> <span>days</span>
+          <div>
+          <%= f.label :visible_to_teachers, "Visible to teachers" %>
+          <%= f.check_box :visible_to_teachers %>
+          </div>
+          <%= f.label :groups %>
+          <%= f.select(:groups,  Group.all.collect {|g| [ g.id ] },  { :prompt => "Please select"}, { :multiple => true, :size => 5, :id => "selection" }) %>
+
+          <div>
+          <%= f.submit "Submit", :class => "btn" %>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </div>
+        <% end %>
+      </div>
+
+  </div>
+</div>

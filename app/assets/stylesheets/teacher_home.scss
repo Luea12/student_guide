@@ -1,0 +1,57 @@
+// Place all the styles related to the teacher_home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#news_content {
+
+  height: 7em;
+  width: 100%;
+}
+
+.form-popup h1 {
+
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+
+}
+
+.form-popup label{
+
+  font-weight: bold;
+}
+
+.form-popup input[type="number"]{
+
+  width: 80%;
+
+}
+
+.form-popup span{
+
+  width: 15%;
+  float: right;
+
+}
+.form-popup select{
+  display: block;
+}
+
+.form-popup input[type='checkbox']{
+
+    margin-left: 0.5em;
+}
+
+.form-popup div{
+
+  display: block;
+}
+
+.form-popup div{
+
+  margin-top: 1rem;
+}
+
+.container-fluid p {
+
+  width: 100%;
+}

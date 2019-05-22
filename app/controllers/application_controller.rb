@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def require_user_login
-    if session[:user_id].nil? or session[:user_type] != "T" or session[:user_type] != "S"
+    if session[:user_id].nil? or session[:user_type] != "T" and session[:user_type] != "S"
       flash[:alert] = "You must be logged in to access this section."
       redirect_to(login_path) and return
     end
@@ -46,7 +46,7 @@ class ApplicationController < ActionController::Base
     if session[:user_type] == "S"
       courses = Group.find(current_user.group_id).courses
     elsif session[:user_type] == "T"
-      courses = Course.where(teacher_id: current_user.id)
+      courses = Course.where(teacher_first_name: current_user.last_name)
     end
 
     monday = []
