@@ -6,6 +6,8 @@ class StudentHomeController < ApplicationController
 
   def index
 
+    #Next Course
+
     schedule = get_schedule
     schedule['saturday'] = []
     schedule['sunday'] = []
@@ -16,12 +18,14 @@ class StudentHomeController < ApplicationController
     x = 0
     y = 0
 
-    @schedule.each_pair do |key,value|
+    schedule.each_pair do |key,value|
       value.each do |course|
         if y==0
-          $first = course.clone
-          $first['day'] = key
-          y=1
+          if course['name']!='today'
+            $first = course.clone
+            $first['day'] = key
+            y=1
+          end
         end
 
         if x==1
@@ -45,14 +49,17 @@ class StudentHomeController < ApplicationController
       @next_course=$first
     end
 
+    # News
 
+    @news = []
 
+    Group.find(current_user.group_id).announcements.each do |announcement|
+       @news << {'content' => announcement[:content], 'teacher' => Teacher.find(announcement[:teacher_id]).first_name + ' ' + Teacher.find(announcement[:teacher_id]).last_name}
+    end
 
 
 
   end
-
-
 
 
 end

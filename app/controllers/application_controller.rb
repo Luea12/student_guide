@@ -46,7 +46,7 @@ class ApplicationController < ActionController::Base
     if session[:user_type] == "S"
       courses = Group.find(current_user.group_id).courses
     elsif session[:user_type] == "T"
-      courses = Course.where(teacher_id: current_user.id)
+      courses = Course.where(teacher_first_name: current_user.last_name)
     end
 
     monday = []

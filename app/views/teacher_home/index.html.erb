@@ -3,8 +3,8 @@
 <div class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <h2>Your next course is:</h2>
-    <div><%# @next_course['day'].capitalize %>, <%#@next_course['start_time']%>, <%#@next_course['name']%></div>
-    <%# link_to "See your schedule", student_schedule_path, :class => "link" %>
+    <div><%= @next_course['day'].capitalize %>, <%=@next_course['start_time']%>, <%=@next_course['name']%></div>
+    <%= link_to "See your schedule", teacher_schedule_path, :class => "link" %>
   </div>
 </div>
 <div class="navbar navbar-light bg-light">
@@ -16,9 +16,9 @@
 <div class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <h2>News</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore  incididunt ut labore et dolore.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore  incididunt ut labore et dolore.</p>
-    <!-- I am not sure if it`s done right -->
+    <% @news.each do |n| %>
+      <p><%= n['content'] %>  ( adaugat de <%= n['teacher']%> )</p>
+    <% end %>
 
       <a href="#" class="link rightBtn" onclick="openForm()">Add News</a>
       <div class="form-popup" id="myForm">
