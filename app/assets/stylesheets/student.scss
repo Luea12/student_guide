@@ -313,15 +313,21 @@ ul ul a {
     opacity: 1;
 }
 
+
+
+
+
+
+
 /* Style the tab */
-.tab {
+/* .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-}
+} */
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+/* .tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -329,17 +335,73 @@ ul ul a {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-}
+} */
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+/* .tab button:hover {
     background-color: #ddd;
-}
+} */
 
 /* Create an active/current tablink class */
-.tab button.active {
+/* .tab button.active {
     background-color: #ccc;
+} */
+
+btn-primary {
+  color: #fff;
+  background-color: #2c8492 !important;
+  border-color: #2c8492 !important;
 }
+
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #2c8492;
+  border-color: #2c8492;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #2c8492;
+    border-color: #2c8492;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  color: #fff;
+  background-color: #2c8492;
+  border-color: #2c8492;
+}
+
+.btn-primary:active:hover,
+.btn-primary:active.focus {
+  color: #fff;
+  background-color: #2c8492;
+  border-color: #2c8492;
+}
+
+.btn-primary { background-color: red !important; }
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+	background: #33a6cc;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Style the tab content */
 .tabcontent {
