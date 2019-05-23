@@ -1,3 +1,5 @@
+@import "bootstrap";
+@import "font-awesome";
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 body {
@@ -100,6 +102,15 @@ span {
 #sidebar ul li a:hover {
     color: #17a3b9 !important;
     background: #fff;
+    border-right: 1px solid #17a3b9;
+}
+
+#sidebar ul li.active {
+  border: 1px solid #17a3b9;
+  a {
+    color: #17a3b9 !important;
+    background: #fff;
+  }
 }
 
 #sidebar.active ul li a {
