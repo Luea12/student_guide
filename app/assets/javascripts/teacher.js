@@ -4,6 +4,12 @@
 //= require popper
 //= require bootstrap
 
+$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+});
+
 function openForm() {
     document.getElementById("myForm").style.display = "block";
 }
