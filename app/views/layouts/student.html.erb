@@ -20,71 +20,35 @@
           <h3>Student Guide</h3>
           <strong>SG</strong>
         </div>
-
-       <ul class="list-unstyled components">
-          <li>
-            <p>Logged in as: <%= current_user.username %></p>
+         <ul class="list-unstyled components">
+            <li>
+              <p>Logged in as: <%= current_user.username %></p>
+            </li>
+            <li id="home" class="<%= 'active' if params[:controller]=='student_home'%>">
+              <%= link_to fa_icon('home', text: "Home"), student_home_path %>
+            </li>
+            <li id="schedule" class="<%= 'active' if params[:controller].in?(['student_schedule', 'search_schedule']) %>">
+              <%= link_to fa_icon('calendar', text: "Schedule"), student_schedule_path %>
+            </li>
+            <!-- TO DO: Change this when events added-->
+           <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
+             <%= link_to fa_icon('newspaper-o', text: "Events"), student_home_path %>
+           </li>
+          <li id="logout">
+            <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
           </li>
-          <li class = "home <%= 'active' if params[:controller]=='student_home'%>">
-            <%= link_to student_home_path do%>
-            <%= content_tag :i, "", :class => "fas fa-home" %>
-            <%="Home" %>
-            <% end %>
-          </li>
-
-         <li class = "schedule <%= 'active' if params[:controller]=='student_schedule'%>">
-            <%= link_to student_schedule_path do%>
-             <%= content_tag :i, "", :class => "fas fa-calendar-alt" %>
-             <%= "Schedule" %>
-             <% end %>
-          </li>
-         <li>
-           <a href="#">
-             <i class="fas fa-newspaper"></i>
-             Events
-           </a>
-         </li>
-
-        <li>
-          <%= link_to logout_path do %>
-          <%= content_tag :i, "", :class => "fas fa-sign-out-alt" %>
-            <%= "Logout" %>
-          <% end %>
-        </li>
-      </ul>
-    </nav>
-    <div class="content">
+        </ul>
+      </nav>
       <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <button type="button" id="sidebarCollapse" class="btn btn-info">
-              <i class="fas fa-align-left"></i>
+              <%= fa_icon 'align-left' %>
             </button>
+          </div>
         </nav>
         <%= yield %>
       </div>
     </div>
-  </div>
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
   </body>
 </html>

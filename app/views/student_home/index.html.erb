@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <h2>Your next course is:</h2>
     <div><%= @next_course['day'].capitalize %>, <%=@next_course['start_time']%>, <%=@next_course['name']%></div>
-    <%= link_to "See your schedule", student_schedule_path, :class => "link" %>
+    <span><%= link_to "See your schedule", student_schedule_path, :class => "link" %></span>
   </div>
 </div>
 <div class="navbar navbar-light bg-light">
@@ -19,6 +19,5 @@
     <% @news.each do |n| %>
       <p><%= n['content'] %>  ( adaugat de <%= n['teacher']%> )</p>
     <% end %>
-
   </div>
 </div>

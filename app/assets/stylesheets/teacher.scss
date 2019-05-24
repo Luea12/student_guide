@@ -1,3 +1,5 @@
+@import "bootstrap";
+@import "font-awesome";
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 body {
@@ -64,9 +66,15 @@ span {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #138496;
+    background: #C71585;
     color: #fff;
     transition: all 0.3s;
+}
+
+#sidebarCollapse {
+  color: #fff;
+  background-color: #C71585;
+  border-color: #C71585;
 }
 
 #sidebar p {
@@ -98,8 +106,17 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: #17a3b9 !important;
+    color: #C71585 !important;
     background: #fff;
+    border-right: 1px solid #C71585;
+}
+
+#sidebar ul li.active {
+  border: 1px solid #C71585;
+  a {
+    color: #C71585 !important;
+    background: #fff;
+  }
 }
 
 #sidebar.active ul li a {
@@ -113,7 +130,6 @@ span {
     display: block;
     font-size: 1.8em;
     margin-bottom: 5px;
-    color: #fff;
 }
 
 #sidebar.active ul ul a{
@@ -131,7 +147,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #277683;
+    background: #a2116d;
     text-align: center;
 }
 
@@ -142,7 +158,7 @@ span {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #C71585;
 }
 
 #sidebar ul li a {
@@ -186,11 +202,9 @@ ul ul a {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
-.content{
-    width: 100%;
-}
 
 #content {
+    width: 100%;
     background: #FAFCFC;
     padding: 20px;
     min-height: 100vh;
@@ -215,10 +229,6 @@ ul ul a {
         -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
         transform: translateX(50%);
-    }
-    .rightBtn{
-        position: relative;
-        right: -73%;
     }
     #sidebar.active {
         margin-left: 0 !important;
@@ -253,12 +263,11 @@ ul ul a {
     }
 }
 /****************************************************************************
-                    ADD NEW EVENT BUTTON
+                    ADD NEWS BUTTON
 ****************************************************************************/
 
 .rightBtn{
-    position: relative;
-    right: -83%;
+    float: right;
 }
 
 

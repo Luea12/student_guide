@@ -12,6 +12,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 
+# Login, Token Validation, Register CSS & JS
+Rails.application.config.assets.precompile += %w( access.js access.css )
+Rails.application.config.assets.precompile += %w( register.js register.css )
+
 # Admin CSS & JS
 Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( admin_home.js admin_home.css )
@@ -31,7 +35,3 @@ Rails.application.config.assets.precompile += %w( teacher_schedule.js teacher_sc
 
 
 Rails.application.config.assets.precompile += %w( search_schedule.js search_schedule.css )
-
-# Login, Token Validation, Register CSS & JS
-Rails.application.config.assets.precompile += %w( access.js access.css )
-Rails.application.config.assets.precompile += %w( register.js register.css )

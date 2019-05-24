@@ -1,5 +1,5 @@
-<%= link_to "Your schedule", choose_schedule_route %>
-<%= link_to "Search schedule", choose_search_route %>
+<%= link_to "Your schedule", choose_schedule_route, :class => "link" %>
+<%= link_to "Search schedule", choose_search_route, :class => "link ml-2" %>
 
 <div class="search_schedule">
   <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>

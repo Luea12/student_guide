@@ -1,5 +1,5 @@
-<%= link_to "Your schedule", student_schedule_path %>
-<%= link_to "Search schedule", student_search_schedule_path %>
+<%= link_to "Your schedule", student_schedule_path, :class => "link" %>
+<%= link_to "Search schedule", student_search_schedule_path, :class => "link ml-2" %>
 
 <h1> Monday </h1>
 <% @schedule['monday'].each do |course| %>
