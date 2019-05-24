@@ -202,11 +202,9 @@ ul ul a {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
-.content{
-    width: 100%;
-}
 
 #content {
+    width: 100%;
     background: #FAFCFC;
     padding: 20px;
     min-height: 100vh;
@@ -231,10 +229,6 @@ ul ul a {
         -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
         transform: translateX(50%);
-    }
-    .rightBtn{
-        position: relative;
-        right: -73%;
     }
     #sidebar.active {
         margin-left: 0 !important;
@@ -269,12 +263,11 @@ ul ul a {
     }
 }
 /****************************************************************************
-                    ADD NEW EVENT BUTTON
+                    ADD NEWS BUTTON
 ****************************************************************************/
 
 .rightBtn{
-    position: relative;
-    right: -83%;
+    float: right;
 }
 
 

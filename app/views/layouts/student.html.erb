@@ -20,27 +20,26 @@
           <h3>Student Guide</h3>
           <strong>SG</strong>
         </div>
-
-       <ul class="list-unstyled components">
-          <li>
-            <p>Logged in as: <%= current_user.username %></p>
+         <ul class="list-unstyled components">
+            <li>
+              <p>Logged in as: <%= current_user.username %></p>
+            </li>
+            <li id="home" class="<%= 'active' if params[:controller]=='student_home'%>">
+              <%= link_to fa_icon('home', text: "Home"), student_home_path %>
+            </li>
+            <li id="schedule" class="<%= 'active' if params[:controller].in?(['student_schedule', 'search_schedule']) %>">
+              <%= link_to fa_icon('calendar', text: "Schedule"), student_schedule_path %>
+            </li>
+            <!-- TO DO: Change this when events added-->
+           <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
+             <%= link_to fa_icon('newspaper-o', text: "Events"), student_home_path %>
+           </li>
+          <li id="logout">
+            <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
           </li>
-          <li id="home" class="<%= 'active' if params[:controller]=='student_home'%>">
-            <%= link_to fa_icon('home', text: "Home"), student_home_path %>
-          </li>
-          <li id="schedule" class="<%= 'active' if params[:controller]=='student_schedule'%>">
-            <%= link_to fa_icon('calendar', text: "Schedule"), student_schedule_path %>
-          </li>
-          <!-- TO DO: Change this when events added-->
-         <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
-           <%= link_to fa_icon('newspaper-o', text: "Events"), student_home_path %>
-         </li>
-        <li id="logout">
-          <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
-        </li>
-      </ul>
-    </nav>
-    <div class="content">
+        </ul>
+      </nav>
+      <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -49,7 +48,7 @@
           </div>
         </nav>
         <%= yield %>
+      </div>
     </div>
-  </div>
   </body>
 </html>

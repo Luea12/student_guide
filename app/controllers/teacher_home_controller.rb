@@ -6,7 +6,6 @@ class TeacherHomeController < ApplicationController
 
   def index
     #Next Course
-
     schedule = get_schedule
     schedule['saturday'] = []
     schedule['sunday'] = []

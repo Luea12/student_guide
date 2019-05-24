@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <h2>Your next course is:</h2>
     <div><%= @next_course['day'].capitalize %>, <%=@next_course['start_time']%>, <%=@next_course['name']%></div>
-    <%= link_to "See your schedule", teacher_schedule_path, :class => "link" %>
+    <span><%= link_to "See your schedule", teacher_schedule_path, :class => "link" %></span>
   </div>
 </div>
 <div class="navbar navbar-light bg-light">
@@ -16,31 +16,31 @@
 <div class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <h2>News</h2>
+    <a href="#" class="link rightBtn" onclick="openForm()">Add News</a>
     <% @news.each do |n| %>
       <p><%= n['content'] %>  ( adaugat de <%= n['teacher']%> )</p>
     <% end %>
+    <div class="form-popup" id="news-form">
+      <%=form_with :class => "form-container", :url => add_news_path, :method => :post, :local => true do |f| %>
+        <h1>Add News</h1>
 
-      <a href="#" class="link rightBtn" onclick="openForm()">Add News</a>
-      <div class="form-popup" id="myForm">
-        <%=form_with :class => "form-container", :url => add_news_path, :method => :post, :local => true do |f| %>
-          <h1>Add News</h1>
-          <%= f.label :content, "Content" %>
-          <%= f.text_area :content, :placeholder => "What are the news?", :required => true, :id => "news_content"%>
-          <%= f.label :valability %>
-          <%= f.number_field :valability, :required => true, :min => 1 %> <span>days</span>
-          <div>
-          <%= f.label :visible_to_teachers, "Visible to teachers" %>
-          <%= f.check_box :visible_to_teachers %>
-          </div>
-          <%= f.label :groups %>
-          <%= f.select(:groups,  Group.all.collect {|g| [ g.id ] },  { :prompt => "Please select"}, { :multiple => true, :size => 5, :id => "selection" }) %>
+        <%= f.label :content %>
+        <%= f.text_area :content, :placeholder => "What are the news?", :required => true, :id => "news-content"%>
 
-          <div>
-          <%= f.submit "Submit", :class => "btn" %>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </div>
-        <% end %>
-      </div>
+        <%= f.label :valability %>
+        <%= f.number_field :valability, :required => true, :min => 1 %> <span>days</span>
+        <div>
+        <%= f.label :visible_to_teachers, "Visible to teachers" %>
+        <%= f.check_box :visible_to_teachers %>
+        </div>
 
+        <%= f.label :groups %>
+        <%= f.select(:groups,  Group.all.collect {|g| [ g.id ] },  { :prompt => "Please select"}, { :multiple => true, :size => 5, :id => "selection" }) %>
+        <div>
+        <%= f.submit "Submit", :class => "btn" %>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

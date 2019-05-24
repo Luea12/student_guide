@@ -25,22 +25,21 @@
         <li>
           <p>Logged in as: <%= current_user.username %></p>
         </li>
-        <li id="home" class="<%= 'active' if params[:controller]=='student_home'%>">
-          <%= link_to fa_icon('home', text: "Home"), student_home_path %>
+        <li id="home" class="<%= 'active' if params[:controller]=='teacher_home'%>">
+          <%= link_to fa_icon('home', text: "Home"), teacher_home_path %>
         </li>
-        <li id="schedule" class="<%= 'active' if params[:controller]=='student_schedule'%>">
-          <%= link_to fa_icon('calendar', text: "Schedule"), student_schedule_path %>
+        <li id="schedule" class="<%= 'active' if params[:controller].in?(['teacher_schedule', 'search_schedule'])%>">
+          <%= link_to fa_icon('calendar', text: "Schedule"), teacher_schedule_path %>
         </li>
         <!-- TO DO: Change this when events added-->
        <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
-         <%= link_to fa_icon('newspaper-o', text: "Events"), student_home_path %>
+         <%= link_to fa_icon('newspaper-o', text: "Events"), teacher_home_path %>
        </li>
       <li id="logout">
         <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
       </li>
     </ul>
     </nav>
-    <div class="content">
       <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
@@ -52,6 +51,5 @@
         <%= yield %>
       </div>
     </div>
-  </div>
   </body>
 </html>
