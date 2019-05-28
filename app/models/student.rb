@@ -4,6 +4,7 @@ class Student < ApplicationRecord
 
   belongs_to :group
   has_and_belongs_to_many :optionals
+  has_and_belongs_to_many :events
 
   EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
   PASSWORD_REGEX = /\A.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(^[a-zA-Z0-9@\?\[\]\{\}\$\*\^\(\)\+\|\\\.-_<>,=!:;#%&~'"`]+$)\Z/

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_114515) do
+ActiveRecord::Schema.define(version: 2019_05_28_103233) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "username", limit: 25, null: false
@@ -63,6 +63,32 @@ ActiveRecord::Schema.define(version: 2019_05_21_114515) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["token"], name: "index_event_tokens_on_token", unique: true
+  end
+
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name", null: false
+    t.date "date", null: false
+    t.string "location", null: false
+    t.text "description", null: false
+    t.integer "student_id"
+    t.integer "teacher_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date"], name: "index_events_on_date"
+    t.index ["location"], name: "index_events_on_location"
+    t.index ["name"], name: "index_events_on_name"
+  end
+
+  create_table "events_students", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "student_id"
+    t.index ["event_id", "student_id"], name: "index_events_students_on_event_id_and_student_id"
+  end
+
+  create_table "events_teachers", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "teacher_id"
+    t.index ["event_id", "teacher_id"], name: "index_events_teachers_on_event_id_and_teacher_id"
   end
 
   create_table "groups", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
