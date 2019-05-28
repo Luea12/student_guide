@@ -45,6 +45,8 @@
             <button type="button" id="sidebarCollapse" class="btn btn-info">
               <%= fa_icon 'align-left' %>
             </button>
+            <%= link_to "Your schedule", student_schedule_path, :class => "link upBar" %>
+            <%= link_to "Search schedule", student_search_schedule_path, :class => "link ml-2 upBar" %>
           </div>
         </nav>
         <%= yield %>
