@@ -1,39 +1,24 @@
 <div class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <div class="search_schedule">
-      <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
-      <table>
-        <tr>
-          <td><%= f.label :group, "Group number" %></td>
-          <td><%= f.text_field :group %></td>
-        </tr>
-        <tr>
-          <td><%= f.submit "Search" %></td>
-        </tr>
-      </table>
-      <% end %>
-    </div>
+  <div class="container-fluid search_schedule form-group">
+    <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
+      <%= f.label :group, "Group number" %>
+      <%= f.text_field :group, :class => "form-control" %>
+
+      <%= f.submit "Search", :class => "btn" %>
+    <% end %>
   </div>
 </div>
 
 <div class="navbar navbar-light bg-light">
-  <div class="container-fluid">  
-    <div class="search_schedule">
-      <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
-      <table>
-        <tr>
-          <td><%= f.label :teacher_last_name, "Teacher's first name" %></td>
-          <td><%= f.text_field :teacher_last_name %></td>
-        </tr>
-        <tr>
-          <td><%= f.label :teacher_first_name, "Teacher's last name" %></td>
-          <td><%= f.text_field :teacher_first_name %></td>
-        </tr>
-        <tr>
-          <td><%= f.submit "Search" %></td>
-        </tr>
-      </table>
-      <% end %>
-    </div>
+  <div class="container-fluid search_schedule form-group">  
+    <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
+      <%= f.label :teacher_last_name, "Teacher's first name" %>
+       <%= f.text_field :teacher_last_name, :class => "form-control" %>
+
+      <%= f.label :teacher_first_name, "Teacher's last name" %>
+      <%= f.text_field :teacher_first_name, :class => "form-control" %>
+
+      <%= f.submit "Search", :class => "btn" %></td>
+    <% end %>
   </div>
 </div>
