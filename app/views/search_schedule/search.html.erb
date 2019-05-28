@@ -1,31 +1,39 @@
-<div class="search_schedule">
-  <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
-  <table>
-    <tr>
-      <td><%= f.label :group, "Group number" %></td>
-      <td><%= f.text_field :group %></td>
-    </tr>
-    <tr>
-      <td><%= f.submit "Search" %></td>
-    </tr>
-  </table>
-  <% end %>
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="search_schedule">
+      <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
+      <table>
+        <tr>
+          <td><%= f.label :group, "Group number" %></td>
+          <td><%= f.text_field :group %></td>
+        </tr>
+        <tr>
+          <td><%= f.submit "Search" %></td>
+        </tr>
+      </table>
+      <% end %>
+    </div>
+  </div>
 </div>
 
-<div class="search_schedule">
-  <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
-  <table>
-    <tr>
-      <td><%= f.label :teacher_last_name, "Teacher's first name" %></td>
-      <td><%= f.text_field :teacher_last_name %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :teacher_first_name, "Teacher's last name" %></td>
-      <td><%= f.text_field :teacher_first_name %></td>
-    </tr>
-    <tr>
-      <td><%= f.submit "Search" %></td>
-    </tr>
-  </table>
-  <% end %>
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">  
+    <div class="search_schedule">
+      <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
+      <table>
+        <tr>
+          <td><%= f.label :teacher_last_name, "Teacher's first name" %></td>
+          <td><%= f.text_field :teacher_last_name %></td>
+        </tr>
+        <tr>
+          <td><%= f.label :teacher_first_name, "Teacher's last name" %></td>
+          <td><%= f.text_field :teacher_first_name %></td>
+        </tr>
+        <tr>
+          <td><%= f.submit "Search" %></td>
+        </tr>
+      </table>
+      <% end %>
+    </div>
+  </div>
 </div>
