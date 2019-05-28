@@ -380,6 +380,12 @@ ul ul a {
     border-color: #2c8492;
 }
 
+/* Style for Input */
+.form-control {
+    outline-color: #2c8492 !important;
+    box-shadow: 0px 0px 0px 0px #2c8492 !important;
+}
+
 /* Style the tab content */
 .tabcontent {
     display: none;
