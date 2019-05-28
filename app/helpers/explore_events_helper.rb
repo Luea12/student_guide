@@ -1,0 +1,2 @@
+module ExploreEventsHelper
+end

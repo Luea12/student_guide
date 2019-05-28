@@ -1,0 +1,27 @@
+<%= link_to "Explore", student_explore_events_path, :class => "link" %>
+</br>
+<%= link_to "Your Calendar", student_explore_events_path, :class => "link" %>
+</br>
+<%= link_to "Hosting", student_explore_events_path, :class => "link" %>
+
+<h1> Recently Announced </h1>
+<p> <%= @recently_added %> </p>
+
+<h1> Find Events </h1>
+<div class="find_events">
+  <%= form_with :url => student_attempt_find_events_path, :method => :post, :local => true do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :today, "Today" %></td>
+      <td><%= f.radio_button :date, :today, :checked => true %></td>
+      <td><%= f.label :week, "This week" %></td>
+      <td><%= f.radio_button :date, :week %></td>
+      <td><%= f.label :month, "This month" %></td>
+      <td><%= f.radio_button :date, :month %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit "Find Events" %></td>
+    </tr>
+  </table>
+  <% end %>
+</div>
