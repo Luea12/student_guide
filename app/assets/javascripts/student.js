@@ -72,7 +72,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (day === 5) {
             day = 'Vineri';
         }
-        document.getElementById(day).style.display = "block";
+        if(document.getElementById(day)){
+            document.getElementById(day).style.display = "block";
+        }
         let butoaneZile = document.getElementsByClassName("btn-outline-primary");
         for(let i = 0; i<butoaneZile.length; i++){
             if(butoaneZile[i].innerHTML == day ) {
