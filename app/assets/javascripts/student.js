@@ -72,15 +72,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (day === 5) {
             day = 'Vineri';
         }
-        if(document.getElementById(day)){
+        if (document.getElementById(day)) {
             document.getElementById(day).style.display = "block";
         }
         let butoaneZile = document.getElementsByClassName("btn-outline-primary");
-        for(let i = 0; i<butoaneZile.length; i++){
-            if(butoaneZile[i].innerHTML == day ) {
-                butoaneZile[i].className+= " active";
+        for (let i = 0; i < butoaneZile.length; i++) {
+            if (butoaneZile[i].innerHTML == day) {
+                butoaneZile[i].className += " active";
                 break;
             }
         }
+
+
+        if (!(window.location.pathname === "/home_s/your_schedule")) {
+            let upBar = document.getElementsByClassName("upBar");
+            for (let i = 0; i < upBar.length; i++) {
+                upBar[i].style.display = "none";
+            }
+        }
+
+    if (!(window.location.pathname === "/home_s/explore_events")) {
+        let upBar = document.getElementsByClassName("upBar2");
+        for (let i = 0; i < upBar.length; i++) {
+            upBar[i].style.display = "none";
+        }
+    }
     }
 );
