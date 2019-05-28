@@ -53,7 +53,7 @@ class TeacherHomeController < ApplicationController
 
     @news = []
 
-    Announcement.where('visible_to_teachers = 1').each do |announcement|
+    Announcement.where('visible_to_teachers = 1 OR teacher_id = ?', current_user.id).each do |announcement|
        @news << {'content' => announcement[:content], 'teacher' => Teacher.find(announcement[:teacher_id]).first_name + ' ' + Teacher.find(announcement[:teacher_id]).last_name}
     end
 
@@ -70,7 +70,7 @@ class TeacherHomeController < ApplicationController
     end
 
 
-    render('index')
+    redirect_to :action => "index"
 
   end
 
