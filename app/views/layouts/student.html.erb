@@ -32,7 +32,7 @@
             </li>
             <!-- TO DO: Change this when events added-->
            <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
-             <%= link_to fa_icon('newspaper-o', text: "Events"), student_home_path %>
+             <%= link_to fa_icon('newspaper-o', text: "Events"), student_explore_events_path %>
            </li>
           <li id="logout">
             <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>

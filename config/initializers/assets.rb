@@ -35,3 +35,4 @@ Rails.application.config.assets.precompile += %w( teacher_schedule.js teacher_sc
 
 
 Rails.application.config.assets.precompile += %w( search_schedule.js search_schedule.css )
+Rails.application.config.assets.precompile += %w( explore_events.js explore_events.css )
