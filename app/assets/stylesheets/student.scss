@@ -308,10 +308,7 @@ ul ul a {
     background-color: #2c8492;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/* Stylize the buttons */
-
+/* Style for Day buttons */
 .btn-outline-primary {
   color: #2c8492 !important;
   background-color: #fff !important;
@@ -347,7 +344,41 @@ ul ul a {
   border-color: #2c8492;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* Style for Submit buttons */
+.btn-primary {
+    color: #fff !important;
+    background-color: #2c8492 !important;
+    border-color: #2c8492 !important;
+    outline-color: #2c8492 !important;
+    box-shadow: 1px 1px 1px 1px #2c8492 !important;
+}
+  
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #2c8492 !important;
+    background-color: #fff !important;
+    border-color: #2c8492;
+}
+  
+.btn-primary:hover {
+      color: #2c8492 !important;
+      background-color: #fff !important;
+      border-color: #2c8492 !important;
+}
+  
+.btn-primary:active,
+.btn-primary.active {
+    color: #2c8492 !important;
+    background-color: #fff !important;
+    border-color: #2c8492;
+}
+  
+.btn-primary:active:hover,
+.btn-primary:active.focus {
+    color: #fff !important;
+    background-color: #2c8492 !important;
+    border-color: #2c8492;
+}
 
 /* Style the tab content */
 .tabcontent {

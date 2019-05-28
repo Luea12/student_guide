@@ -2,9 +2,9 @@
   <div class="container-fluid search_schedule form-group">
     <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
       <%= f.label :group, "Group number" %>
-      <%= f.text_field :group, :class => "form-control" %>
+      <%= f.text_field :group, :class => "form-control" %><br>
 
-      <%= f.submit "Search", :class => "btn" %>
+      <%= f.submit "Search", :class => "btn btn-primary" %>
     <% end %>
   </div>
 </div>
@@ -13,12 +13,12 @@
   <div class="container-fluid search_schedule form-group">  
     <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
       <%= f.label :teacher_last_name, "Teacher's first name" %>
-       <%= f.text_field :teacher_last_name, :class => "form-control" %>
+      <%= f.text_field :teacher_last_name, :class => "form-control" %><br>
 
       <%= f.label :teacher_first_name, "Teacher's last name" %>
-      <%= f.text_field :teacher_first_name, :class => "form-control" %>
+      <%= f.text_field :teacher_first_name, :class => "form-control" %><br>
 
-      <%= f.submit "Search", :class => "btn" %></td>
+      <%= f.submit "Search", :class => "btn btn-primary" %></td>
     <% end %>
   </div>
 </div>
