@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let butoaneZile = document.getElementsByClassName("btn-outline-primary");
         for(let i = 0; i<butoaneZile.length; i++){
             if(butoaneZile[i].innerHTML == day ) {
-                console.log(day);
                 butoaneZile[i].className+= " active";
                 break;
             }
