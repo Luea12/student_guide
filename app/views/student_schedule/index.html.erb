@@ -1,27 +1,106 @@
 <%= link_to "Your schedule", student_schedule_path, :class => "link" %>
 <%= link_to "Search schedule", student_search_schedule_path, :class => "link ml-2" %>
 
-<h1> Monday </h1>
-<% @schedule['monday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div class="tab">
+  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Luni')">Luni</button>
+  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Marti')">Marti</button>
+  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Miercuri')">Miercuri</button>
+  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Joi')">Joi</button>
+  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Vineri')">Vineri</button>
+</div>
 
-<h1> Tuesday </h1>
-<% @schedule['tuesday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<!-- Tab content -->
+<div id="Luni" class="tabcontent">
+  <div class="column ">
+    <% @schedule['monday'].each do |course| %>
+      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
+      </h4>
+    <% end %>
+  </div>
+  <div class="column">
+    <div id="information">
+      <% @schedule['monday'].each do |course| %>
+        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
+          <p><h5>Locatia: </h5><%= course['room'] %>
+          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<h1> Wednesday </h1>
-<% @schedule['wednesday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="Marti" class="tabcontent">
+  <div class="column">
+  <% @schedule['tuesday'].each do |course| %>
+    <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
+    </h4>
+    <% end %>
+  </div>
+  <div class="column">
+    <div id="information">
+      <% @schedule['tuesday'].each do |course| %>
+        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
+          <p><h5>Locatia: </h5><%= course['room'] %>
+          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<h1> Thursday </h1>
-<% @schedule['thursday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="Miercuri" class="tabcontent">
+  <div class="column">
+    <% @schedule['wednesday'].each do |course| %>
+      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
+      </h4>
+    <% end %>
+  </div>
+  <div class="column">
+    <div id="information">
+      <% @schedule['wednesday'].each do |course| %>
+        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
+          <p><h5>Locatia: </h5><%= course['room'] %>
+          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<h1> Friday </h1>
-<% @schedule['friday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="Joi" class="tabcontent">
+  <div class="column">
+    <% @schedule['thursday'].each do |course| %>
+      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
+      </h4>
+    <% end %>
+  </div>
+  <div class="column">
+    <div id="information">
+      <% @schedule['thursday'].each do |course| %>
+        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
+          <p><h5>Locatia: </h5><%= course['room'] %>
+          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div id="Vineri" class="tabcontent">
+  <div class="column">
+    <% @schedule['friday'].each do |course| %>
+      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
+      </h4>
+    <% end %>
+  </div>
+  <div class="column">
+    <div id="information">
+      <% @schedule['friday'].each do |course| %>
+        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
+          <p><h5>Locatia: </h5><%= course['room'] %>
+          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
