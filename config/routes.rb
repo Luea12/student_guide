@@ -13,6 +13,16 @@ Rails.application.routes.draw do
   post 'token_auth', :to => 'register#token_validation', :as => 'token_validation'
   post 'signup', :to => 'register#attempt_signup', :as => 'attempt_signup'
 
+  # Expired News routes
+  get 'home_a/expired_news', :to => 'expired_news#index', :as => 'expired_news'
+  delete 'home_a/expired_news/:id', :to => 'expired_news#destroy', :as => 'delete_announcement'
+
+  # Show Students
+  get 'home_a/show_students', :to => 'show_students#index', :as => 'show_students'
+
+  # Show Teachers
+  get 'home_a/show_teachers', :to => 'show_teachers#index', :as => 'show_teachers'
+
   # Student Tokens routes
   get 'home_a/student_tokens', :to => 'student_tokens#index', :as => 'student_tokens'
   get 'home_a/student_tokens/new', :to => 'student_tokens#new', :as => 'new_student_token'

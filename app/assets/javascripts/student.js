@@ -18,11 +18,11 @@ function openDetails(event){
     }
     className = className.substr(0, className.length-8);
     document.getElementsByClassName(className)[0].style.display="block";
-    let information = document.getElementsByClassName("activee");
+    let information = document.getElementsByClassName("active");
     for(let i=0; i<information.length; i++){
-        information[i].className = information[i].className.replace("activee", "oneline");
+        information[i].className = information[i].className.replace("active", "oneline");
     }
-    event.target.className = event.target.className.replace("oneline", "activee");
+    event.target.className = event.target.className.replace("oneline", "active");
 }
 
 function openCity(evt, day) {

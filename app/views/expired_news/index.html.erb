@@ -1,0 +1,32 @@
+<% @page_title = "Expired News" %>
+
+<%= link_to("<< Back to Home", admin_home_path) %>
+
+<h2>Expired News</h2>
+
+<table summary="Expired news">
+  <tr class="header">
+    <th>#</th>
+    <th>Content</th>
+    <th>Expiration Date</th>
+    <th>For groups</th>
+    <th>Visible to teachers</th>
+    <th>Owner</th>
+    <th>Actions</th>
+  </tr>
+  <% @news.each do |n| %>
+  <tr>
+    <td><%= n.id %></td>
+    <td><%= n.content %></td>
+    <td><%= n.valability %></td>
+    <td>
+      <% n.groups.each do |gr| %>
+        <%= gr.group_no %>
+      <% end %>
+    </td>
+    <td><%= n.visible_to_teachers %></td>
+    <td><%= Teacher.find(n.teacher_id).name %></td>
+    <td><%= link_to "Delete", delete_announcement_path(n), data: { method: 'delete', confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</table>
