@@ -22,6 +22,9 @@ Rails.application.config.assets.precompile += %w( admin_home.js admin_home.css )
 Rails.application.config.assets.precompile += %w( student_tokens.js student_tokens.css )
 Rails.application.config.assets.precompile += %w( teacher_tokens.js teacher_tokens.css )
 Rails.application.config.assets.precompile += %w( event_tokens.js event_tokens.css )
+Rails.application.config.assets.precompile += %w( show_students.js show_students.css )
+Rails.application.config.assets.precompile += %w( show_teachers.js show_teachers.css )
+Rails.application.config.assets.precompile += %w( expired_news.js expired_news.css )
 
 # Student CSS & JS
 Rails.application.config.assets.precompile += %w( student.js student.css )
