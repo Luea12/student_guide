@@ -28,6 +28,10 @@ function openDetails(event){
 function openCity(evt, day) {
     // Declare all variables
     let i, tabcontent, tablinks;
+    let activeElements = document.getElementsByClassName("active");
+    for(let j=0; j<activeElements.length+1; j++){
+        activeElements[0].className = activeElements[0].className.replace("active", " ");
+    }
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -43,7 +47,10 @@ function openCity(evt, day) {
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(day).style.display = "block";
-    evt.currentTarget.className += " active";
+
+    if(!(evt.currentTarget.className.includes("active"))){
+        evt.currentTarget.className += " active";
+    }
 }
 
 
@@ -65,13 +72,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (day === 5) {
             day = 'Vineri';
         }
-        document.getElementById(day).style.display = "block";
-        let tablinks = document.getElementsByClassName("tablinks");
-        for(let i = 0; i<tablinks.length; i++){
-            if(tablinks[i].innerHTML === day) {
-                tablinks[i].className+= " active";
+        if (document.getElementById(day)) {
+            document.getElementById(day).style.display = "block";
+        }
+        let butoaneZile = document.getElementsByClassName("btn-outline-primary");
+        for (let i = 0; i < butoaneZile.length; i++) {
+            if (butoaneZile[i].innerHTML == day) {
+                butoaneZile[i].className += " active";
                 break;
             }
         }
+
+
+        if (!(window.location.pathname === "/home_s/your_schedule") && !(window.location.pathname === "/home_s/search_schedule")) {
+            let upBar = document.getElementsByClassName("upBar");
+            for (let i = 0; i < upBar.length; i++) {
+                upBar[i].style.display = "none";
+            }
+        }
+
+    if (!(window.location.pathname === "/home_s/explore_events")) {
+        let upBar = document.getElementsByClassName("upBar2");
+        for (let i = 0; i < upBar.length; i++) {
+            upBar[i].style.display = "none";
+        }
+    }
     }
 );
