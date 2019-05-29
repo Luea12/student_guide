@@ -1,38 +1,56 @@
+<% @page_title = "Events" %>
+
+<%= link_to "Explore", student_explore_events_path, :class => "link" %>
+<%= link_to "Hosting", student_host_events_path, :class => "link" %>
+
 
 <div class="navbar navbar-light bg-light">
-  <div class="container-fluid search_schedule">
-    <h1> Recently Announced </h1><br>
-    <div style="padding: 10px 20px 0px 10px"> Here is the 1 st event but because it does not exist, I have to write something </div><br>
-    <div> <%= @recently_added %> </div>
-  </div>
-</div>
+  <div class="container-fluid">
+    <h2>Recently Announced</h2>
+    </br>
+    <div class = 'events'>
+      <ul>
+        <% @recently_added.each do |event|%>
+        <li>
+          <div class = 'time'>
+            <h3> <%= event.date.strftime('%d %B') %> <h3>
+            </div>
+            <div class = 'details'>
+              <h3> <%=event.name%> </h3>
+              <p> <%= event.description%> </p>
+              <span> Location: <%= event.location %>
+              <%= button_to "Join", {controller: 'explore_events', action: 'join_event', event: event.id}, method: :post, local: true, class: 'join' %>
+            </div>
 
-<div class="navbar navbar-light bg-light">
-  <div class="container-fluid search_schedule">
-    <h1> Find Events </h1>
-    <div class="find_events">
-      <%= form_with :url => student_attempt_find_events_path, :method => :post, :local => true do |f| %>
-        <div class="input-group input-group-prepend">
-          <div class="custom-control custom-radio">
-            <%= f.radio_button :date, :today, :checked => true, :class => "custom-control-input", :id => "customRadio1" %>
-            <label class="custom-control-label" for="customRadio1">Today</label>
-          </div><br>
-              
-          <div class="custom-control custom-radio">
-            <%= f.radio_button :date, :week,  :class => "custom-control-input", :id => "customRadio2" %>
-            <label class="custom-control-label" for="customRadio2">This week</label>
-          </div><br>
+        </li>
+        <%end%>
+      </ul>
 
-          <div class="custom-control custom-radio">
-            <%= f.radio_button :date, :month, :class => "custom-control-input", :id => "customRadio3" %>
-            <label class="custom-control-label" for="customRadio3">This month</label>
-          </div>
-
-          <%= f.submit "Find Events", :class => "btn btn-primary" %>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
 
+
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+<h2> Find Events </h2>
+<div class="find_events">
+  <%= form_with :url => student_attempt_find_events_path, :method => :post, :local => true do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :today, "Today" %></td>
+      <td><%= f.radio_button :date, :today, :checked => true %></td>
+      <td><%= f.label :week, "This week" %></td>
+      <td><%= f.radio_button :date, :week %></td>
+      <td><%= f.label :month, "This month" %></td>
+      <td><%= f.radio_button :date, :month %></td>
+    </tr>
+    <tr>
+      <td class='find'><%= f.submit "Find Events" %></td>
+    </tr>
+  </table>
+  <% end %>
+</div>
+</div>
+</div>
 

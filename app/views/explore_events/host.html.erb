@@ -1,0 +1,73 @@
+<% @page_title = "Events" %>
+
+<%= link_to "Explore", student_explore_events_path, :class => "link" %>
+<%= link_to "Hosting", student_host_events_path, :class => "link" %>
+
+
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <h2>Hosted events</h2>
+    </br>
+    <div class = 'events'>
+      <% if Event.find_by(student_id: current_user.id) == nil %>
+      <p> You aren't hosting any events </p>
+      <% else %>
+      <ul>
+        <% Event.where(student_id: current_user.id).each do |event|%>
+        <li>
+          <div class = 'time'>
+            <h3> <%= event.date.strftime('%d %B') %> <h3>
+            </div>
+            <div class = 'details'>
+              <h3> <%=event.name%> </h3>
+              <p> <%= event.description%> </p>
+              <span> Location: <%= event.location %>
+              <%= button_to "Join", {controller: 'explore_events', action: 'join_event', event: event.id}, method: :post, local: true, class: 'join' %>
+            </div>
+
+        </li>
+        <%end%>
+      </ul>
+      <%end%>
+    </div>
+  </div>
+</div>
+
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <h2>Create event</h2>
+
+<p class = "notice"> <%=@mess%> </p>
+
+
+<div class="host_events">
+  <%= form_with :url => student_create_event_path, :method => :post, :local => true do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :token, "Token" %></td>
+      <td><%= f.text_field :token, :required => true %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :name, "Name" %></td>
+      <td><%= f.text_field :name, :required => true %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :date, "Date" %></td>
+      <td><%= f.date_select :date, :required => true, :start_year => Time.now.strftime('%Y').to_i, :end_year => Time.now.strftime('%Y').to_i + 1 %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :location, "Location" %></td>
+      <td><%= f.text_field :location, :required => true%></td>
+    </tr>
+    <tr>
+      <td><%= f.label :description, "Description" %></td>
+      <td><%= f.text_area :description, :required => true%></td>
+    </tr>
+    <tr>
+      <td><%= f.submit "Create", class: "create" %></td>
+    </tr>
+  </table>
+  <% end %>
+</div>
+</div>
+</div>

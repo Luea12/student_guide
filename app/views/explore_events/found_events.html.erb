@@ -1,6 +1,32 @@
+
+<% @page_title = "Events" %>
+
+<%= link_to "Explore", student_explore_events_path, :class => "link" %>
+<%= link_to "Hosting", student_host_events_path, :class => "link" %>
+
+
 <div class="navbar navbar-light bg-light">
-  <div class="container-fluid search_schedule">
-    <p><%= @events %></p>
+  <div class="container-fluid">
+    <h2><%= @period %> events</h2>
+    </br>
+    <div class = 'events'>
+      <ul>
+        <% @events.each do |event|%>
+        <li>
+          <div class = 'time'>
+            <h3> <%= event.date.strftime('%d %B') %> <h3>
+            </div>
+            <div class = 'details'>
+              <h3> <%=event.name%> </h3>
+              <p> <%= event.description%> </p>
+              <span> Location: <%= event.location %>
+              <%= button_to "Join", {controller: 'explore_events', action: 'join_event', event: event.id}, method: :post, local: true, class: 'join' %>
+            </div>
+
+        </li>
+        <%end%>
+      </ul>
+    </div>
   </div>
 </div>
 
