@@ -59,7 +59,10 @@ Rails.application.routes.draw do
   # Explore
   get 'home_s/explore_events', :to => 'explore_events#index', :as => 'student_explore_events'
   get 'home_t/explore_events', :to => 'explore_events#index', :as => 'teacher_explore_events'
-  post 'home_s/explore_events', :to => 'explore_events#attempt_find', :as => 'student_attempt_find_events'
+  post 'home_s/explore_events/find_events', :to => 'explore_events#attempt_find', :as => 'student_attempt_find_events'
+  post 'home_s/explore_events', :to => 'explore_events#join_event', :as => 'student_join_event'
+  get 'home_s/explore_events/hosted_events', :to => 'explore_events#host', :as => 'student_host_events'
+  post 'home_s/explore_events/hosted_events', :to => 'explore_events#create_event', :as => 'student_create_event'
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.

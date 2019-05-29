@@ -11,6 +11,16 @@ class ExploreEventsController < ApplicationController
     end
   end
 
+  def join_event
+
+
+    current_user.events << Event.find(params[:event])
+    print(current_user.events)
+    redirect_to :action => 'index'
+
+
+  end
+
   def attempt_find
 
     @events = []
@@ -29,11 +39,13 @@ class ExploreEventsController < ApplicationController
       Event.where('DAY(date) = ? AND MONTH(date) = ? AND YEAR(date) = ?',  Time.now.strftime('%d').to_i,  Time.now.strftime('%m'),  Time.now.strftime('%Y')).each do |event|
         @events << event
       end
+      @period = "Today's"
     elsif params[:date] == "week"
       if @first_day_of_current_week<@last_day_of_current_week
         Event.where('DAY(date) >= ? AND DAY(date) <= ? ', @first_day_of_current_week, @last_day_of_current_week).each do |event|
           @events << event
         end
+        @period = "This week's"
       else
         Event.where('DAY(date) >= ? OR DAY(date) <= ? ', @first_day_of_current_week, @last_day_of_current_week).each do |event|
           @events << event
@@ -43,11 +55,25 @@ class ExploreEventsController < ApplicationController
       Event.where(' MONTH(date) = ? AND YEAR(date) = ?', Time.now.strftime('%m'),  Time.now.strftime('%Y')).each do |event|
         @events << event
       end
+      @period = "This month's"
     end
 
     render('found_events')
+  end
 
+  def host
 
+    @mess = params[:not]
+  end
+
+  def create_event
+
+    if EventToken.find_by(:token => params[:token])
+      Event.create(:name => params[:name], :date => Date.new(params["date(1i)"].to_i, params["date(2i)"].to_i, params["date(3i)"].to_i), :location => params[:location], :description => params[:description], :student_id => current_user.id)
+      redirect_to action: 'host', not: "Your event has been created."
+    else
+      redirect_to action: 'host', not: "Token is not valid."
+    end
 
   end
 
