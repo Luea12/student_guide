@@ -397,6 +397,21 @@ ul ul a {
     width: 20%;
 }
 
+/* Style for radio buttons */
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-color: #2c8492;  
+    border-radius: 50%;
+}
+
+.custom-radio .custom-control-input:active ~ .custom-control-label::before {
+    color: #fff;
+    background-color: #2c8492;
+}
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff; 
+}
+
 .oneline{
     width: 60%;
     display: flex !important;
