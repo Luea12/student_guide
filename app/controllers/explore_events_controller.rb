@@ -39,13 +39,16 @@ class ExploreEventsController < ApplicationController
       Event.where('DAY(date) = ? AND MONTH(date) = ? AND YEAR(date) = ?',  Time.now.strftime('%d').to_i,  Time.now.strftime('%m'),  Time.now.strftime('%Y')).each do |event|
         @events << event
       end
+
       @period = "Today's"
+
     elsif params[:date] == "week"
       if @first_day_of_current_week<@last_day_of_current_week
         Event.where('DAY(date) >= ? AND DAY(date) <= ? ', @first_day_of_current_week, @last_day_of_current_week).each do |event|
           @events << event
         end
         @period = "This week's"
+
       else
         Event.where('DAY(date) >= ? OR DAY(date) <= ? ', @first_day_of_current_week, @last_day_of_current_week).each do |event|
           @events << event
@@ -74,6 +77,7 @@ class ExploreEventsController < ApplicationController
     else
       redirect_to action: 'host', not: "Token is not valid."
     end
+
 
   end
 

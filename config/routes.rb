@@ -13,6 +13,16 @@ Rails.application.routes.draw do
   post 'token_auth', :to => 'register#token_validation', :as => 'token_validation'
   post 'signup', :to => 'register#attempt_signup', :as => 'attempt_signup'
 
+  # Expired News routes
+  get 'home_a/expired_news', :to => 'expired_news#index', :as => 'expired_news'
+  delete 'home_a/expired_news/:id', :to => 'expired_news#destroy', :as => 'delete_announcement'
+
+  # Show Students
+  get 'home_a/show_students', :to => 'show_students#index', :as => 'show_students'
+
+  # Show Teachers
+  get 'home_a/show_teachers', :to => 'show_teachers#index', :as => 'show_teachers'
+
   # Student Tokens routes
   get 'home_a/student_tokens', :to => 'student_tokens#index', :as => 'student_tokens'
   get 'home_a/student_tokens/new', :to => 'student_tokens#new', :as => 'new_student_token'
@@ -59,10 +69,12 @@ Rails.application.routes.draw do
   # Explore
   get 'home_s/explore_events', :to => 'explore_events#index', :as => 'student_explore_events'
   get 'home_t/explore_events', :to => 'explore_events#index', :as => 'teacher_explore_events'
+
   post 'home_s/explore_events/find_events', :to => 'explore_events#attempt_find', :as => 'student_attempt_find_events'
   post 'home_s/explore_events', :to => 'explore_events#join_event', :as => 'student_join_event'
   get 'home_s/explore_events/hosted_events', :to => 'explore_events#host', :as => 'student_host_events'
   post 'home_s/explore_events/hosted_events', :to => 'explore_events#create_event', :as => 'student_create_event'
+
 
   # Cand accesez localhost:3000/ imi apare un welcome.
   # Cand dau hover pe welcome, acesta dispare si ramane vizibil formularul de login.

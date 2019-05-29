@@ -1,0 +1,22 @@
+<% @page_title = "All Teachers" %>
+
+<%= link_to("<< Back to Home", admin_home_path) %>
+
+<h2>All Teachers</h2>
+
+<table summary="All Teachers">
+  <tr class="header">
+    <th>#</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Username</th>
+  </tr>
+  <% @teachers.each do |teacher| %>
+  <tr>
+    <td><%= teacher.id %></td>
+    <td><%= teacher.name %></td>
+    <td><%= teacher.email %></td>
+    <td><%= teacher.username %></td>
+  </tr>
+  <% end %>
+</table>
