@@ -398,6 +398,10 @@ ul ul a {
 }
 
 /* Style for radio buttons */
+.custom-control-label {
+    padding: 0px 20px 20px 0px !important;
+}
+
 .custom-radio .custom-control-input:checked~.custom-control-label::before,
 .custom-radio .custom-control-input:checked~.custom-control-label::after {
     background-color: #2c8492;  
