@@ -1,21 +1,45 @@
-<h1> Recently Announced </h1>
-<p> <%= @recently_added %> </p>
 
-<h1> Find Events </h1>
-<div class="find_events">
-  <%= form_with :url => student_attempt_find_events_path, :method => :post, :local => true do |f| %>
-  <table>
-    <tr>
-      <td><%= f.label :today, "Today" %></td>
-      <td><%= f.radio_button :date, :today, :checked => true %></td>
-      <td><%= f.label :week, "This week" %></td>
-      <td><%= f.radio_button :date, :week %></td>
-      <td><%= f.label :month, "This month" %></td>
-      <td><%= f.radio_button :date, :month %></td>
-    </tr>
-    <tr>
-      <td><%= f.submit "Find Events" %></td>
-    </tr>
-  </table>
-  <% end %>
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid search_schedule form-group">
+      <h1> Recently Announced </h1>
+      <div> Here is the 1 st event but because it does not exist, I have to write something </div>
+    <div> <%= @recently_added %> </div>
+  </div>
 </div>
+
+<div class="navbar navbar-light bg-light">
+  <div class="container-fluid search_schedule form-group">
+    <h1> Find Events </h1>
+    <div class="find_events">
+      <%= form_with :url => student_attempt_find_events_path, :method => :post, :local => true do |f| %>
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <div class="custom-control custom-radio">
+                <%= f.radio_button :date, :today, :checked => true, :class => "custom-control-input", :id => "customRadio1" %>
+                <label class="custom-control-label" for="customRadio1">Today</label>
+              </div>
+              <br>
+              <div class="custom-control custom-radio">
+                <%= f.radio_button :date, :week,  :class => "custom-control-input", :id => "customRadio2" %>
+                <label class="custom-control-label" for="customRadio2">This week</label>
+              </div>
+
+            <div class="custom-control custom-radio">
+              <%= f.radio_button :date, :month, :class => "custom-control-input", :id => "customRadio3" %>
+              <label class="custom-control-label" for="customRadio3">This month</label>
+            </div>
+
+
+
+              <%= f.submit "Find Events" %>
+            </div>
+        </div>
+
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
+
+

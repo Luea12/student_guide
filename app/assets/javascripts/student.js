@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
 
 
-        if (!(window.location.pathname === "/home_s/your_schedule")) {
+        if (!(window.location.pathname === "/home_s/your_schedule") && !(window.location.pathname === "/home_s/search_schedule")) {
             let upBar = document.getElementsByClassName("upBar");
             for (let i = 0; i < upBar.length; i++) {
                 upBar[i].style.display = "none";
