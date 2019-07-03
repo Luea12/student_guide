@@ -11,28 +11,25 @@
     <%= javascript_include_tag 'student' %>
     <%= javascript_include_tag params[:controller] %>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-
   <body>
-
-        <div class = "toggle" id = "toggle" onclick = "toggle()">
-          <i class="material-icons" id = "arrow"> chevron_right </i>
-        </div>
-        <div class = "menu" id="menu">
-          <%= link_to  student_home_path do %>
-          <i class="material-icons"> home </i>
-          <% end %>
-          <%= link_to  student_schedule_path do %>
-          <i class="material-icons"> schedule </i>
-          <% end %>
-          <%= link_to  student_explore_events_path do %>
-          <i class="material-icons"> event </i>
-          <% end %>
-        </div>
-
-    <%= yield %>
-
+    <div class="toggle" id="toggle" onclick ="toggle()">
+      <i class="material-icons" id="arrow">chevron_right</i>
+    </div>
+    <div class="menu" id="menu">
+      <%= link_to  student_home_path do %>
+        <i class="material-icons">home</i>
+      <% end %>
+      <%= link_to  student_schedule_path do %>
+        <i class="material-icons"> schedule </i>
+      <% end %>
+      <%= link_to  student_explore_events_path do %>
+        <i class="material-icons"> event </i>
+      <% end %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
