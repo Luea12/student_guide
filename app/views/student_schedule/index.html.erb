@@ -1,101 +1,129 @@
-<div class="tab">
-  <button type="button" class="btn btn-lg tablinks"  style="width:19.655%" onclick="openCity(event, 'Luni')">Luni</button>
-  <button type="button" class="btn btn-lg tablinks"  style="width:19.655%" onclick="openCity(event, 'Marti')">Marti</button>
-  <button type="button" class="btn btn-lg tablinks"  style="width:19.655%" onclick="openCity(event, 'Miercuri')">Miercuri</button>
-  <button type="button" class="btn btn-lg tablinks"  style="width:19.655%" onclick="openCity(event, 'Joi')">Joi</button>
-  <button type="button" class="btn btn-lg tablinks"  style="width:19.655%" onclick="openCity(event, 'Vineri')">Vineri</button>
+<%= link_to "Your schedule", student_schedule_path, :class => "link" %>
+<%= link_to "Search schedule", student_search_schedule_path, :class => "link ml-2" %>
+
+<!-- Buttons with days -->
+<div class="col-container">
+  <div class="column-5">
+    <button type="button" class="btn btn-outline-primary btn-lg" onclick="showSchedule(event, 'Monday')">Monday</button>
+  </div>
+  <div class="column-5">
+    <button type="button" class="btn btn-outline-primary btn-lg" onclick="showSchedule(event, 'Tuesday')">Tuesday</button>
+  </div>
+  <div class="column-5">
+    <button type="button" class="btn btn-outline-primary btn-lg" onclick="showSchedule(event, 'Wednesday')">Wednesday</button>
+  </div>
+  <div class="column-5">
+    <button type="button" class="btn btn-outline-primary btn-lg" onclick="showSchedule(event, 'Thursday')">Thursday</button>
+  </div>
+  <div class="column-5">
+    <button type="button" class="btn btn-outline-primary btn-lg" onclick="showSchedule(event, 'Friday')">Friday</button>
+  </div>
 </div>
 
-<!-- Tab content -->
-<div id="Luni" class="tabcontent">
-  <div class="column">
+<!-- Monday Schedule -->
+<div id="Monday" class="col-container">
+  <div class="column-2">
     <% @schedule['monday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+      <div class="schedule-card" onmouseover="showDetails(event)">
+        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+        <h5><%= course['name'] %></h5>
+      </div>
     <% end %>
   </div>
-  <div class="column">
+  <div class="column-2">
     <div id="information">
       <% @schedule['monday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <%= content_tag :div, "", class: [course['name'], course['start_time']]  do%>
+          <p><h5>Room: </h5><%= course['room'] %>
+          <p><h5>Professor: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
         <% end %>
       <% end %>
     </div>
   </div>
 </div>
 
-<div id="Marti" class="tabcontent">
-  <div class="column">
-  <% @schedule['tuesday'].each do |course| %>
-    <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-    </h4>
+<!-- Tuesday Schedule -->
+<div id="Tuesday" class="col-container">
+  <div class="column-2">
+    <% @schedule['tuesday'].each do |course| %>
+      <div class="schedule-card" onmouseover="showDetails(event)">
+        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+        <h4><%= course['name'] %></h4>
+      </div>
     <% end %>
   </div>
-  <div class="column">
+  <div class="column-2">
     <div id="information">
       <% @schedule['tuesday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <%= content_tag :div, "", class: [course['name'], course['start_time']]  do%>
+          <p><h5>Room: </h5><%= course['room'] %>
+          <p><h5>Professor: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
         <% end %>
       <% end %>
     </div>
   </div>
 </div>
 
-<div id="Miercuri" class="tabcontent">
-  <div class="column">
+<!-- Wednesday Schedule -->
+<div id="Wednesday" class="col-container">
+  <div class="column-2">
     <% @schedule['wednesday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+      <div class="schedule-card" onmouseover="showDetails(event)">
+        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+        <h4><%= course['name'] %></h4>
+      </div>
     <% end %>
   </div>
-  <div class="column">
+  <div class="column-2">
     <div id="information">
       <% @schedule['wednesday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <%= content_tag :div, "", class: [course['name'], course['start_time']]  do%>
+          <p><h5>Room: </h5><%= course['room'] %>
+          <p><h5>Professor: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
         <% end %>
       <% end %>
     </div>
   </div>
 </div>
 
-<div id="Joi" class="tabcontent">
-  <div class="column">
+<!-- Thursday Schedule -->
+<div id="Thursday" class="col-container">
+  <div class="column-2">
     <% @schedule['thursday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+      <div class="schedule-card" onmouseover="showDetails(event)">
+        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+        <h4><%= course['name'] %></h4>
+      </div>
     <% end %>
   </div>
-  <div class="column">
+  <div class="column-2">
     <div id="information">
       <% @schedule['thursday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <%= content_tag :div, "", class: [course['name'], course['start_time']]  do%>
+          <p><h5>Room: </h5><%= course['room'] %>
+          <p><h5>Professor: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
         <% end %>
       <% end %>
     </div>
   </div>
 </div>
 
-<div id="Vineri" class="tabcontent">
-  <div class="column">
+<!-- Friday Schedule -->
+<div id="Friday" class="col-container">
+  <div class="column-2">
     <% @schedule['friday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+      <div class="schedule-card" onmouseover="showDetails(event)">
+        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+        <h4><%= course['name'] %></h4>
+      </div>
     <% end %>
   </div>
-  <div class="column">
+  <div class="column-2">
     <div id="information">
       <% @schedule['friday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
+        <%= content_tag :div, "", class: [course['name'], course['start_time']]  do%>
+          <p><h5>Room: </h5><%= course['room'] %>
+          <p><h5>Professor: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
         <% end %>
       <% end %>
     </div>

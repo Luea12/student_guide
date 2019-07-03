@@ -1,0 +1,38 @@
+.col-container {
+  display: table;
+  width: 100%;
+  margin: 0 -5px;
+  box-sizing: border-box;
+}
+
+.col-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column-2 {
+  float: left;
+  width: 50%;
+  padding: .5em 1.5em;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgb(179,236,245);
+  display: table-cell;
+}
+
+.column-5 {
+  float: left;
+  width: 20%;
+  padding: .5em;
+  box-sizing: border-box;
+  display: table-cell;
+  text-align: center;
+}
+
+.schedule-card {
+  margin: 1em 0;
+  height: 5rem;
+  padding: .75em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: yellow;
+}
