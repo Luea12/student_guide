@@ -4,11 +4,55 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #fbf8f2;
+    padding: 0;
+    margin: 0;
+}
+
+.toggle {
+  background-color: #1d3444;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#arrow {
+  color: #82a0a7;
+  font-size: 50px;
+}
+
+.menu {
+  background-color: #1d3444;
+  position: absolute;;
+  width: 100px;
+  top: 100px;
+  left:-100px;
+  border-radius: 0 0 15px 0;
+  padding-bottom: 10px;
+
 }
 
 a {
-    color: #fff !important;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+a>.material-icons{
+  font-size: 50px;
+  color: #82a0a7;
+
+}
+
+a:hover .material-icons{
+  color: #40667c;
+  transform: scale(1.2);
 }
 
 p {
