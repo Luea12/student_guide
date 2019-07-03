@@ -24,46 +24,86 @@
   <!-- Monday Schedule -->
   <div id="Monday" class="column-5">
     <% @schedule['monday'].each do |course| %>
-      <div class="schedule-card" onmouseover="showDetails(event)">
-        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
-        <h5><%= course['name'] %></h5>
+      <div class="schedule-card">
+        <div class="schedule-card-inner">
+          <div class="schedule-card-front">
+            <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+            <h5><%= course['name'] %></h5>
+          </div>
+          <div class="schedule-card-back">
+            <span>Room: <%= course['room'] %></span>
+            <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
   <!-- Tuesday Schedule -->
   <div id="Tuesday" class="column-5">
     <% @schedule['tuesday'].each do |course| %>
-      <div class="schedule-card" onmouseover="showDetails(event)">
-        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
-        <h5><%= course['name'] %></h5>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+          <h5><%= course['name'] %></h5>
+        </div>
+        <div class="schedule-card-back">
+          <span>Room: <%= course['room'] %></span>
+          <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+        </div>
       </div>
+    </div>
     <% end %>
   </div>
   <!-- Wednesday Schedule -->
   <div id="Wednesday" class="column-5">
     <% @schedule['wednesday'].each do |course| %>
-      <div class="schedule-card" onmouseover="showDetails(event)">
-        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
-        <h5><%= course['name'] %></h5>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+          <h5><%= course['name'] %></h5>
+        </div>
+        <div class="schedule-card-back">
+          <span>Room: <%= course['room'] %></span>
+          <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+        </div>
       </div>
+    </div>
     <% end %>
   </div>
   <!-- Thursday Schedule -->
   <div id="Thursday" class="column-5">
     <% @schedule['thursday'].each do |course| %>
-      <div class="schedule-card" onmouseover="showDetails(event)">
-        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
-        <h5><%= course['name'] %></h5>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+          <h5><%= course['name'] %></h5>
+        </div>
+        <div class="schedule-card-back">
+          <span>Room: <%= course['room'] %></span>
+          <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+        </div>
       </div>
+    </div>
     <% end %>
   </div>
   <!-- Friday Schedule -->
   <div id="Friday" class="column-5">
     <% @schedule['friday'].each do |course| %>
-      <div class="schedule-card" onmouseover="showDetails(event)">
-        <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
-        <h5><%= course['name'] %></h5>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <span><%= course['start_time'] %> - <%= course['end_time'] %></span>
+          <h5><%= course['name'] %></h5>
+        </div>
+        <div class="schedule-card-back">
+          <span>Room: <%= course['room'] %></span>
+          <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+        </div>
       </div>
+    </div>
     <% end %>
   </div>
 </div>
