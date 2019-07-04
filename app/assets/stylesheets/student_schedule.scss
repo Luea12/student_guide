@@ -22,15 +22,26 @@
   background-color: #1D3444;
   box-shadow: 1px 1px 3px rgb(179,236,245);
   border-radius: 3px;
-  border-width: 2px 1px 0 1px;
+  border-width: 3px 1px 4px 1px;
   border-style: solid;
   border-color: #40667C;
+}
+
+.header-column-5:first-child {
+  border-width: 3px 1px 4px 3px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.header-column-5:last-child {
+  border-width: 3px 3px 4px 1px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .header-column-5 h4 {
   color: #82A0A7;
   font-weight: normal;
-  line-height: 1.5em;
 }
 
 .column-5 {
@@ -52,9 +63,28 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.7s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.schedule-card-inner h5 {
+  font-weight: normal;
+  font-size: 1.2em;
+  display: flex;
+}
+
+.schedule-card-inner p {
+  font-weight: 450;
+  display: flex;
+  margin: 0 !important;
+}
+
+.schedule-card-inner p.hour-interval {
+  font-weight: 550;
+  font-size: 1em;
+  display: flex;
+  margin: 0 0 .2em 0 !important;
 }
 
 .schedule-card:hover .schedule-card-inner {
@@ -73,6 +103,12 @@
   transform: rotateY(180deg);
 }
 
-.schedule-card-inner h5 {
-  font-weight: normal;
+hr.schedule-hr {
+  width: 99%;
+  height: auto;
+  margin: .5em 0 0 -0.2em;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #40667C;
+  border-radius: 4px;
 }
