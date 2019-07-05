@@ -14,22 +14,31 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div class="toggle" id="toggle" onclick ="toggle()">
-      <i class="material-icons" id="arrow">chevron_right</i>
-    </div>
-    <div class="menu" id="menu">
-      <%= link_to  student_home_path do %>
-        <i class="material-icons">home</i>
-      <% end %>
-      <%= link_to  student_schedule_path do %>
-        <i class="material-icons"> schedule </i>
-      <% end %>
-      <%= link_to  student_explore_events_path do %>
-        <i class="material-icons"> event </i>
-      <% end %>
-    </div>
-    <div class="container">
-      <%= yield %>
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Student Guide</h3>
+        </div>
+        <ul class="list-unstyled components">
+          <li id="home" class="<%= 'active' if params[:controller]=='student_home'%>">
+            <%= link_to fa_icon('home', text: "Home"), student_home_path %>
+          </li>
+          <li id="schedule" class="<%= 'active' if params[:controller].in?(['student_schedule', 'search_schedule']) %>">
+            <%= link_to fa_icon('calendar', text: "Schedule"), student_schedule_path %>
+          </li>
+          <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
+             <%= link_to fa_icon('newspaper-o', text: "Events"), student_explore_events_path %>
+          </li>
+          <li id="logout">
+            <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
+          </li>
+        </ul>
+      </nav>
+      <div id="content">
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
