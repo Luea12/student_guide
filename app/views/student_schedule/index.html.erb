@@ -1,6 +1,10 @@
-<%= link_to "Your schedule", student_schedule_path, :class => "link" %>
-<%= link_to "Search schedule", student_search_schedule_path, :class => "link ml-2" %>
-
+<nav id="nav-links">
+  <div class="container-fluid">
+    <%= link_to "Your schedule", student_schedule_path, :class => "link" %>
+    <%= link_to "Search schedule", student_search_schedule_path, :class => "link" %>
+    <p>Logged in as: <%= current_user.username %></p>
+  </div>
+</nav>
 <!-- Buttons with days -->
 <div id="schedule-buttons" class="col-container">
   <div class="header-column-5">
@@ -30,7 +34,7 @@
         <div class="schedule-card-inner">
           <div class="schedule-card-front">
             <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
-            <h5><%= course['name'] %></h5>
+            <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
           </div>
           <div class="schedule-card-back">
             <p>Room: <%= course['room'] %></p>
@@ -47,7 +51,7 @@
       <div class="schedule-card-inner">
         <div class="schedule-card-front">
           <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
-          <h5><%= course['name'] %></h5>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
         </div>
         <div class="schedule-card-back">
           <p>Room: <%= course['room'] %></p>
@@ -64,7 +68,7 @@
       <div class="schedule-card-inner">
         <div class="schedule-card-front">
           <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
-          <h5><%= course['name'] %></h5>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
         </div>
         <div class="schedule-card-back">
           <p>Room: <%= course['room'] %></p>
@@ -81,7 +85,7 @@
       <div class="schedule-card-inner">
         <div class="schedule-card-front">
           <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
-          <h5><%= course['name'] %></h5>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
         </div>
         <div class="schedule-card-back">
           <p>Room: <%= course['room'] %></p>
@@ -98,7 +102,7 @@
       <div class="schedule-card-inner">
         <div class="schedule-card-front">
           <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
-          <h5><%= course['name'] %></h5>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
         </div>
         <div class="schedule-card-back">
           <p>Room: <%= course['room'] %></p>

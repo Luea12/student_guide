@@ -55,19 +55,40 @@ class ApplicationController < ActionController::Base
     thursday = []
     friday = []
 
+  if session[:user_type] == "S"
     courses.each do |course|
       if course.day == "Luni"
-        monday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
+        monday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
       elsif course.day == "Marti"
-        tuesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
+        tuesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
       elsif course.day == "Miercuri"
-        wednesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
+        wednesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
       elsif course.day == "Joi"
-        thursday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
+        thursday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
       elsif course.day == "Vineri"
-        friday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
+        friday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
       end
     end
+  elsif session[:user_type] == "T"
+    courses.each do |course|
+      groups = []
+      course.groups.each do |group|
+        groups << group.group_no
+      end
+      if course.day == "Luni"
+        monday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+      elsif course.day == "Marti"
+        tuesday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+      elsif course.day == "Miercuri"
+        wednesday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+      elsif course.day == "Joi"
+        thursday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+      elsif course.day == "Vineri"
+        friday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+      end
+    end
+  end
+
 
 
     monday = monday.sort_by!{ |c| c['start_time']}

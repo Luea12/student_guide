@@ -1,27 +1,116 @@
-<%= link_to "Your schedule", teacher_schedule_path, :class => "link" %>
-<%= link_to "Search schedule", teacher_search_schedule_path, :class => "link ml-2" %>
+<nav id="nav-links">
+  <div class="container-fluid">
+    <%= link_to "Your schedule", teacher_schedule_path, :class => "link" %>
+    <%= link_to "Search schedule", teacher_search_schedule_path, :class => "link" %>
+    <p>Logged in as: <%= current_user.username %></p>
+  </div>
+</nav>
 
-<h1> Monday </h1>
-<% @schedule['monday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<!-- Buttons with days -->
+<div id="schedule-buttons" class="col-container">
+  <div class="header-column-5">
+    <h4>Monday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Tuesday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Wednesday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Thursday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Friday</h4>
+  </div>
+</div>
 
-<h1> Tuesday </h1>
-<% @schedule['tuesday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<hr class="schedule-hr"/>
 
-<h1> Wednesday </h1>
-<% @schedule['wednesday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
-
-<h1> Thursday </h1>
-<% @schedule['thursday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
-
-<h1> Friday </h1>
-<% @schedule['friday'].each do |course| %>
-<p> <%= course['start_time'] %> - <%= course['end_time'] %>: <%= course['name']%> </p>
-<% end %>
+<div id="schedule-tab" class="col-container">
+  <!-- Monday Schedule -->
+  <div id="Monday" class="column-5">
+    <% @schedule['monday'].each do |course| %>
+      <div class="schedule-card">
+        <div class="schedule-card-inner">
+          <div class="schedule-card-front">
+            <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+            <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+          </div>
+          <div class="schedule-card-back">
+            <p>Room: <%= course['room'] %></p>
+            <p>Groups: <%= course['groups'] %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <!-- Tuesday Schedule -->
+  <div id="Tuesday" class="column-5">
+    <% @schedule['tuesday'].each do |course| %>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <p>Groups: <%= course['groups'] %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <!-- Wednesday Schedule -->
+  <div id="Wednesday" class="column-5">
+    <% @schedule['wednesday'].each do |course| %>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <p>Groups: <%= course['groups'] %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <!-- Thursday Schedule -->
+  <div id="Thursday" class="column-5">
+    <% @schedule['thursday'].each do |course| %>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <p>Groups: <%= course['groups'] %></  p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <!-- Friday Schedule -->
+  <div id="Friday" class="column-5">
+    <% @schedule['friday'].each do |course| %>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <p>Groups: <%= course['groups']%>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

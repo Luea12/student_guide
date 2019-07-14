@@ -13,42 +13,30 @@
   </head>
 
   <body>
-  <div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-      <div class="sidebar-header">
-        <h3>Student Guide</h3>
-        <strong>SG</strong>
-      </div>
-
-      <ul class="list-unstyled components">
-        <li>
-          <p>Logged in as: <%= current_user.username %></p>
-        </li>
-        <li id="home" class="<%= 'active' if params[:controller]=='teacher_home'%>">
-          <%= link_to fa_icon('home', text: "Home"), teacher_home_path %>
-        </li>
-        <li id="schedule" class="<%= 'active' if params[:controller].in?(['teacher_schedule', 'search_schedule'])%>">
-          <%= link_to fa_icon('calendar', text: "Schedule"), teacher_schedule_path %>
-        </li>
-        <!-- TO DO: Change this when events added-->
-       <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
-         <%= link_to fa_icon('newspaper-o', text: "Events"), teacher_explore_events_path %>
-       </li>
-      <li id="logout">
-        <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
-      </li>
-    </ul>
-    </nav>
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Student Guide</h3>
+        </div>
+        <ul class="list-unstyled components">
+          <li id="home" class="<%= 'active' if params[:controller]=='teacher_home'%>">
+            <%= link_to fa_icon('home', text: "Home"), teacher_home_path %>
+          </li>
+          <li id="schedule" class="<%= 'active' if params[:controller].in?(['teacher_schedule', 'search_schedule']) %>">
+            <%= link_to fa_icon('calendar', text: "Schedule"), teacher_schedule_path %>
+          </li>
+          <li id="events" class="<%= 'active' if params[:controller]=='explore_events'%>">
+             <%= link_to fa_icon('newspaper-o', text: "Events"), teacher_explore_events_path %>
+          </li>
+          <li id="logout">
+            <%= link_to fa_icon('sign-out', text: "Logout"), logout_path %>
+          </li>
+        </ul>
+      </nav>
       <div id="content">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <button type="button" id="sidebarCollapse" class="btn">
-              <%= fa_icon 'align-left' %>
-            </button>
-          </div>
-        </nav>
-        <%= yield %>
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
       </div>
     </div>
   </body>

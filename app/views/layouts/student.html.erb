@@ -10,9 +10,8 @@
 
     <%= javascript_include_tag 'student' %>
     <%= javascript_include_tag params[:controller] %>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
+
   <body>
     <div class="wrapper">
       <nav id="sidebar">
@@ -26,7 +25,7 @@
           <li id="schedule" class="<%= 'active' if params[:controller].in?(['student_schedule', 'search_schedule']) %>">
             <%= link_to fa_icon('calendar', text: "Schedule"), student_schedule_path %>
           </li>
-          <li id="events" class="<%= 'active' if params[:controller]=='events'%>">
+          <li id="events" class="<%= 'active' if params[:controller]=='explore_events'%>">
              <%= link_to fa_icon('newspaper-o', text: "Events"), student_explore_events_path %>
           </li>
           <li id="logout">

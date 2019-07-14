@@ -1,103 +1,135 @@
-<div class="tab">
-  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Luni')">Luni</button>
-  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Marti')">Marti</button>
-  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Miercuri')">Miercuri</button>
-  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Joi')">Joi</button>
-  <button type="button" class="btn btn-outline-primary btn-lg"  style="width:19.655%" class="tablinks" onclick="openCity(event, 'Vineri')">Vineri</button>
+<nav id="nav-links">
+  <div class="container-fluid">
+    <%= link_to "Your schedule", choose_schedule_route, :class => "link" %>
+    <%= link_to "Search schedule", choose_search_route, :class => "link" %>
+    <p>Logged in as: <%= current_user.username %></p>
+  </div>
+</nav>
+<!-- Buttons with days -->
+<div id="schedule-buttons" class="col-container">
+  <div class="header-column-5">
+    <h4>Monday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Tuesday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Wednesday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Thursday</h4>
+  </div>
+  <div class="header-column-5">
+    <h4>Friday</h4>
+  </div>
 </div>
 
-<!-- Tab content -->
-<div id="Luni" class="tabcontent">
-  <div class="column ">
+<hr class="schedule-hr"/>
+
+<div id="schedule-tab" class="col-container">
+  <!-- Monday Schedule -->
+  <div id="Monday" class="column-5">
     <% @schedule['monday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+      <div class="schedule-card">
+        <div class="schedule-card-inner">
+          <div class="schedule-card-front">
+            <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+            <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+          </div>
+          <div class="schedule-card-back">
+            <p>Room: <%= course['room'] %></p>
+            <% if course['teacher_first_name'] and course['teacher_last_name'] %>
+              <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+            <% elsif course['groups'] %>
+              <p>Groups: <%= course['groups'] %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
-  <div class="column">
-    <div id="information">
-      <% @schedule['monday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div id="Marti" class="tabcontent">
-  <div class="column">
+  <!-- Tuesday Schedule -->
+  <div id="Tuesday" class="column-5">
     <% @schedule['tuesday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <% if course['teacher_first_name'] and course['teacher_last_name'] %>
+            <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+          <% elsif course['groups'] %>
+            <p>Groups: <%= course['groups'] %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
-  <div class="column">
-    <div id="information">
-      <% @schedule['tuesday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div id="Miercuri" class="tabcontent">
-  <div class="column">
+  <!-- Wednesday Schedule -->
+  <div id="Wednesday" class="column-5">
     <% @schedule['wednesday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <% if course['teacher_first_name'] and course['teacher_last_name'] %>
+            <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+          <% elsif course['groups'] %>
+            <p>Groups: <%= course['groups'] %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
-  <div class="column">
-    <div id="information">
-      <% @schedule['wednesday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div id="Joi" class="tabcontent">
-  <div class="column">
+  <!-- Thursday Schedule -->
+  <div id="Thursday" class="column-5">
     <% @schedule['thursday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <% if course['teacher_first_name'] and course['teacher_last_name'] %>
+            <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+          <% elsif course['groups'] %>
+            <p>Groups: <%= course['groups'] %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
-  <div class="column">
-    <div id="information">
-      <% @schedule['thursday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div id="Vineri" class="tabcontent">
-  <div class="column">
+  <!-- Friday Schedule -->
+  <div id="Friday" class="column-5">
     <% @schedule['friday'].each do |course| %>
-      <h4 class="w3-tag w3-teal w3-round oneline" onmouseover="openDetails(event)"> <%= course['name']%>  <%= course['start_time'] %> - <%= course['end_time'] %>
-      </h4>
-    <% end %>
-  </div>
-  <div class="column">
-    <div id="information">
-      <% @schedule['friday'].each do |course| %>
-        <%= content_tag :div, "", class: ["informatii" ,course['name'], course['start_time']]  do%>
-          <p><h5>Locatia: </h5><%= course['room'] %>
-          <p><h5>Prof: </h5><%= course['teacher_first_name'] + " " + course['teacher_last_name'] %>
-        <% end %>
-      <% end %>
+    <div class="schedule-card">
+      <div class="schedule-card-inner">
+        <div class="schedule-card-front">
+          <p class="hour-interval"><%= course['start_time'] %> - <%= course['end_time'] %></p>
+          <h5><%= course['name'] %> (<%= course['kind'][0]%>)</h5>
+        </div>
+        <div class="schedule-card-back">
+          <p>Room: <%= course['room'] %></p>
+          <% if course['teacher_first_name'] and course['teacher_last_name'] %>
+            <p>Prof: <%= course['teacher_first_name'] + " " + course['teacher_last_name'] %></p>
+          <% elsif course['groups'] %>
+            <p>Groups: <%= course['groups'] %></p>
+          <% end %>
+        </div>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>

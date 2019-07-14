@@ -1,3 +1,11 @@
+<nav id="nav-links">
+  <div class="container-fluid">
+    <%= link_to "Your schedule", choose_schedule_route, :class => "link" %>
+    <%= link_to "Search schedule", choose_search_route, :class => "link" %>
+    <p>Logged in as: <%= current_user.username %></p>
+  </div>
+</nav>
+
 <div class="navbar navbar-light bg-light">
   <div class="container-fluid search_schedule form-group">
     <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
@@ -10,7 +18,7 @@
 </div>
 
 <div class="navbar navbar-light bg-light">
-  <div class="container-fluid search_schedule form-group">  
+  <div class="container-fluid search_schedule form-group">
     <%= form_with :url => choose_search_post_route, :method => :post, :local => true do |f| %>
       <%= f.label :teacher_last_name, "Teacher's first name" %>
       <%= f.text_field :teacher_last_name, :class => "form-control" %><br>

@@ -11,32 +11,49 @@ class SearchScheduleController < ApplicationController
   end
 
   def attempt_search
-    if params[:group].present?
-      courses = Group.find(params[:group]).courses
-    elsif params[:teacher_last_name].present? && params[:teacher_first_name].present?
-      courses = Course.where(teacher_last_name: params[:teacher_last_name].camelize, teacher_first_name: params[:teacher_first_name].camelize)
-    end
-
     monday = []
     tuesday = []
     wednesday = []
     thursday = []
     friday = []
 
-    courses.each do |course|
-      if course.day == "Luni"
-        monday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
-      elsif course.day == "Marti"
-        tuesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
-      elsif course.day == "Miercuri"
-        wednesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
-      elsif course.day == "Joi"
-        thursday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
-      elsif course.day == "Vineri"
-        friday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency }
+    if params[:group].present?
+      courses = Group.find(params[:group]).courses
+
+      courses.each do |course|
+        if course.day == "Luni"
+          monday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
+        elsif course.day == "Marti"
+          tuesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
+        elsif course.day == "Miercuri"
+          wednesday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
+        elsif course.day == "Joi"
+          thursday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
+        elsif course.day == "Vineri"
+          friday << { 'name' => course.name, 'room' => course.room , 'teacher_first_name' => course.teacher_first_name, 'teacher_last_name' => course.teacher_last_name, 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind }
+        end
+      end
+    elsif params[:teacher_last_name].present? && params[:teacher_first_name].present?
+      courses = Course.where(teacher_last_name: params[:teacher_last_name].camelize, teacher_first_name: params[:teacher_first_name].camelize)
+
+      courses.each do |course|
+        groups = []
+        course.groups.each do |group|
+          groups << group.group_no
+        end
+        if course.day == "Luni"
+          monday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+        elsif course.day == "Marti"
+          tuesday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+        elsif course.day == "Miercuri"
+          wednesday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+        elsif course.day == "Joi"
+          thursday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+        elsif course.day == "Vineri"
+          friday << { 'name' => course.name, 'room' => course.room , 'start_time' => course.start_time, 'end_time' => course.end_time, 'frequency' => course.frequency, 'kind' => course.kind, 'groups' => groups }
+        end
       end
     end
-
 
     monday = monday.sort_by!{ |c| c[:start_time]}
     tuesday = tuesday.sort_by!{ |c| c[:start_time]}
